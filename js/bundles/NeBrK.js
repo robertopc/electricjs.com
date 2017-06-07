@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([1],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12008,25 +12008,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageIndex", function() { return pageIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NeBrK", function() { return NeBrK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12038,15 +12025,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from getting-started.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageIndex.
+ * @fileoverview Templates in namespace NeBrK.
  * @public
  */
 
-goog.module('pageIndex.incrementaldom');
+goog.module('NeBrK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12067,7 +12054,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12078,443 +12067,225 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param106 = function() {
-    $header(opt_data, null, opt_ijData);
-    $why(null, null, opt_ijData);
-    $highlights(null, null, opt_ijData);
-    $how(null, null, opt_ijData);
-    $features(null, null, opt_ijData);
-    $footer(null, null, opt_ijData);
+  var param254 = function() {
+    ie_open('article', null, null,
+        'id', 'electricCli');
+      ie_open('h2');
+        itext('Electric CLI');
+      ie_close('h2');
+      ie_open('h3');
+        itext('Install');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g electric-cli@alpha', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('@alpha');
+        ie_close('code');
+        itext(' tag is only necesarry until ');
+        ie_open('code');
+          itext('v2.0.0');
+        ie_close('code');
+        itext(' is officially released.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Initialize Project');
+      ie_close('h3');
+      $templateAlias2({code: 'electric init', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Run');
+      ie_close('h3');
+      $templateAlias2({code: 'electric run', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will build your newly created project and start up a development server along with a watch task for quickly making changes.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'structure');
+      ie_open('h2');
+        itext('Project Structure');
+      ie_close('h2');
+      ie_open('p');
+        itext('Here is a basic example of an ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u251C\u2500\u2500 electric.config.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'text/javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('electric.config.js');
+      ie_close('h2');
+      ie_open('p');
+        itext('This file provides configuration options to electric. It must always be located in the root directory of your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/configuration.html');
+          itext('configuration');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('site.json');
+      ie_close('h2');
+      ie_open('p');
+        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'layouts');
+      ie_open('h2');
+        itext('Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('layouts');
+        ie_close('code');
+        itext(' is flexible, as soy uses the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' of every file as an identifier.');
+      ie_close('p');
+      ie_open('p');
+        itext('All layout files must be a soy template, and the only required layout is');
+        ie_open('code');
+          itext('base.soy');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/layouts.html');
+          itext('layouts');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'pages');
+      ie_open('h2');
+        itext('Pages');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every file in ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' with a ');
+        ie_open('code');
+          itext('.soy');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('.md');
+        ie_close('code');
+        itext(' extension is rendered to HTML during the ');
+        ie_open('code');
+          itext('build');
+        ie_close('code');
+        itext(' command.');
+      ie_close('p');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' determines the urls of your pages. For the above example, the ');
+        ie_open('code');
+          itext('child.md');
+        ie_close('code');
+        itext(' file will be located at ');
+        ie_open('code');
+          itext('/docs/parent/child.html');
+        ie_close('code');
+        itext(' after building.');
+      ie_close('p');
+      ie_open('p');
+        itext('Pages named ');
+        ie_open('code');
+          itext('index');
+        ie_close('code');
+        itext(' will be located at the path of it\'s parent directory, so ');
+        ie_open('code');
+          itext('pages/docs/index.soy');
+        ie_close('code');
+        itext(' will be available at ');
+        ie_open('code');
+          itext('/docs/');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/pages.html');
+          itext('pages');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param106}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param254}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageIndex.render';
+  $render.soyTemplateName = 'NeBrK.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        ie_void('span', null, null,
-            'class', 'icon-16-flash');
-        itext(' Electric');
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn12 = opt_data.site.index.description;
-        if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
-      ie_close('h2');
-      ie_open('div', null, null,
-          'class', 'header-cta');
-        ie_open('a', null, null,
-            'href', '/docs/getting-started.html',
-            'class', 'btn btn-accent');
-          ie_void('span', null, null,
-              'class', 'icon-16-circle-arrow');
-          itext('Get Started');
-        ie_close('a');
-      ie_close('div');
-    ie_close('div');
-    ie_open('p', null, null,
-        'class', 'gh-btns');
-      ie_void('iframe', null, null,
-          'src', 'http://ghbtns.com/github-btn.html?user=wedeploy&repo=electric&type=watch&count=true&size=large',
-          'allowtransparency', 'true',
-          'frameborder', '0',
-          'scrolling', '0',
-          'width', '150',
-          'height', '30');
-      ie_void('iframe', null, null,
-          'src', 'http://ghbtns.com/github-btn.html?user=wedeploy&repo=electric&type=fork&count=true&size=large',
-          'allowtransparency', 'true',
-          'frameborder', '0',
-          'scrolling', '0',
-          'width', '150',
-          'height', '30');
-    ie_close('p');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageIndex.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $why(opt_data, opt_ignored, opt_ijData) {
-  ie_open('article', null, null,
-      'class', 'about');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'col-md-12 col-md-offset-2');
-          ie_open('h3', null, null,
-              'class', 'about-title');
-            itext('Why?');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'about-description');
-            itext('Because good documentation is a must, and your project deserves better than a readme file.');
-          ie_close('p');
-          ie_open('p', null, null,
-              'class', 'about-description');
-            itext('Electric is a Node.js static generator that accelerates the process of writing detailed documentation sites.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-  ie_close('article');
-}
-exports.why = $why;
-if (goog.DEBUG) {
-  $why.soyTemplateName = 'pageIndex.why';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $highlights(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'highlights');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('section', null, null,
-          'class', 'highlight row');
-        ie_open('div', null, null,
-            'class', 'col-md-6 col-md-offset-2');
-          ie_open('h4', null, null,
-              'class', 'highlight-title');
-            itext('Customize the way you want.');
-          ie_close('h4');
-          ie_open('p', null, null,
-              'class', 'highlight-description');
-            itext('Electric comes with a flexible default theme that includes a landing page, docs, changelog, search, code highlight, copy to clipboard, and more.');
-          ie_close('p');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'col-md-5 col-md-offset-1');
-          ie_open('div', null, null,
-              'class', 'highlight-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-star');
-          ie_close('div');
-        ie_close('div');
-      ie_close('section');
-      ie_open('section', null, null,
-          'class', 'highlight row');
-        ie_open('div', null, null,
-            'class', 'col-md-6 col-md-push-8');
-          ie_open('h4', null, null,
-              'class', 'highlight-title');
-            itext('Focus on the content.');
-          ie_close('h4');
-          ie_open('p', null, null,
-              'class', 'highlight-description');
-            itext('No more databases or server-side logic. Transform plain text into fully functional sites using the latest web technologies.');
-          ie_close('p');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'col-md-5 col-md-offset-2 col-md-pull-6');
-          ie_open('div', null, null,
-              'class', 'highlight-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-streams');
-          ie_close('div');
-        ie_close('div');
-      ie_close('section');
-      ie_open('section', null, null,
-          'class', 'highlight row');
-        ie_open('div', null, null,
-            'class', 'col-md-6 col-md-offset-2');
-          ie_open('h4', null, null,
-              'class', 'highlight-title');
-            itext('Host anywhere.');
-          ie_close('h4');
-          ie_open('p', null, null,
-              'class', 'highlight-description');
-            itext('Electric builds completely static HTML sites that you can host on Amazon S3, GitHub pages, WeDeploy or anywhere else you choose.');
-          ie_close('p');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'col-md-5 col-md-offset-1');
-          ie_open('div', null, null,
-              'class', 'highlight-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-cloud');
-          ie_close('div');
-        ie_close('div');
-      ie_close('section');
-    ie_close('div');
-  ie_close('div');
-}
-exports.highlights = $highlights;
-if (goog.DEBUG) {
-  $highlights.soyTemplateName = 'pageIndex.highlights';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $how(opt_data, opt_ignored, opt_ijData) {
-  ie_open('article', null, null,
-      'class', 'about');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'col-md-12 col-md-offset-2');
-          ie_open('h3', null, null,
-              'class', 'about-title');
-            itext('How?');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'about-description');
-            itext('We\'re not trying to reinvent the wheel here. Our idea is to leverage existing and well established tools, so you can feel more familiar with the workflow, worry less about tooling, and focus on what\'s important.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-  ie_close('article');
-}
-exports.how = $how;
-if (goog.DEBUG) {
-  $how.soyTemplateName = 'pageIndex.how';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $features(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'features');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4 col-md-offset-2',
-            'href', 'https://developers.google.com/closure/templates/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-code-file');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Soy');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Create reusable layouts and pages using Closure Templates (aka Soy).');
-          ie_close('p');
-        ie_close('a');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4',
-            'href', 'http://sass-lang.com/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-image');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Sass');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Customize the entire look and feel of our default theme using Sass.');
-          ie_close('p');
-        ie_close('a');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4',
-            'href', 'http://metaljs.com/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-file-js');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Metal.js');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Use existing UI components with Metal.js or just build your own.');
-          ie_close('p');
-        ie_close('a');
-      ie_close('div');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4 col-md-offset-2',
-            'href', 'https://guides.github.com/features/mastering-markdown/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-markdown');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Markdown');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Write documentation with the simplicity of Markdown and Front Matter.');
-          ie_close('p');
-        ie_close('a');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4',
-            'href', 'http://gulpjs.com/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-hammer');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Gulp');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Run Gulp tasks to leverage the power of node streams and get fast builds.');
-          ie_close('p');
-        ie_close('a');
-        ie_open('a', null, null,
-            'class', 'feature col-md-4',
-            'href', 'http://yeoman.io/',
-            'target', '_blank');
-          ie_open('div', null, null,
-              'class', 'feature-graphic');
-            ie_void('span', null, null,
-                'class', 'icon-16-command-line');
-          ie_close('div');
-          ie_open('h3', null, null,
-              'class', 'feature-title');
-            itext('Yeoman');
-          ie_close('h3');
-          ie_open('p', null, null,
-              'class', 'feature-description');
-            itext('Kickstart new projects and themes using a Yeoman generator.');
-          ie_close('p');
-        ie_close('a');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.features = $features;
-if (goog.DEBUG) {
-  $features.soyTemplateName = 'pageIndex.features';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $footer(opt_data, opt_ignored, opt_ijData) {
-  ie_open('footer', null, null,
-      'class', 'footer');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6 col-md-offset-2');
-          itext('Copyright \u00A9 2017 ');
-          ie_open('a', null, null,
-              'href', 'https://liferay.com');
-            itext('Liferay, Inc');
-          ie_close('a');
-        ie_close('p');
-        ie_open('p', null, null,
-            'class', 'footer-description col-md-6');
-          itext('Powered by ');
-          ie_open('a', null, null,
-              'href', 'http://wedeploy.com');
-            itext('WeDeploy\u2122');
-          ie_close('a');
-        ie_close('p');
-      ie_close('div');
-    ie_close('div');
-  ie_close('footer');
-}
-exports.footer = $footer;
-if (goog.DEBUG) {
-  $footer.soyTemplateName = 'pageIndex.footer';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["site"];
-exports.header.types = {"site":"any"};
-exports.why.params = [];
-exports.why.types = {};
-exports.highlights.params = [];
-exports.highlights.types = {};
-exports.how.params = [];
-exports.how.types = {};
-exports.features.params = [];
-exports.features.types = {};
-exports.footer.params = [];
-exports.footer.types = {};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageIndex extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates);
+class NeBrK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(NeBrK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
 /* 113 */,
 /* 114 */,
 /* 115 */,
@@ -12548,19 +12319,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageIndex, templates)
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */,
-/* 158 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12592,9 +12351,9 @@ __webpack_require__(21);
 
 __webpack_require__(19);
 
-var _indexSoy = __webpack_require__(112);
+var _gettingStartedSoy = __webpack_require__(99);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12604,23 +12363,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageIndex = function (_Component) {
-  _inherits(pageIndex, _Component);
+var NeBrK = function (_Component) {
+  _inherits(NeBrK, _Component);
 
-  function pageIndex() {
-    _classCallCheck(this, pageIndex);
+  function NeBrK() {
+    _classCallCheck(this, NeBrK);
 
-    return _possibleConstructorReturn(this, (pageIndex.__proto__ || Object.getPrototypeOf(pageIndex)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NeBrK.__proto__ || Object.getPrototypeOf(NeBrK)).apply(this, arguments));
   }
 
-  return pageIndex;
+  return NeBrK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageIndex, _indexSoy2.default);
+_metalSoy2.default.register(NeBrK, _gettingStartedSoy2.default);
 
-exports.default = pageIndex;
+exports.default = NeBrK;
 
 /***/ })
-],[158]);
+],[146]);

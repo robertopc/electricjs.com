@@ -10269,3 +10269,24 @@ li a:not([class]) {
 @media (min-width: 960px) {
   .gh-btns {
     margin-top: 140px; } }
+
+.showcase {
+  margin-top: 60px; }
+
+.showcase-item {
+  margin-bottom: 40px; }
+
+.showcase-title {
+  font-family: "Galano", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 20px; }
+
+.showcase-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 20px; }
+
+.showcase-img {
+  max-width: 100%; }
