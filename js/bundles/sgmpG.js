@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([2],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12063,14 +12063,12 @@ module.exports = Uri;
 /* 107 */,
 /* 108 */,
 /* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsSearchVOne", function() { return pageDocsSearchVOne; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sgmpG", function() { return sgmpG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12082,15 +12080,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from search.soy.
+// This file was automatically generated from metal-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsSearchVOne.
+ * @fileoverview Templates in namespace sgmpG.
  * @public
  */
 
-goog.module('pageDocsSearchVOne.incrementaldom');
+goog.module('sgmpG.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12111,11 +12109,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearch.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
 
 
 /**
@@ -12126,61 +12122,142 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param649 = function() {
-    $templateAlias2({searchPath: '/docs/v1_0/', section: opt_data.site.index.children['docs'].children['v1_0']}, null, opt_ijData);
-    ie_open('div', null, null,
-        'class', 'sidebar-offset');
-      ie_open('div', null, null,
-          'class', 'container-hybrid docs-home-top');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-16');
-            ie_open('h1', null, null,
-                'class', 'docs-home-top-title');
-              ie_open('span');
-                itext('Electric');
-              ie_close('span');
-              itext(' Docs');
-            ie_close('h1');
-            ie_open('p', null, null,
-                'class', 'docs-home-top-description');
-              itext('Start learning how to leverage the power of Electric.');
-            ie_close('p');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'container-hybrid');
-            $templateAlias3({action: '/docs/v1_0/search.html', path: '/docs/v1_0/', placeholder: 'Search Docs'}, null, opt_ijData);
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
+  var param580 = function() {
+    ie_open('article', null, null,
+        'id', 'creating');
+      ie_open('h2');
+        itext('Creating Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('One of the major benefits of ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' is the ability to create metal.js components and invoke them in your ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' layouts and pages.');
+      ie_close('p');
+      ie_open('p');
+        itext('Components can exist anywhere in the ');
+        ie_open('code');
+          itext('src');
+        ie_close('code');
+        itext(' directory, for this example we will place them inside ');
+        ie_open('code');
+          itext('src/components');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 components\n    \u2502   \u251C\u2500\u2500 MyComponent.js\n    \u2502   \u2514\u2500\u2500 MyComponent.soy\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u2514\u2500\u2500 pages\n        \u2514\u2500\u2500 index.soy', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.soy');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace MyComponent&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>Hello, World!</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.js');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '\'use strict\';\n\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MyComponent.soy\';\n\nclass MyComponent extends Component {\n    attached() {\n        console.log(\'MyComponent attached!\');\n    }\n};\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now that you have the base component files, the ');
+        ie_open('code');
+          itext('MyComponent');
+        ie_close('code');
+        itext(' template simply needs to be rendered in a page/layout.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'rendering');
+      ie_open('h2');
+        itext('Rendering Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('To render a metal component in a page/layout, simply use the ');
+        ie_open('code');
+          itext('call');
+        ie_close('code');
+        itext(' command to render the ');
+        ie_open('code');
+          itext('.render');
+        ie_close('code');
+        itext(' template of the component.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>\n        {call MyComponent.render /}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you should see \'MyComponent attached!\' in the browser console.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'metal_sgg_components');
+      ie_open('h2');
+        itext('Electric Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/electric-components');
+          itext('electric-components');
+        ie_close('a');
+        itext(' package contains a number of components that are compatible with the site meta data, such as navigation and search components.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/configuration.html#options');
+          itext('configuration');
+        ie_close('a');
+        itext(' for information on adding ');
+        ie_open('code');
+          itext('plugins');
+        ie_close('code');
+        itext(' to your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('These components are invoked the same way as your own components.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n * @param site\n */\n&#123;template .render&#125;\n    <div>\n        {call ElectricNavigation.render}\n            {param depth: 1 /}\n            {param section: $site.index /}\n        {/call}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will render a list with all direct descendants of the index page.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param649}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param580}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsSearchVOne.render';
+  $render.soyTemplateName = 'sgmpG.render';
 }
 
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsSearchVOne extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearchVOne, templates);
+class sgmpG extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(sgmpG, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 111 */,
+/* 112 */,
 /* 113 */,
 /* 114 */,
 /* 115 */,
@@ -12195,7 +12272,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearchVOne, t
 /* 124 */,
 /* 125 */,
 /* 126 */,
-/* 127 */
+/* 127 */,
+/* 128 */,
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12229,9 +12308,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _searchSoy = __webpack_require__(112);
+var _metalComponentsSoy = __webpack_require__(110);
 
-var _searchSoy2 = _interopRequireDefault(_searchSoy);
+var _metalComponentsSoy2 = _interopRequireDefault(_metalComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12241,23 +12320,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsSearchVOne = function (_Component) {
-  _inherits(pageDocsSearchVOne, _Component);
+var sgmpG = function (_Component) {
+  _inherits(sgmpG, _Component);
 
-  function pageDocsSearchVOne() {
-    _classCallCheck(this, pageDocsSearchVOne);
+  function sgmpG() {
+    _classCallCheck(this, sgmpG);
 
-    return _possibleConstructorReturn(this, (pageDocsSearchVOne.__proto__ || Object.getPrototypeOf(pageDocsSearchVOne)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (sgmpG.__proto__ || Object.getPrototypeOf(sgmpG)).apply(this, arguments));
   }
 
-  return pageDocsSearchVOne;
+  return sgmpG;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsSearchVOne, _searchSoy2.default);
+_metalSoy2.default.register(sgmpG, _metalComponentsSoy2.default);
 
-exports.default = pageDocsSearchVOne;
+exports.default = sgmpG;
 
 /***/ })
-],[127]);
+],[129]);

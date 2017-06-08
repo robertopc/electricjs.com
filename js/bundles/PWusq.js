@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([6],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12060,17 +12060,12 @@ module.exports = Uri;
 /* 104 */,
 /* 105 */,
 /* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsSearchVOne", function() { return pageDocsSearchVOne; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PWusq", function() { return PWusq; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12082,15 +12077,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from search.soy.
+// This file was automatically generated from getting-started.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsSearchVOne.
+ * @fileoverview Templates in namespace PWusq.
  * @public
  */
 
-goog.module('pageDocsSearchVOne.incrementaldom');
+goog.module('PWusq.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12111,11 +12106,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearch.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
 
 
 /**
@@ -12126,61 +12119,236 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param649 = function() {
-    $templateAlias2({searchPath: '/docs/v1_0/', section: opt_data.site.index.children['docs'].children['v1_0']}, null, opt_ijData);
-    ie_open('div', null, null,
-        'class', 'sidebar-offset');
-      ie_open('div', null, null,
-          'class', 'container-hybrid docs-home-top');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-16');
-            ie_open('h1', null, null,
-                'class', 'docs-home-top-title');
-              ie_open('span');
-                itext('Electric');
-              ie_close('span');
-              itext(' Docs');
-            ie_close('h1');
-            ie_open('p', null, null,
-                'class', 'docs-home-top-description');
-              itext('Start learning how to leverage the power of Electric.');
-            ie_close('p');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'container-hybrid');
-            $templateAlias3({action: '/docs/v1_0/search.html', path: '/docs/v1_0/', placeholder: 'Search Docs'}, null, opt_ijData);
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
+  var param485 = function() {
+    ie_open('article', null, null,
+        'id', 'yeoman');
+      ie_open('h2');
+        itext('Yeoman Generator');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/generator-electric');
+          itext('Yeoman Generator');
+        ie_close('a');
+        itext(' is the fastest way to get an ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project up and running.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Install dependencies');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g gulp yo', mode: 'shell'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Install generator');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g generator-electric', mode: 'shell'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Run generator');
+      ie_close('h3');
+      $templateAlias2({code: 'yo electric', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Having issues getting the generator running? Check out ');
+        ie_open('a', null, null,
+            'href', 'http://yeoman.io/learning/faq.html');
+          itext('Yeoman\'s FAQs');
+        ie_close('a');
+        itext(' for troubleshooting tips.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Build');
+      ie_close('h3');
+      ie_open('p');
+        itext('All ');
+        ie_open('code');
+          itext('gulp');
+        ie_close('code');
+        itext(' commands should be run from your project root.');
+      ie_close('p');
+      $templateAlias2({code: 'gulp', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will run the default gulp task registered in your project\'s ');
+        ie_open('code');
+          itext('gulpfile.js');
+        ie_close('code');
+        itext(', which includes generating your site, starting up a development server, and starting the ');
+        ie_open('code');
+          itext('watch');
+        ie_close('code');
+        itext(' task.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'structure');
+      ie_open('h2');
+        itext('Project Structure');
+      ie_close('h2');
+      ie_open('p');
+        itext('Here is a basic example of an ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u251C\u2500\u2500 gulpfile.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('site.json');
+      ie_close('h2');
+      ie_open('p');
+        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'layouts');
+      ie_open('h2');
+        itext('Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('layouts');
+        ie_close('code');
+        itext(' is flexible, as ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' uses the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' of every file as an identifier.');
+      ie_close('p');
+      ie_open('p');
+        itext('All layout files must be a ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' template, and the only required layout is');
+        ie_open('code');
+          itext('base.soy');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/layouts.html');
+          itext('layouts');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'pages');
+      ie_open('h2');
+        itext('Pages');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every file in ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' with a ');
+        ie_open('code');
+          itext('.soy');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('.md');
+        ie_close('code');
+        itext(' extension is rendered to HTML during the ');
+        ie_open('code');
+          itext('generate');
+        ie_close('code');
+        itext(' task.');
+      ie_close('p');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' determines the urls of your pages. For the above example, the ');
+        ie_open('code');
+          itext('child.md');
+        ie_close('code');
+        itext(' file will be located at ');
+        ie_open('code');
+          itext('/docs/parent/child.html');
+        ie_close('code');
+        itext(' after generating.');
+      ie_close('p');
+      ie_open('p');
+        itext('Pages named ');
+        ie_open('code');
+          itext('index');
+        ie_close('code');
+        itext(' will be located at the path of it\'s parent directory, so ');
+        ie_open('code');
+          itext('pages/docs/index.soy');
+        ie_close('code');
+        itext(' will be available at ');
+        ie_open('code');
+          itext('/docs/');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/pages.html');
+          itext('pages');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({elementClasses: 'docs', content: param649}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param485}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsSearchVOne.render';
+  $render.soyTemplateName = 'PWusq.render';
 }
 
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsSearchVOne extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearchVOne, templates);
+class PWusq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(PWusq, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
 /* 113 */,
 /* 114 */,
 /* 115 */,
@@ -12193,9 +12361,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsSearchVOne, t
 /* 122 */,
 /* 123 */,
 /* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12229,9 +12395,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _searchSoy = __webpack_require__(112);
+var _gettingStartedSoy = __webpack_require__(107);
 
-var _searchSoy2 = _interopRequireDefault(_searchSoy);
+var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12241,23 +12407,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsSearchVOne = function (_Component) {
-  _inherits(pageDocsSearchVOne, _Component);
+var PWusq = function (_Component) {
+  _inherits(PWusq, _Component);
 
-  function pageDocsSearchVOne() {
-    _classCallCheck(this, pageDocsSearchVOne);
+  function PWusq() {
+    _classCallCheck(this, PWusq);
 
-    return _possibleConstructorReturn(this, (pageDocsSearchVOne.__proto__ || Object.getPrototypeOf(pageDocsSearchVOne)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PWusq.__proto__ || Object.getPrototypeOf(PWusq)).apply(this, arguments));
   }
 
-  return pageDocsSearchVOne;
+  return PWusq;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsSearchVOne, _searchSoy2.default);
+_metalSoy2.default.register(PWusq, _gettingStartedSoy2.default);
 
-exports.default = pageDocsSearchVOne;
+exports.default = PWusq;
 
 /***/ })
-],[127]);
+],[125]);
