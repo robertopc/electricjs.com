@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12057,16 +12057,12 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsIndexVOne", function() { return pageDocsIndexVOne; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jDFyK", function() { return jDFyK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12078,15 +12074,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from pages.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsIndexVOne.
+ * @fileoverview Templates in namespace jDFyK.
  * @public
  */
 
-goog.module('pageDocsIndexVOne.incrementaldom');
+goog.module('jDFyK.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12107,11 +12103,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12122,157 +12116,193 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'main');
-    ie_open('main', null, null,
-        'class', 'content');
-      ie_open('div', null, null,
-          'class', 'docs');
-        $templateAlias1(soy.$$assignDefaults({elementClasses: 'topbar-docs'}, opt_data), null, opt_ijData);
-        $templateAlias2({searchPath: '/docs/v1_0/', section: opt_data.site.index.children['docs'].children['v1_0']}, null, opt_ijData);
-        $topics(opt_data, null, opt_ijData);
-      ie_close('div');
-    ie_close('main');
-  ie_close('div');
+  var param398 = function() {
+    ie_open('article', null, null,
+        'id', 'front_matter');
+      ie_open('h2');
+        itext('Front Matter');
+      ie_close('h2');
+      ie_open('p');
+        itext('All files in the ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' directory must have the following front matter declared at the beginning of the file.');
+      ie_close('p');
+      $templateAlias2({code: '---\ntitle: "Page Title"\ndescription: "Description."\n---', mode: 'text'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('title');
+        ie_close('code');
+        itext(' property will be used for auto-generated navigation elements and as the page\'s ');
+        ie_open('code');
+          itext('<title>');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('Both the ');
+        ie_open('code');
+          itext('title');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('description');
+        ie_close('code');
+        itext(' properties will be used for search functionality.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'soy_files');
+      ie_open('h2');
+        itext('Soy');
+      ie_close('h2');
+      ie_open('p');
+        itext('All files ending with the ');
+        ie_open('code');
+          itext('.soy');
+        ie_close('code');
+        itext(' extension will be rendered as soy templates.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('Note: all ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' properties must be unique across all files within the ');
+        ie_open('code');
+          itext('src');
+        ie_close('code');
+        itext(' directory, and every soy file must define a ');
+        ie_open('code');
+          itext('.render');
+        ie_close('code');
+        itext(' template.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Site/Page Data');
+      ie_close('h3');
+      ie_open('p');
+        itext('Every page is passed a ');
+        ie_open('code');
+          itext('site');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' param.');
+      ie_close('p');
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(' param represents the front matter of the current file.');
+      ie_close('p');
+      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('site');
+        ie_close('code');
+        itext(' param contains project meta data such as ');
+        ie_open('code');
+          itext('site.title');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('site.repo');
+        ie_close('code');
+        itext('. It also contains the structure of the entire site which can be used to generate navigation elements. This structure data is defined as the ');
+        ie_open('code');
+          itext('site.index');
+        ie_close('code');
+        itext(' property representing the index page of the project.');
+      ie_close('p');
+      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This data is pulled from the ');
+        ie_open('code');
+          itext('dist/site.json');
+        ie_close('code');
+        itext(' file. Additional properties can be added to this data by editing the ');
+        ie_open('code');
+          itext('src/site.json');
+        ie_close('code');
+        itext(' file.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'markdown_files');
+      ie_open('h2');
+        itext('Markdown');
+      ie_close('h2');
+      ie_open('p');
+        itext('Markdown files are intended for easier writing of documentation and content, these files are rendered to HTML and then wrapped in a ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' template and rendered along all ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' pages.');
+      ie_close('p');
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' is also auto-generated based on the file path, so it does not need to be declared at the top of the file.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\nlayout: "docs"\ntitle: "Page"\n---\n\n# Hello, World!', mode: 'markdown'}, null, opt_ijData);
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', 'https://developers.google.com/closure/templates/docs/commands#specialcharacters');
+          itext('google\'s documentation');
+        ie_close('a');
+        itext(' for more info.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
+  };
+  $templateAlias1(soy.$$assignDefaults({content: param398}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsIndexVOne.render';
+  $render.soyTemplateName = 'jDFyK.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $topics(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'sidebar-offset');
-    ie_open('div', null, null,
-        'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'col-xs-16');
-          ie_open('h1', null, null,
-              'class', 'docs-home-top-title');
-            itext('Docs');
-          ie_close('h1');
-          ie_open('p', null, null,
-              'class', 'docs-home-top-description');
-            itext('Start learning how to leverage the power of ');
-            var dyn21 = opt_data.site.title;
-            if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
-            itext('.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'container-hybrid docs-home-top-form');
-          ie_open('form', null, null,
-              'action', '/docs/v1_0/search.html',
-              'method', 'GET',
-              'enctype', 'multipart/form-data');
-            ie_open('div', null, null,
-                'class', 'row');
-              ie_open('div', null, null,
-                  'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
-                ie_open('div', null, null,
-                    'class', 'search');
-                  $templateAlias3({maxResults: 3, path: '/docs/v1_0/', placeholder: 'Search Docs'}, null, opt_ijData);
-                ie_close('div');
-              ie_close('div');
-            ie_close('div');
-          ie_close('form');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-    ie_open('div', null, null,
-        'class', 'docs-home-topics');
-      ie_open('div', null, null,
-          'class', 'container-hybrid');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-14 col-xs-offset-1 ');
-            ie_open('section', null, null,
-                'class', 'docs-home-middle');
-              ie_open('h2', null, null,
-                  'class', 'docs-home-middle-subtitle');
-                itext('Choose a Guide');
-              ie_close('h2');
-              ie_open('p', null, null,
-                  'class', 'docs-home-middle-description');
-                itext('Each one provide step by step coverage for every core feature.');
-              ie_close('p');
-            ie_close('section');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-md-12 col-md-offset-2 col-xs-16');
-            ie_open('div', null, null,
-                'class', 'row');
-              var childIdList546 = opt_data.page.childIds;
-              var childIdListLen546 = childIdList546.length;
-              for (var childIdIndex546 = 0; childIdIndex546 < childIdListLen546; childIdIndex546++) {
-                var childIdData546 = childIdList546[childIdIndex546];
-                var topic__soy536 = opt_data.page.children[childIdData546];
-                if (! topic__soy536.hidden) {
-                  ie_open('div', null, null,
-                      'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-                    ie_open('a', null, null,
-                        'class', 'topic radial-out',
-                        'href', topic__soy536.url);
-                      ie_open('div', null, null,
-                          'class', 'topic-icon');
-                        ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy536.icon);
-                      ie_close('div');
-                      ie_open('h3', null, null,
-                          'class', 'topic-title');
-                        var dyn22 = topic__soy536.title;
-                        if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
-                      ie_close('h3');
-                    ie_close('a');
-                  ie_close('div');
-                }
-              }
-            ie_close('div');
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.topics = $topics;
-if (goog.DEBUG) {
-  $topics.soyTemplateName = 'pageDocsIndexVOne.topics';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.topics.params = ["page","site"];
-exports.topics.types = {"page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsIndexVOne extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndexVOne, templates);
+class jDFyK extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(jDFyK, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -12312,13 +12342,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndexVOne, te
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12352,9 +12376,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _indexSoy = __webpack_require__(108);
+var _pagesSoy = __webpack_require__(104);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _pagesSoy2 = _interopRequireDefault(_pagesSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12364,23 +12388,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsIndexVOne = function (_Component) {
-  _inherits(pageDocsIndexVOne, _Component);
+var jDFyK = function (_Component) {
+  _inherits(jDFyK, _Component);
 
-  function pageDocsIndexVOne() {
-    _classCallCheck(this, pageDocsIndexVOne);
+  function jDFyK() {
+    _classCallCheck(this, jDFyK);
 
-    return _possibleConstructorReturn(this, (pageDocsIndexVOne.__proto__ || Object.getPrototypeOf(pageDocsIndexVOne)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (jDFyK.__proto__ || Object.getPrototypeOf(jDFyK)).apply(this, arguments));
   }
 
-  return pageDocsIndexVOne;
+  return jDFyK;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsIndexVOne, _indexSoy2.default);
+_metalSoy2.default.register(jDFyK, _pagesSoy2.default);
 
-exports.default = pageDocsIndexVOne;
+exports.default = jDFyK;
 
 /***/ })
-],[154]);
+],[148]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([6],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12052,21 +12052,12 @@ module.exports = function(module) {
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDocsIndexVOne", function() { return pageDocsIndexVOne; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dwuzR", function() { return dwuzR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12078,15 +12069,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from configuration.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageDocsIndexVOne.
+ * @fileoverview Templates in namespace dwuzR.
  * @public
  */
 
-goog.module('pageDocsIndexVOne.incrementaldom');
+goog.module('dwuzR.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12107,11 +12098,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias3 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Sidebar.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Topbar.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12122,157 +12111,462 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'main');
-    ie_open('main', null, null,
-        'class', 'content');
-      ie_open('div', null, null,
-          'class', 'docs');
-        $templateAlias1(soy.$$assignDefaults({elementClasses: 'topbar-docs'}, opt_data), null, opt_ijData);
-        $templateAlias2({searchPath: '/docs/v1_0/', section: opt_data.site.index.children['docs'].children['v1_0']}, null, opt_ijData);
-        $topics(opt_data, null, opt_ijData);
-      ie_close('div');
-    ie_close('main');
-  ie_close('div');
+  var param214 = function() {
+    ie_open('article', null, null,
+        'id', 'registering');
+      ie_open('h2');
+        itext('electric.config.js');
+      ie_close('h2');
+      ie_open('p');
+        itext('All options can be set in the ');
+        ie_open('code');
+          itext('electric.config.js');
+        ie_close('code');
+        itext(' file located in the root of your project. This file must export an Object, or a function that returns an Object.');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathDest: \'build\'\n};\n\n// or\n\nmodule.exports = function() {\n    return {\n        pathDest: \'build\'\n    };\n};', mode: 'text/javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'options');
+      ie_open('h2');
+        itext('Options');
+      ie_close('h2');
+      ie_open('h3');
+        itext('codeMirrorLanguages');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<languageName>');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('[\'xml\', \'css\', \'javascript\']');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('An Array of langauge names for syntax highlighting. See ');
+        ie_open('a', null, null,
+            'href', 'https://codemirror.net/mode/index.html');
+          itext('CodeMirror');
+        ie_close('a');
+        itext(' for a list of available languages.');
+      ie_close('p');
+      ie_open('h3');
+        itext('codeMirrorTheme');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('\'dracula\'');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Theme to be used by CodeMirror. See ');
+        ie_open('a', null, null,
+            'href', 'https://codemirror.net/demo/theme.html');
+          itext('CodeMirror');
+        ie_close('a');
+        itext(' for a list of available themes.');
+      ie_close('p');
+      ie_open('h3');
+        itext('deployOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('{ branch: \'wedeploy\' }');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Configuration options used by the ');
+        ie_open('code');
+          itext('deploy');
+        ie_close('code');
+        itext(' command. See ');
+        ie_open('a', null, null,
+            'href', 'https://www.npmjs.com/package/gulp-gh-pages#ghpages-options-');
+          itext('gulp-gh-pages');
+        ie_close('a');
+        itext(' for further configuration options.');
+      ie_close('p');
+      ie_open('h3');
+        itext('frontMatterHook');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('function');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Allows modifications of your project\'s front-matter before it\'s passed to the templates.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    frontMatterHook: function(data) {\n        data.someValue = \'Hello, World!\';\n\n        return data;\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this example the property ');
+        ie_open('code');
+          itext('someValue');
+        ie_close('code');
+        itext(' will be accessible via the ');
+        ie_open('code');
+          itext('$site');
+        ie_close('code');
+        itext(' parameter in your pages/templates.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\nlayout: "docs"\ntitle: "Page"\n---\n\n{$site.someValue}', mode: 'markdown'}, null, opt_ijData);
+      ie_open('h3');
+        itext('markdownOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('An Object Literal containing configuration options for ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/jonschlinkert/remarkable');
+          itext('Remarkable');
+        ie_close('a');
+        itext(' which is used to render Markdown files.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    markdownOptions: {\n        breaks: true\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/jonschlinkert/remarkable#options');
+          itext('Remarkable\'s documentation');
+        ie_close('a');
+        itext(' for list of options.');
+      ie_close('p');
+      ie_open('h3');
+        itext('markdownRenderer');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('function|Remarkable');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Allows complete customization over the markdown renderer. Value can either be instance of ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/jonschlinkert/remarkable');
+          itext('Remarkable');
+        ie_close('a');
+        itext(' or a function which receives the default instance of ');
+        ie_open('code');
+          itext('Remarkable');
+        ie_close('code');
+        itext(' as an argument.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: '// New Remarkable instance\nmodule.exports = {\n    markdownRenderer: new Remarkable()\n};\n\n// Function\nmodule.exports = {\n    markdownRenderer: function(md) {\n        md.core.ruler.enable([\n            \'abbr\'\n        ]);\n\n        return md;\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('h3');
+        itext('pathDest');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('dist');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The path that generated files are placed in.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathDest: \'build\'\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now all generated files will be placed in the ');
+        ie_open('code');
+          itext('build');
+        ie_close('code');
+        itext(' directory.');
+      ie_close('p');
+      ie_open('h3');
+        itext('pathSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('src');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The path where all source files are located.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathSrc: \'web\'\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' will look inside the ');
+        ie_open('code');
+          itext('web');
+        ie_close('code');
+        itext(' directory for all source files.');
+      ie_close('p');
+      ie_open('h3');
+        itext('metalComponents');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of ');
+        ie_open('code');
+          itext('npm');
+        ie_close('code');
+        itext(' modules that expose Metal components. These also must be added as ');
+        ie_open('code');
+          itext('npm');
+        ie_close('code');
+        itext(' dependencies in your package.json.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    metalComponents: [\'electric-components\']\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('The components found in the ');
+        ie_open('code');
+          itext('electric-components');
+        ie_close('code');
+        itext(' package will now be available to all ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' files in your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Note that every package listed in ');
+        ie_open('code');
+          itext('metalComponents');
+        ie_close('code');
+        itext(' must also be listed as a dependency in the project\'s ');
+        ie_open('code');
+          itext('package.json');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('h3');
+        itext('sassOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Config object passed to ');
+        ie_open('a', null, null,
+            'href', 'https://www.npmjs.com/package/gulp-sass');
+          itext('gulp-sass');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    sassOptions: {\n        includePaths: [\'node_modules/some-package/scss\']\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('h3');
+        itext('staticSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of glob patterns for static files found in the');
+        ie_open('code');
+          itext('options.pathSrc');
+        ie_close('code');
+        itext(' directory. These glob patterns target anything that isn\'t part of the build system (pages, layouts, styles, etc.).');
+      ie_close('p');
+      ie_open('p');
+        itext('Note: it is not recommended to overwrite this property.');
+      ie_close('p');
+      ie_open('h3');
+        itext('uglifyBundle');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('boolean');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('false');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Determines if bundle files are both minified and uglified.');
+      ie_close('p');
+      ie_open('p');
+        itext('When using ');
+        ie_open('code');
+          itext('electric-cli');
+        ie_close('code');
+        itext(', this option defaults to ');
+        ie_open('code');
+          itext('true');
+        ie_close('code');
+        itext(' during the ');
+        ie_open('code');
+          itext('deploy');
+        ie_close('code');
+        itext(' task, and defaults to ');
+        ie_open('code');
+          itext('false');
+        ie_close('code');
+        itext(' during all others.');
+      ie_close('p');
+      ie_open('p');
+        itext('Warning: enabling this option can significantly increase build times.');
+      ie_close('p');
+      ie_open('h3');
+        itext('vendorSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('[]');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of glob patterns for .css and .js files that should be included in the ');
+        ie_open('code');
+          itext('<head>');
+        ie_close('code');
+        itext(' of your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    vendorSrc: [\'node_modules/some-project/src/min.js\']\n};', mode: 'text/javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
+  };
+  $templateAlias1(soy.$$assignDefaults({content: param214}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageDocsIndexVOne.render';
+  $render.soyTemplateName = 'dwuzR.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $topics(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'sidebar-offset');
-    ie_open('div', null, null,
-        'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'col-xs-16');
-          ie_open('h1', null, null,
-              'class', 'docs-home-top-title');
-            itext('Docs');
-          ie_close('h1');
-          ie_open('p', null, null,
-              'class', 'docs-home-top-description');
-            itext('Start learning how to leverage the power of ');
-            var dyn21 = opt_data.site.title;
-            if (typeof dyn21 == 'function') dyn21(); else if (dyn21 != null) itext(dyn21);
-            itext('.');
-          ie_close('p');
-        ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null,
-          'class', 'row');
-        ie_open('div', null, null,
-            'class', 'container-hybrid docs-home-top-form');
-          ie_open('form', null, null,
-              'action', '/docs/v1_0/search.html',
-              'method', 'GET',
-              'enctype', 'multipart/form-data');
-            ie_open('div', null, null,
-                'class', 'row');
-              ie_open('div', null, null,
-                  'class', 'col-xs-14 col-xs-offset-1 col-md-10 col-md-offset-3 col-lg-6 col-lg-offset-5');
-                ie_open('div', null, null,
-                    'class', 'search');
-                  $templateAlias3({maxResults: 3, path: '/docs/v1_0/', placeholder: 'Search Docs'}, null, opt_ijData);
-                ie_close('div');
-              ie_close('div');
-            ie_close('div');
-          ie_close('form');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-    ie_open('div', null, null,
-        'class', 'docs-home-topics');
-      ie_open('div', null, null,
-          'class', 'container-hybrid');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-xs-14 col-xs-offset-1 ');
-            ie_open('section', null, null,
-                'class', 'docs-home-middle');
-              ie_open('h2', null, null,
-                  'class', 'docs-home-middle-subtitle');
-                itext('Choose a Guide');
-              ie_close('h2');
-              ie_open('p', null, null,
-                  'class', 'docs-home-middle-description');
-                itext('Each one provide step by step coverage for every core feature.');
-              ie_close('p');
-            ie_close('section');
-          ie_close('div');
-        ie_close('div');
-        ie_open('div', null, null,
-            'class', 'row');
-          ie_open('div', null, null,
-              'class', 'col-md-12 col-md-offset-2 col-xs-16');
-            ie_open('div', null, null,
-                'class', 'row');
-              var childIdList546 = opt_data.page.childIds;
-              var childIdListLen546 = childIdList546.length;
-              for (var childIdIndex546 = 0; childIdIndex546 < childIdListLen546; childIdIndex546++) {
-                var childIdData546 = childIdList546[childIdIndex546];
-                var topic__soy536 = opt_data.page.children[childIdData546];
-                if (! topic__soy536.hidden) {
-                  ie_open('div', null, null,
-                      'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
-                    ie_open('a', null, null,
-                        'class', 'topic radial-out',
-                        'href', topic__soy536.url);
-                      ie_open('div', null, null,
-                          'class', 'topic-icon');
-                        ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy536.icon);
-                      ie_close('div');
-                      ie_open('h3', null, null,
-                          'class', 'topic-title');
-                        var dyn22 = topic__soy536.title;
-                        if (typeof dyn22 == 'function') dyn22(); else if (dyn22 != null) itext(dyn22);
-                      ie_close('h3');
-                    ie_close('a');
-                  ie_close('div');
-                }
-              }
-            ie_close('div');
-          ie_close('div');
-        ie_close('div');
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.topics = $topics;
-if (goog.DEBUG) {
-  $topics.soyTemplateName = 'pageDocsIndexVOne.topics';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.topics.params = ["page","site"];
-exports.topics.types = {"page":"any","site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageDocsIndexVOne extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndexVOne, templates);
+class dwuzR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(dwuzR, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
 /* 109 */,
 /* 110 */,
 /* 111 */,
@@ -12311,14 +12605,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndexVOne, te
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12352,9 +12639,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _indexSoy = __webpack_require__(108);
+var _configurationSoy = __webpack_require__(99);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _configurationSoy2 = _interopRequireDefault(_configurationSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12364,23 +12651,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsIndexVOne = function (_Component) {
-  _inherits(pageDocsIndexVOne, _Component);
+var dwuzR = function (_Component) {
+  _inherits(dwuzR, _Component);
 
-  function pageDocsIndexVOne() {
-    _classCallCheck(this, pageDocsIndexVOne);
+  function dwuzR() {
+    _classCallCheck(this, dwuzR);
 
-    return _possibleConstructorReturn(this, (pageDocsIndexVOne.__proto__ || Object.getPrototypeOf(pageDocsIndexVOne)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (dwuzR.__proto__ || Object.getPrototypeOf(dwuzR)).apply(this, arguments));
   }
 
-  return pageDocsIndexVOne;
+  return dwuzR;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsIndexVOne, _indexSoy2.default);
+_metalSoy2.default.register(dwuzR, _configurationSoy2.default);
 
-exports.default = pageDocsIndexVOne;
+exports.default = dwuzR;
 
 /***/ })
-],[154]);
+],[147]);
