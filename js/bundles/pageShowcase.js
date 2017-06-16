@@ -1075,6 +1075,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -1082,10 +1089,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -1094,16 +1098,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -1119,7 +1152,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -1190,6 +1223,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -2903,7 +2941,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
         'class', 'topbar-logo-link',
         'href', '/');
       ie_void('span', null, null,
-          'class', 'topbar-logo-icon icon-16-hammer');
+          'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
         var dyn14 = opt_data.site.title;
@@ -10165,7 +10203,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL = 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.
@@ -10209,7 +10251,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function parse(opt_uri) {
 	if ((0, _metal.isFunction)(URL) && URL.length) {
-		return new URL(opt_uri);
+		var url = new URL(opt_uri);
+
+		// Safari Browsers will cap port to the max 16-bit unsigned integer (65535) instead
+		// of throwing a TypeError as per spec. It will still keep the port number in the
+		// href attribute, so we can use this mismatch to raise the expected exception.
+		if (url.port && url.href.indexOf(url.port) === -1) {
+			throw new TypeError(opt_uri + ' is not a valid URL');
+		}
+
+		return url;
 	} else {
 		return (0, _parseFromAnchor2.default)(opt_uri);
 	}
@@ -10235,6 +10286,11 @@ Object.defineProperty(exports, "__esModule", {
 function parseFromAnchor(opt_uri) {
 	var link = document.createElement('a');
 	link.href = opt_uri;
+
+	if (link.protocol === ':' || !/:/.test(link.href)) {
+		throw new TypeError(opt_uri + ' is not a valid URL');
+	}
+
 	return {
 		hash: link.hash,
 		hostname: link.hostname,
@@ -12126,12 +12182,12 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param179 = function() {
+  var param411 = function() {
     $header(opt_data, null, opt_ijData);
     $showcase(opt_data, null, opt_ijData);
     $templateAlias2(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param179}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param411}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -12153,13 +12209,13 @@ function $header(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('h1', null, null,
           'class', 'header-title');
-        var dyn15 = opt_data.page.title;
-        if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
+        var dyn17 = opt_data.page.title;
+        if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn16 = opt_data.page.description;
-        if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
+        var dyn18 = opt_data.page.description;
+        if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
       ie_close('h2');
     ie_close('div');
   ie_close('header');
@@ -12184,40 +12240,40 @@ function $showcase(opt_data, opt_ignored, opt_ijData) {
         'class', 'container');
       ie_open('div', null, null,
           'class', 'row');
-        var showcaseList209 = opt_data.site.showcase;
-        var showcaseListLen209 = showcaseList209.length;
-        for (var showcaseIndex209 = 0; showcaseIndex209 < showcaseListLen209; showcaseIndex209++) {
-          var showcaseData209 = showcaseList209[showcaseIndex209];
+        var showcaseList441 = opt_data.site.showcase;
+        var showcaseListLen441 = showcaseList441.length;
+        for (var showcaseIndex441 = 0; showcaseIndex441 < showcaseListLen441; showcaseIndex441++) {
+          var showcaseData441 = showcaseList441[showcaseIndex441];
           ie_open('div', null, null,
-              'class', 'col-sm-8');
+              'class', 'col-xs-16 col-md-8');
             ie_open('div', null, null,
                 'class', 'showcase-item');
               ie_open('img', null, null,
                   'class', 'showcase-img',
-                  'src', '/images/' + showcaseData209.image + '.png',
-                  'alt', showcaseData209.title);
+                  'src', '/images/' + showcaseData441.image + '.png',
+                  'alt', showcaseData441.title);
               ie_close('img');
               ie_open('p', null, null,
                   'class', 'showcase-title');
-                var dyn17 = showcaseData209.title;
-                if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
+                var dyn19 = showcaseData441.title;
+                if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
               ie_close('p');
               ie_open('p', null, null,
                   'class', 'showcase-description');
-                var dyn18 = showcaseData209.description;
-                if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
+                var dyn20 = showcaseData441.description;
+                if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
                 ie_open('br');
                 ie_close('br');
                 ie_open('br');
                 ie_close('br');
                 ie_open('a', null, null,
-                    'href', showcaseData209.site);
+                    'href', showcaseData441.site);
                   itext('Visit Site');
                 ie_close('a');
-                if (showcaseData209.repo) {
+                if (showcaseData441.repo) {
                   itext(' | ');
                   ie_open('a', null, null,
-                      'href', showcaseData209.repo);
+                      'href', showcaseData441.repo);
                     itext('Source Code');
                   ie_close('a');
                 }

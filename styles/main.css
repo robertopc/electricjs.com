@@ -10200,16 +10200,15 @@ li a:not([class]) {
   text-align: center; }
 
 .header {
-  padding: 100px 0 0; }
+  padding: 20px 0 0; }
+  @media (min-width: 960px) {
+    .header {
+      padding: 80px 0 0; } }
   .header .icon-16-flash {
     color: #FFCC00;
     display: block;
     margin: 0 0 20px;
-    font-size: 120px; }
-
-@media (min-width: 960px) {
-  .header {
-    padding: 175px 0 0; } }
+    font-size: 160px; }
 
 .about-title {
   font-size: 48px; }
@@ -10272,6 +10271,9 @@ li a:not([class]) {
 
 .showcase {
   margin-top: 60px; }
+  .showcase .row {
+    display: flex;
+    flex-wrap: wrap; }
 
 .showcase-item {
   margin-bottom: 40px; }

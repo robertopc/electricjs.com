@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([8],[
+webpackJsonppageComponent([4],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -1075,6 +1075,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -1082,10 +1089,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -1094,16 +1098,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -1119,7 +1152,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -1190,6 +1223,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -2903,7 +2941,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
         'class', 'topbar-logo-link',
         'href', '/');
       ie_void('span', null, null,
-          'class', 'topbar-logo-icon icon-16-hammer');
+          'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
         var dyn14 = opt_data.site.title;
@@ -10165,7 +10203,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL = 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.
@@ -10209,7 +10251,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function parse(opt_uri) {
 	if ((0, _metal.isFunction)(URL) && URL.length) {
-		return new URL(opt_uri);
+		var url = new URL(opt_uri);
+
+		// Safari Browsers will cap port to the max 16-bit unsigned integer (65535) instead
+		// of throwing a TypeError as per spec. It will still keep the port number in the
+		// href attribute, so we can use this mismatch to raise the expected exception.
+		if (url.port && url.href.indexOf(url.port) === -1) {
+			throw new TypeError(opt_uri + ' is not a valid URL');
+		}
+
+		return url;
 	} else {
 		return (0, _parseFromAnchor2.default)(opt_uri);
 	}
@@ -10235,6 +10286,11 @@ Object.defineProperty(exports, "__esModule", {
 function parseFromAnchor(opt_uri) {
 	var link = document.createElement('a');
 	link.href = opt_uri;
+
+	if (link.protocol === ':' || !/:/.test(link.href)) {
+		throw new TypeError(opt_uri + ' is not a valid URL');
+	}
+
 	return {
 		hash: link.hash,
 		hostname: link.hostname,
@@ -12059,12 +12115,16 @@ module.exports = function(module) {
 /* 103 */,
 /* 104 */,
 /* 105 */,
-/* 106 */
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rxceY", function() { return rxceY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lkifR", function() { return lkifR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12076,15 +12136,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from configuration.soy.
+// This file was automatically generated from metal-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace rxceY.
+ * @fileoverview Templates in namespace lkifR.
  * @public
  */
 
-goog.module('rxceY.incrementaldom');
+goog.module('lkifR.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12118,326 +12178,107 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param446 = function() {
+  var param580 = function() {
     ie_open('article', null, null,
-        'id', 'registering');
+        'id', 'creating');
       ie_open('h2');
-        itext('Registering');
+        itext('Creating Components');
       ie_close('h2');
       ie_open('p');
-        itext('All tasks are registered in the project\'s ');
-        ie_open('code');
-          itext('gulpfile.js');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      $templateAlias2({code: 'const gulp = require(\'gulp\');\nconst electric = require(\'electric\');\n\nelectric.registerTasks({\n    gulp: gulp\n});', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'options');
-      ie_open('h2');
-        itext('Options');
-      ie_close('h2');
-      ie_open('h3');
-        ie_open('code');
-          itext('registerTasks');
-        ie_close('code');
-      ie_close('h3');
-      ie_open('h4');
-        itext('gulp');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('true');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: Gulp instance');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('An instance of ');
-        ie_open('a', null, null,
-            'href', 'http://gulpjs.com/');
-          itext('gulp');
-        ie_close('a');
-        itext('.');
-      ie_close('p');
-      ie_open('h4');
-        itext('codeMirrorLanguages');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Array<languageName>');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('[\'xml\', \'css\', \'javascript\']');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('An Array of langauge names for syntax highlighting. See ');
-        ie_open('a', null, null,
-            'href', 'https://codemirror.net/mode/index.html');
-          itext('CodeMirror');
-        ie_close('a');
-        itext(' for a list of available languages.');
-      ie_close('p');
-      ie_open('h4');
-        itext('codeMirrorTheme');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('\'dracula\'');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Theme to be used by CodeMirror. See ');
-        ie_open('a', null, null,
-            'href', 'https://codemirror.net/demo/theme.html');
-          itext('CodeMirror');
-        ie_close('a');
-        itext(' for a list of available themes.');
-      ie_close('p');
-      ie_open('h4');
-        itext('markdownOptions');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Object');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('An Object Literal containing configuration options for ');
-        ie_open('a', null, null,
-            'href', 'https://github.com/jonschlinkert/remarkable');
-          itext('Remarkable');
-        ie_close('a');
-        itext(' which is used to render Markdown files.');
-      ie_close('p');
-      ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    markdownOptions: {\n        breaks: true\n    }\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('See ');
-        ie_open('a', null, null,
-            'href', 'https://github.com/jonschlinkert/remarkable#options');
-          itext('Remarkable\'s documentation');
-        ie_close('a');
-        itext(' for list of options.');
-      ie_close('p');
-      ie_open('h4');
-        itext('pathDest');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('dist');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The path that generated files are placed in.');
-      ie_close('p');
-      ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    pathDest: \'build\'\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now all generated files will be placed in the ');
-        ie_open('code');
-          itext('build');
-        ie_close('code');
-        itext(' directory.');
-      ie_close('p');
-      ie_open('h4');
-        itext('pathSrc');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('src');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The path where all source files are located.');
-      ie_close('p');
-      ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    pathSrc: \'web\'\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now ');
+        itext('One of the major benefits of ');
         ie_open('code');
           itext('electric');
         ie_close('code');
-        itext(' will look inside the ');
-        ie_open('code');
-          itext('web');
-        ie_close('code');
-        itext(' directory for all source files.');
-      ie_close('p');
-      ie_open('h4');
-        itext('plugins');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Array<String>');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Array of ');
-        ie_open('code');
-          itext('npm');
-        ie_close('code');
-        itext(' modules that expose Metal components.');
-      ie_close('p');
-      ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    plugins: [\'electric-components\']\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('The components found in the ');
-        ie_open('code');
-          itext('electric-components');
-        ie_close('code');
-        itext(' package will now be available to all ');
+        itext(' is the ability to create metal.js components and invoke them in your ');
         ie_open('code');
           itext('soy');
         ie_close('code');
-        itext(' files in your project.');
+        itext(' layouts and pages.');
       ie_close('p');
       ie_open('p');
-        itext('Note that every package listed in ');
+        itext('Components can exist anywhere in the ');
+        ie_open('code');
+          itext('src');
+        ie_close('code');
+        itext(' directory, for this example we will place them inside ');
+        ie_open('code');
+          itext('src/components');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 components\n    \u2502   \u251C\u2500\u2500 MyComponent.js\n    \u2502   \u2514\u2500\u2500 MyComponent.soy\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u2514\u2500\u2500 pages\n        \u2514\u2500\u2500 index.soy', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.soy');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace MyComponent&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>Hello, World!</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.js');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '\'use strict\';\n\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MyComponent.soy\';\n\nclass MyComponent extends Component {\n    attached() {\n        console.log(\'MyComponent attached!\');\n    }\n};\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now that you have the base component files, the ');
+        ie_open('code');
+          itext('MyComponent');
+        ie_close('code');
+        itext(' template simply needs to be rendered in a page/layout.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'rendering');
+      ie_open('h2');
+        itext('Rendering Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('To render a metal component in a page/layout, simply use the ');
+        ie_open('code');
+          itext('call');
+        ie_close('code');
+        itext(' command to render the ');
+        ie_open('code');
+          itext('.render');
+        ie_close('code');
+        itext(' template of the component.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>\n        {call MyComponent.render /}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you should see \'MyComponent attached!\' in the browser console.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'metal_sgg_components');
+      ie_open('h2');
+        itext('Electric Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/electric-components');
+          itext('electric-components');
+        ie_close('a');
+        itext(' package contains a number of components that are compatible with the site meta data, such as navigation and search components.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/configuration.html#options');
+          itext('configuration');
+        ie_close('a');
+        itext(' for information on adding ');
         ie_open('code');
           itext('plugins');
         ie_close('code');
-        itext(' must also be listed as a dependency in the project\'s ');
-        ie_open('code');
-          itext('package.json');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('h4');
-        itext('taskPrefix');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('String that is prefixed to every task exposed by ');
-        ie_open('code');
-          itext('electric');
-        ie_close('code');
-        itext('.');
+        itext(' to your project.');
       ie_close('p');
       ie_open('p');
-        itext('Example:');
+        itext('These components are invoked the same way as your own components.');
       ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    taskPrefix: \'electric:\'\n});', mode: 'javascript'}, null, opt_ijData);
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n * @param site\n */\n&#123;template .render&#125;\n    <div>\n        {call ElectricNavigation.render}\n            {param depth: 1 /}\n            {param section: $site.index /}\n        {/call}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
       ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('generate');
-        ie_close('code');
-        itext(' task will now be exposed as ');
-        ie_open('code');
-          itext('electric:generate');
-        ie_close('code');
-        itext('. This option allows you to implement ');
-        ie_open('code');
-          itext('electric');
-        ie_close('code');
-        itext(' in conjunction with other packages that expose ');
-        ie_open('code');
-          itext('gulp');
-        ie_close('code');
-        itext(' tasks without the risk of overwriting previously defined tasks.');
+        itext('This will render a list with all direct descendants of the index page.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -12449,11 +12290,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param446}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param580}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'rxceY.render';
+  $render.soyTemplateName = 'lkifR.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12463,18 +12304,14 @@ return exports;
 
 });
 
-class rxceY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rxceY, templates);
+class lkifR extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lkifR, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
 /* 111 */,
 /* 112 */,
 /* 113 */,
@@ -12519,9 +12356,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rxceY, templates);
 /* 152 */,
 /* 153 */,
 /* 154 */,
-/* 155 */,
-/* 156 */,
-/* 157 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12555,9 +12390,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _configurationSoy = __webpack_require__(106);
+var _metalComponentsSoy = __webpack_require__(110);
 
-var _configurationSoy2 = _interopRequireDefault(_configurationSoy);
+var _metalComponentsSoy2 = _interopRequireDefault(_metalComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12567,23 +12402,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var rxceY = function (_Component) {
-  _inherits(rxceY, _Component);
+var lkifR = function (_Component) {
+  _inherits(lkifR, _Component);
 
-  function rxceY() {
-    _classCallCheck(this, rxceY);
+  function lkifR() {
+    _classCallCheck(this, lkifR);
 
-    return _possibleConstructorReturn(this, (rxceY.__proto__ || Object.getPrototypeOf(rxceY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (lkifR.__proto__ || Object.getPrototypeOf(lkifR)).apply(this, arguments));
   }
 
-  return rxceY;
+  return lkifR;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(rxceY, _configurationSoy2.default);
+_metalSoy2.default.register(lkifR, _metalComponentsSoy2.default);
 
-exports.default = rxceY;
+exports.default = lkifR;
 
 /***/ })
-],[157]);
+],[155]);

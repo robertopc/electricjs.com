@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([3],[
+webpackJsonppageComponent([10],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -1075,6 +1075,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -1082,10 +1089,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -1094,16 +1098,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -1119,7 +1152,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -1190,6 +1223,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -2903,7 +2941,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
         'class', 'topbar-logo-link',
         'href', '/');
       ie_void('span', null, null,
-          'class', 'topbar-logo-icon icon-16-hammer');
+          'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
         var dyn14 = opt_data.site.title;
@@ -10165,7 +10203,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL = 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.
@@ -10209,7 +10251,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function parse(opt_uri) {
 	if ((0, _metal.isFunction)(URL) && URL.length) {
-		return new URL(opt_uri);
+		var url = new URL(opt_uri);
+
+		// Safari Browsers will cap port to the max 16-bit unsigned integer (65535) instead
+		// of throwing a TypeError as per spec. It will still keep the port number in the
+		// href attribute, so we can use this mismatch to raise the expected exception.
+		if (url.port && url.href.indexOf(url.port) === -1) {
+			throw new TypeError(opt_uri + ' is not a valid URL');
+		}
+
+		return url;
 	} else {
 		return (0, _parseFromAnchor2.default)(opt_uri);
 	}
@@ -10235,6 +10286,11 @@ Object.defineProperty(exports, "__esModule", {
 function parseFromAnchor(opt_uri) {
 	var link = document.createElement('a');
 	link.href = opt_uri;
+
+	if (link.protocol === ':' || !/:/.test(link.href)) {
+		throw new TypeError(opt_uri + ' is not a valid URL');
+	}
+
 	return {
 		hash: link.hash,
 		hostname: link.hostname,
@@ -12057,19 +12113,12 @@ module.exports = function(module) {
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rMZqP", function() { return rMZqP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IzIVo", function() { return IzIVo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12085,11 +12134,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace rMZqP.
+ * @fileoverview Templates in namespace IzIVo.
  * @public
  */
 
-goog.module('rMZqP.incrementaldom');
+goog.module('IzIVo.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12112,7 +12161,7 @@ var iattr = IncrementalDom.attr;
 
 var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12123,7 +12172,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param614 = function() {
+  var param363 = function() {
     ie_open('article', null, null,
         'id', 'front_matter');
       ie_open('h2');
@@ -12172,7 +12221,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' extension will be rendered as soy templates.');
       ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('Note: all ');
         ie_open('code');
@@ -12209,7 +12258,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' param represents the front matter of the current file.');
       ie_close('p');
-      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('The ');
         ie_open('code');
@@ -12229,7 +12278,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' property representing the index page of the project.');
       ie_close('p');
-      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('This data is pulled from the ');
         ie_open('code');
@@ -12284,11 +12333,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param614}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param363}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'rMZqP.render';
+  $render.soyTemplateName = 'IzIVo.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12298,14 +12347,21 @@ return exports;
 
 });
 
-class rMZqP extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rMZqP, templates);
+class IzIVo extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(IzIVo, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
@@ -12340,17 +12396,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rMZqP, templates);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */,
-/* 154 */,
-/* 155 */,
-/* 156 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12384,7 +12430,7 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _pagesSoy = __webpack_require__(111);
+var _pagesSoy = __webpack_require__(104);
 
 var _pagesSoy2 = _interopRequireDefault(_pagesSoy);
 
@@ -12396,23 +12442,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var rMZqP = function (_Component) {
-  _inherits(rMZqP, _Component);
+var IzIVo = function (_Component) {
+  _inherits(IzIVo, _Component);
 
-  function rMZqP() {
-    _classCallCheck(this, rMZqP);
+  function IzIVo() {
+    _classCallCheck(this, IzIVo);
 
-    return _possibleConstructorReturn(this, (rMZqP.__proto__ || Object.getPrototypeOf(rMZqP)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (IzIVo.__proto__ || Object.getPrototypeOf(IzIVo)).apply(this, arguments));
   }
 
-  return rMZqP;
+  return IzIVo;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(rMZqP, _pagesSoy2.default);
+_metalSoy2.default.register(IzIVo, _pagesSoy2.default);
 
-exports.default = rMZqP;
+exports.default = IzIVo;
 
 /***/ })
-],[156]);
+],[146]);

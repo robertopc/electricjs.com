@@ -1075,6 +1075,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -1082,10 +1089,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -1094,16 +1098,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -1119,7 +1152,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -1190,6 +1223,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -2903,7 +2941,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
         'class', 'topbar-logo-link',
         'href', '/');
       ie_void('span', null, null,
-          'class', 'topbar-logo-icon icon-16-hammer');
+          'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
         var dyn14 = opt_data.site.title;
@@ -10165,7 +10203,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL = 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.
@@ -10209,7 +10251,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function parse(opt_uri) {
 	if ((0, _metal.isFunction)(URL) && URL.length) {
-		return new URL(opt_uri);
+		var url = new URL(opt_uri);
+
+		// Safari Browsers will cap port to the max 16-bit unsigned integer (65535) instead
+		// of throwing a TypeError as per spec. It will still keep the port number in the
+		// href attribute, so we can use this mismatch to raise the expected exception.
+		if (url.port && url.href.indexOf(url.port) === -1) {
+			throw new TypeError(opt_uri + ' is not a valid URL');
+		}
+
+		return url;
 	} else {
 		return (0, _parseFromAnchor2.default)(opt_uri);
 	}
@@ -10235,6 +10286,11 @@ Object.defineProperty(exports, "__esModule", {
 function parseFromAnchor(opt_uri) {
 	var link = document.createElement('a');
 	link.href = opt_uri;
+
+	if (link.protocol === ':' || !/:/.test(link.href)) {
+		throw new TypeError(opt_uri + ' is not a valid URL');
+	}
+
 	return {
 		hash: link.hash,
 		hostname: link.hostname,
@@ -12157,8 +12213,8 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
           ie_open('p', null, null,
               'class', 'docs-home-top-description');
             itext('Start learning how to leverage the power of ');
-            var dyn19 = opt_data.site.title;
-            if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
+            var dyn15 = opt_data.site.title;
+            if (typeof dyn15 == 'function') dyn15(); else if (dyn15 != null) itext(dyn15);
             itext('.');
           ie_close('p');
         ie_close('div');
@@ -12223,26 +12279,26 @@ function $topics(opt_data, opt_ignored, opt_ijData) {
               'class', 'col-md-12 col-md-offset-2 col-xs-16');
             ie_open('div', null, null,
                 'class', 'row');
-              var childIdList330 = opt_data.page.childIds;
-              var childIdListLen330 = childIdList330.length;
-              for (var childIdIndex330 = 0; childIdIndex330 < childIdListLen330; childIdIndex330++) {
-                var childIdData330 = childIdList330[childIdIndex330];
-                var topic__soy320 = opt_data.page.children[childIdData330];
-                if (! topic__soy320.hidden) {
+              var childIdList295 = opt_data.page.childIds;
+              var childIdListLen295 = childIdList295.length;
+              for (var childIdIndex295 = 0; childIdIndex295 < childIdListLen295; childIdIndex295++) {
+                var childIdData295 = childIdList295[childIdIndex295];
+                var topic__soy285 = opt_data.page.children[childIdData295];
+                if (! topic__soy285.hidden) {
                   ie_open('div', null, null,
                       'class', 'col-md-8 col-md-offset-0 col-xs-14 col-xs-offset-1');
                     ie_open('a', null, null,
                         'class', 'topic radial-out',
-                        'href', topic__soy320.url);
+                        'href', topic__soy285.url);
                       ie_open('div', null, null,
                           'class', 'topic-icon');
                         ie_void('span', null, null,
-                            'class', 'icon-16-' + topic__soy320.icon);
+                            'class', 'icon-16-' + topic__soy285.icon);
                       ie_close('div');
                       ie_open('h3', null, null,
                           'class', 'topic-title');
-                        var dyn20 = topic__soy320.title;
-                        if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
+                        var dyn16 = topic__soy285.title;
+                        if (typeof dyn16 == 'function') dyn16(); else if (dyn16 != null) itext(dyn16);
                       ie_close('h3');
                     ie_close('a');
                   ie_close('div');
@@ -12323,9 +12379,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsIndex, templa
 /* 145 */,
 /* 146 */,
 /* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12390,4 +12444,4 @@ _metalSoy2.default.register(pageDocsIndex, _indexSoy2.default);
 exports.default = pageDocsIndex;
 
 /***/ })
-],[150]);
+],[148]);

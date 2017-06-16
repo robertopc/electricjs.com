@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([4],[
+webpackJsonppageComponent([14],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -1075,6 +1075,13 @@ var ElectricSearchBase = function (_Component) {
 			this.on('queryChanged', this.handleQueryChange_.bind(this));
 		}
 	}, {
+		key: 'matchesArrayField_',
+		value: function matchesArrayField_(value, query) {
+			return value.some(function (itemName) {
+				return itemName.indexOf(query) > -1;
+			});
+		}
+	}, {
 		key: 'matchesQuery_',
 		value: function matchesQuery_(data, query) {
 			var childrenOnly = this.childrenOnly,
@@ -1082,10 +1089,7 @@ var ElectricSearchBase = function (_Component) {
 
 			var path = this.path || location.pathname;
 
-			var content = data.content,
-			    description = data.description,
-			    hidden = data.hidden,
-			    title = data.title,
+			var hidden = data.hidden,
 			    url = data.url;
 
 
@@ -1094,16 +1098,45 @@ var ElectricSearchBase = function (_Component) {
 				return false;
 			}
 
-			content = content ? content.toLowerCase() : '';
-			description = description ? description.toLowerCase() : '';
-			title = title ? title.toLowerCase() : '';
+			return !hidden && this.matchesField_(data, query);
+		}
+	}, {
+		key: 'matchesField_',
+		value: function matchesField_(data, query) {
+			var _this2 = this;
 
-			return !hidden && (title.indexOf(query) > -1 || description.indexOf(query) > -1 || content.indexOf(query) > -1);
+			var fieldNames = this.fieldNames;
+
+
+			return fieldNames.some(function (fieldName) {
+				var value = data[fieldName];
+
+				var matches = false;
+
+				if (!value) {
+					return matches;
+				}
+
+				if (Array.isArray(value)) {
+					matches = _this2.matchesArrayField_(value, query);
+				} else if (typeof value === 'string') {
+					matches = _this2.matchesTextField_(value, query);
+				}
+
+				return matches;
+			});
+		}
+	}, {
+		key: 'matchesTextField_',
+		value: function matchesTextField_(value, query) {
+			value = value.toLowerCase();
+
+			return value.indexOf(query) > -1;
 		}
 	}, {
 		key: 'filterResults_',
 		value: function filterResults_(data, query) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var children = data.children,
 			    childIds = data.childIds;
@@ -1119,7 +1152,7 @@ var ElectricSearchBase = function (_Component) {
 				childIds.forEach(function (childId) {
 					var child = children[childId];
 
-					results = results.concat(_this2.filterResults_(child, query));
+					results = results.concat(_this3.filterResults_(child, query));
 				});
 			}
 
@@ -1190,6 +1223,11 @@ ElectricSearchBase.STATE = {
 
 	excludePath: {
 		validator: _metal2.default.isString
+	},
+
+	fieldNames: {
+		validator: _metal2.default.isArray,
+		value: ['content', 'description', 'tags', 'title']
 	},
 
 	maxResults: {
@@ -2903,7 +2941,7 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
         'class', 'topbar-logo-link',
         'href', '/');
       ie_void('span', null, null,
-          'class', 'topbar-logo-icon icon-16-hammer');
+          'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
         var dyn14 = opt_data.site.title;
@@ -10165,7 +10203,11 @@ var Uri = function () {
  */
 
 
-Uri.DEFAULT_PROTOCOL = 'http:';
+var isSecure = function isSecure() {
+	return typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.indexOf('https') === 0;
+};
+
+Uri.DEFAULT_PROTOCOL = isSecure() ? 'https:' : 'http:';
 
 /**
  * Hostname placeholder. Relevant to internal usage only.
@@ -10209,7 +10251,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 function parse(opt_uri) {
 	if ((0, _metal.isFunction)(URL) && URL.length) {
-		return new URL(opt_uri);
+		var url = new URL(opt_uri);
+
+		// Safari Browsers will cap port to the max 16-bit unsigned integer (65535) instead
+		// of throwing a TypeError as per spec. It will still keep the port number in the
+		// href attribute, so we can use this mismatch to raise the expected exception.
+		if (url.port && url.href.indexOf(url.port) === -1) {
+			throw new TypeError(opt_uri + ' is not a valid URL');
+		}
+
+		return url;
 	} else {
 		return (0, _parseFromAnchor2.default)(opt_uri);
 	}
@@ -10235,6 +10286,11 @@ Object.defineProperty(exports, "__esModule", {
 function parseFromAnchor(opt_uri) {
 	var link = document.createElement('a');
 	link.href = opt_uri;
+
+	if (link.protocol === ':' || !/:/.test(link.href)) {
+		throw new TypeError(opt_uri + ' is not a valid URL');
+	}
+
 	return {
 		hash: link.hash,
 		hostname: link.hostname,
@@ -12053,22 +12109,12 @@ module.exports = function(module) {
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YLgwZ", function() { return YLgwZ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VUKav", function() { return VUKav; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12080,15 +12126,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from metal-components.soy.
+// This file was automatically generated from getting-started.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace YLgwZ.
+ * @fileoverview Templates in namespace VUKav.
  * @public
  */
 
-goog.module('YLgwZ.incrementaldom');
+goog.module('VUKav.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12111,7 +12157,7 @@ var iattr = IncrementalDom.attr;
 
 var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12122,107 +12168,168 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param580 = function() {
+  var param238 = function() {
     ie_open('article', null, null,
-        'id', 'creating');
+        'id', 'electricCli');
       ie_open('h2');
-        itext('Creating Components');
+        itext('Electric CLI');
       ie_close('h2');
+      ie_open('h3');
+        itext('Install');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g electric-cli', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Initialize Project');
+      ie_close('h3');
+      $templateAlias2({code: 'electric init', mode: 'text/x-sh'}, null, opt_ijData);
       ie_open('p');
-        itext('One of the major benefits of ');
+        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
         ie_open('code');
           itext('electric');
         ie_close('code');
-        itext(' is the ability to create metal.js components and invoke them in your ');
-        ie_open('code');
-          itext('soy');
-        ie_close('code');
-        itext(' layouts and pages.');
+        itext(' project.');
       ie_close('p');
+      ie_open('h3');
+        itext('Run');
+      ie_close('h3');
+      $templateAlias2({code: 'electric run', mode: 'text/x-sh'}, null, opt_ijData);
       ie_open('p');
-        itext('Components can exist anywhere in the ');
-        ie_open('code');
-          itext('src');
-        ie_close('code');
-        itext(' directory, for this example we will place them inside ');
-        ie_open('code');
-          itext('src/components');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      $templateAlias2({code: '.\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 components\n    \u2502   \u251C\u2500\u2500 MyComponent.js\n    \u2502   \u2514\u2500\u2500 MyComponent.soy\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u2514\u2500\u2500 pages\n        \u2514\u2500\u2500 index.soy', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        ie_open('code');
-          itext('MyComponent.soy');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '&#123;namespace MyComponent&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>Hello, World!</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      ie_open('p');
-        ie_open('code');
-          itext('MyComponent.js');
-        ie_close('code');
-      ie_close('p');
-      $templateAlias2({code: '\'use strict\';\n\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MyComponent.soy\';\n\nclass MyComponent extends Component {\n    attached() {\n        console.log(\'MyComponent attached!\');\n    }\n};\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now that you have the base component files, the ');
-        ie_open('code');
-          itext('MyComponent');
-        ie_close('code');
-        itext(' template simply needs to be rendered in a page/layout.');
+        itext('This will build your newly created project and start up a development server along with a watch task for quickly making changes.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'rendering');
+        'id', 'structure');
       ie_open('h2');
-        itext('Rendering Components');
+        itext('Project Structure');
       ie_close('h2');
       ie_open('p');
-        itext('To render a metal component in a page/layout, simply use the ');
+        itext('Here is a basic example of an ');
         ie_open('code');
-          itext('call');
+          itext('electric');
         ie_close('code');
-        itext(' command to render the ');
-        ie_open('code');
-          itext('.render');
-        ie_close('code');
-        itext(' template of the component.');
+        itext(' project.');
       ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>\n        {call MyComponent.render /}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now you should see \'MyComponent attached!\' in the browser console.');
-      ie_close('p');
+      $templateAlias2({code: '.\n\u251C\u2500\u2500 electric.config.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'text/javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'metal_sgg_components');
+        'id', 'site_json');
       ie_open('h2');
-        itext('Electric Components');
+        itext('electric.config.js');
       ie_close('h2');
       ie_open('p');
-        itext('The ');
-        ie_open('a', null, null,
-            'href', 'https://github.com/liferay/electric-components');
-          itext('electric-components');
-        ie_close('a');
-        itext(' package contains a number of components that are compatible with the site meta data, such as navigation and search components.');
+        itext('This file provides configuration options to electric. It must always be located in the root directory of your project.');
       ie_close('p');
       ie_open('p');
         itext('See ');
         ie_open('a', null, null,
-            'href', '/docs/configuration.html#options');
+            'href', '/docs/configuration.html');
           itext('configuration');
         ie_close('a');
-        itext(' for information on adding ');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('site.json');
+      ie_close('h2');
+      ie_open('p');
+        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'layouts');
+      ie_open('h2');
+        itext('Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('The file structure of ');
         ie_open('code');
-          itext('plugins');
+          itext('layouts');
         ie_close('code');
-        itext(' to your project.');
+        itext(' is flexible, as soy uses the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' of every file as an identifier.');
       ie_close('p');
       ie_open('p');
-        itext('These components are invoked the same way as your own components.');
+        itext('All layout files must be a soy template, and the only required layout is');
+        ie_open('code');
+          itext('base.soy');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n * @param site\n */\n&#123;template .render&#125;\n    <div>\n        {call ElectricNavigation.render}\n            {param depth: 1 /}\n            {param section: $site.index /}\n        {/call}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
       ie_open('p');
-        itext('This will render a list with all direct descendants of the index page.');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/layouts.html');
+          itext('layouts');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'pages');
+      ie_open('h2');
+        itext('Pages');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every file in ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' with a ');
+        ie_open('code');
+          itext('.soy');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('.md');
+        ie_close('code');
+        itext(' extension is rendered to HTML during the ');
+        ie_open('code');
+          itext('build');
+        ie_close('code');
+        itext(' command.');
+      ie_close('p');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' determines the urls of your pages. For the above example, the ');
+        ie_open('code');
+          itext('child.md');
+        ie_close('code');
+        itext(' file will be located at ');
+        ie_open('code');
+          itext('/docs/parent/child.html');
+        ie_close('code');
+        itext(' after building.');
+      ie_close('p');
+      ie_open('p');
+        itext('Pages named ');
+        ie_open('code');
+          itext('index');
+        ie_close('code');
+        itext(' will be located at the path of it\'s parent directory, so ');
+        ie_open('code');
+          itext('pages/docs/index.soy');
+        ie_close('code');
+        itext(' will be available at ');
+        ie_open('code');
+          itext('/docs/');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/pages.html');
+          itext('pages');
+        ie_close('a');
+        itext(' for more information.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -12234,11 +12341,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param580}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param238}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'YLgwZ.render';
+  $render.soyTemplateName = 'VUKav.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12248,14 +12355,24 @@ return exports;
 
 });
 
-class YLgwZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YLgwZ, templates);
+class VUKav extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VUKav, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
 /* 111 */,
 /* 112 */,
 /* 113 */,
@@ -12292,13 +12409,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(YLgwZ, templates);
 /* 144 */,
 /* 145 */,
 /* 146 */,
-/* 147 */,
-/* 148 */,
-/* 149 */,
-/* 150 */,
-/* 151 */,
-/* 152 */,
-/* 153 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12332,9 +12443,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _metalComponentsSoy = __webpack_require__(110);
+var _gettingStartedSoy = __webpack_require__(100);
 
-var _metalComponentsSoy2 = _interopRequireDefault(_metalComponentsSoy);
+var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12344,23 +12455,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var YLgwZ = function (_Component) {
-  _inherits(YLgwZ, _Component);
+var VUKav = function (_Component) {
+  _inherits(VUKav, _Component);
 
-  function YLgwZ() {
-    _classCallCheck(this, YLgwZ);
+  function VUKav() {
+    _classCallCheck(this, VUKav);
 
-    return _possibleConstructorReturn(this, (YLgwZ.__proto__ || Object.getPrototypeOf(YLgwZ)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (VUKav.__proto__ || Object.getPrototypeOf(VUKav)).apply(this, arguments));
   }
 
-  return YLgwZ;
+  return VUKav;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(YLgwZ, _metalComponentsSoy2.default);
+_metalSoy2.default.register(VUKav, _gettingStartedSoy2.default);
 
-exports.default = YLgwZ;
+exports.default = VUKav;
 
 /***/ })
-],[153]);
+],[147]);
