@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0],[
+webpackJsonppageComponent([7],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12119,16 +12119,12 @@ module.exports = Uri;
 /* 107 */,
 /* 108 */,
 /* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageShowcase", function() { return pageShowcase; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QQoHS", function() { return QQoHS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12140,15 +12136,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from metal-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageShowcase.
+ * @fileoverview Templates in namespace QQoHS.
  * @public
  */
 
-goog.module('pageShowcase.incrementaldom');
+goog.module('QQoHS.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12169,9 +12165,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Footer.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
 
 
 /**
@@ -12182,133 +12178,144 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param411 = function() {
-    $header(opt_data, null, opt_ijData);
-    $showcase(opt_data, null, opt_ijData);
-    $templateAlias2(null, null, opt_ijData);
+  var param580 = function() {
+    ie_open('article', null, null,
+        'id', 'creating');
+      ie_open('h2');
+        itext('Creating Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('One of the major benefits of ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' is the ability to create metal.js components and invoke them in your ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' layouts and pages.');
+      ie_close('p');
+      ie_open('p');
+        itext('Components can exist anywhere in the ');
+        ie_open('code');
+          itext('src');
+        ie_close('code');
+        itext(' directory, for this example we will place them inside ');
+        ie_open('code');
+          itext('src/components');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 components\n    \u2502   \u251C\u2500\u2500 MyComponent.js\n    \u2502   \u2514\u2500\u2500 MyComponent.soy\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u2514\u2500\u2500 pages\n        \u2514\u2500\u2500 index.soy', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.soy');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace MyComponent&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>Hello, World!</div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.js');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '\'use strict\';\n\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MyComponent.soy\';\n\nclass MyComponent extends Component {\n    attached() {\n        console.log(\'MyComponent attached!\');\n    }\n};\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now that you have the base component files, the ');
+        ie_open('code');
+          itext('MyComponent');
+        ie_close('code');
+        itext(' template simply needs to be rendered in a page/layout.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'rendering');
+      ie_open('h2');
+        itext('Rendering Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('To render a metal component in a page/layout, simply use the ');
+        ie_open('code');
+          itext('call');
+        ie_close('code');
+        itext(' command to render the ');
+        ie_open('code');
+          itext('.render');
+        ie_close('code');
+        itext(' template of the component.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>\n        {call MyComponent.render /}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you should see \'MyComponent attached!\' in the browser console.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'metal_sgg_components');
+      ie_open('h2');
+        itext('Electric Components');
+      ie_close('h2');
+      ie_open('p');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/electric-components');
+          itext('electric-components');
+        ie_close('a');
+        itext(' package contains a number of components that are compatible with the site meta data, such as navigation and search components.');
+      ie_close('p');
+      ie_open('p');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/configuration.html#options');
+          itext('configuration');
+        ie_close('a');
+        itext(' for information on adding ');
+        ie_open('code');
+          itext('plugins');
+        ie_close('code');
+        itext(' to your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('These components are invoked the same way as your own components.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n * @param site\n */\n&#123;template .render&#125;\n    <div>\n        {call ElectricNavigation.render}\n            {param depth: 1 /}\n            {param section: $site.index /}\n        {/call}\n    </div>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will render a list with all direct descendants of the index page.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param411}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param580}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageShowcase.render';
+  $render.soyTemplateName = 'QQoHS.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn17 = opt_data.page.title;
-        if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn18 = opt_data.page.description;
-        if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
-      ie_close('h2');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageShowcase.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $showcase(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'showcase');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        var showcaseList441 = opt_data.site.showcase;
-        var showcaseListLen441 = showcaseList441.length;
-        for (var showcaseIndex441 = 0; showcaseIndex441 < showcaseListLen441; showcaseIndex441++) {
-          var showcaseData441 = showcaseList441[showcaseIndex441];
-          ie_open('div', null, null,
-              'class', 'col-xs-16 col-md-8');
-            ie_open('div', null, null,
-                'class', 'showcase-item');
-              ie_open('img', null, null,
-                  'class', 'showcase-img',
-                  'src', '/images/' + showcaseData441.image + '.png',
-                  'alt', showcaseData441.title);
-              ie_close('img');
-              ie_open('p', null, null,
-                  'class', 'showcase-title');
-                var dyn19 = showcaseData441.title;
-                if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
-              ie_close('p');
-              ie_open('p', null, null,
-                  'class', 'showcase-description');
-                var dyn20 = showcaseData441.description;
-                if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
-                ie_open('br');
-                ie_close('br');
-                ie_open('br');
-                ie_close('br');
-                ie_open('a', null, null,
-                    'href', showcaseData441.site);
-                  itext('Visit Site');
-                ie_close('a');
-                if (showcaseData441.repo) {
-                  itext(' | ');
-                  ie_open('a', null, null,
-                      'href', showcaseData441.repo);
-                    itext('Source Code');
-                  ie_close('a');
-                }
-              ie_close('p');
-            ie_close('div');
-          ie_close('div');
-        }
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.showcase = $showcase;
-if (goog.DEBUG) {
-  $showcase.soyTemplateName = 'pageShowcase.showcase';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["page"];
-exports.header.types = {"page":"any"};
-exports.showcase.params = ["site"];
-exports.showcase.types = {"site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageShowcase extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageShowcase, templates);
+class QQoHS extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QQoHS, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
 /* 115 */,
 /* 116 */,
 /* 117 */,
@@ -12318,14 +12325,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageShowcase, templat
 /* 121 */,
 /* 122 */,
 /* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12359,9 +12359,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _indexSoy = __webpack_require__(114);
+var _metalComponentsSoy = __webpack_require__(110);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _metalComponentsSoy2 = _interopRequireDefault(_metalComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12371,23 +12371,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageShowcase = function (_Component) {
-  _inherits(pageShowcase, _Component);
+var QQoHS = function (_Component) {
+  _inherits(QQoHS, _Component);
 
-  function pageShowcase() {
-    _classCallCheck(this, pageShowcase);
+  function QQoHS() {
+    _classCallCheck(this, QQoHS);
 
-    return _possibleConstructorReturn(this, (pageShowcase.__proto__ || Object.getPrototypeOf(pageShowcase)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (QQoHS.__proto__ || Object.getPrototypeOf(QQoHS)).apply(this, arguments));
   }
 
-  return pageShowcase;
+  return QQoHS;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageShowcase, _indexSoy2.default);
+_metalSoy2.default.register(QQoHS, _metalComponentsSoy2.default);
 
-exports.default = pageShowcase;
+exports.default = QQoHS;
 
 /***/ })
-],[131]);
+],[124]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([0],[
+webpackJsonppageComponent([11],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12111,24 +12111,12 @@ module.exports = Uri;
 /* 99 */,
 /* 100 */,
 /* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageShowcase", function() { return pageShowcase; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "qxBkq", function() { return qxBkq; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12140,15 +12128,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from index.soy.
+// This file was automatically generated from layouts.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace pageShowcase.
+ * @fileoverview Templates in namespace qxBkq.
  * @public
  */
 
-goog.module('pageShowcase.incrementaldom');
+goog.module('qxBkq.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12169,9 +12157,9 @@ var ie_open_end = IncrementalDom.elementOpenEnd;
 var itext = IncrementalDom.text;
 var iattr = IncrementalDom.attr;
 
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('Footer.incrementaldom', 'render');
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('main.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12182,150 +12170,261 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param411 = function() {
-    $header(opt_data, null, opt_ijData);
-    $showcase(opt_data, null, opt_ijData);
-    $templateAlias2(null, null, opt_ijData);
+  var param300 = function() {
+    ie_open('article', null, null,
+        'id', 'base');
+      ie_open('h2');
+        itext('Base Layout');
+      ie_close('h2');
+      ie_open('p');
+        itext('All projects must have a ');
+        ie_open('code');
+          itext('layouts/base.soy');
+        ie_close('code');
+        itext(' file. This file is responsible for the HTML boilerplate of your site. Every page will be rendered with this layout.');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace base&#125;\n\n/**\n * @param content\n * @param page\n * @param serialized\n * @param site\n */\n&#123;template .render private="true"&#125;\n<!DOCTYPE html>\n<html lang="en">\n    <head>\n        <meta charset="UTF-8">\n        <meta content="minimum-scale=1.0, width=device-width" name="viewport">\n        <meta name="description" content="{$page.description ?: \'\'}">\n\n        <title>{$page.title} - {$site.title}</title>\n\n        <!-- inject:css -->\n        <!-- endinject -->\n\n        <link rel="stylesheet" href="/styles/main.css">\n\n        <!-- inject:js -->\n        <!-- endinject -->\n    </head>\n    <body>\n        <!-- inject:metal:js -->\n            <div>\n                {$content}\n            </div>\n        <!-- endinject -->\n\n        <!-- inject:codemirror:js -->\n        <!-- endinject -->\n    </body>\n</html>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This layout can be editted to fit the needs of your project, but it must use ');
+        ie_open('code');
+          itext('base');
+        ie_close('code');
+        itext(' as the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(', and it must include the ');
+        ie_open('code');
+          itext('{$content}');
+        ie_close('code');
+        itext(' variable which renders the content of each page.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Inject Tags');
+      ie_close('h3');
+      ie_open('p');
+        itext('Inside the ');
+        ie_open('code');
+          itext('base.soy');
+        ie_close('code');
+        itext(' template there are multiple inject tags that are used by electric to import resources and scripts.');
+      ie_close('p');
+      ie_open('h4');
+        ie_open('code');
+          itext('inject:css');
+        ie_close('code');
+        itext('/');
+        ie_open('code');
+          itext('inject:js');
+        ie_close('code');
+      ie_close('h4');
+      ie_open('p');
+        itext('These tags are used to inject ');
+        ie_open('code');
+          itext('link');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('script');
+        ie_close('code');
+        itext(' tags for all thirdparty resources located in ');
+        ie_open('code');
+          itext('dist/vendor');
+        ie_close('code');
+        itext('.');
+      ie_close('p');
+      ie_open('h4');
+        ie_open('code');
+          itext('inject:metal:js');
+        ie_close('code');
+      ie_close('h4');
+      ie_open('p');
+        itext('During the ');
+        ie_open('code');
+          itext('generate');
+        ie_close('code');
+        itext(' task they are replaced with the necessary code for automatically invoking Metal components that have been implemented in your project\'s ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' files.');
+      ie_close('p');
+      ie_open('p');
+        itext('Note: these tags only need to be included in the ');
+        ie_open('code');
+          itext('base');
+        ie_close('code');
+        itext(' template.');
+      ie_close('p');
+      ie_open('p');
+        itext('The injected code is what implements the ');
+        ie_open('code');
+          itext('serialized');
+        ie_close('code');
+        itext(' param that is defined at the start of the template. ');
+        ie_open('code');
+          itext('serialized');
+        ie_close('code');
+        itext(' is stringified meta data that Metal consumes to render each page.');
+      ie_close('p');
+      ie_open('h4');
+        ie_open('code');
+          itext('inject:codemirror:js');
+        ie_close('code');
+      ie_close('h4');
+      ie_open('p');
+        itext('CodeMirror is responsible for Electric\'s built in syntax highlighting. This script locates all code examples and applies the appropriate syntax highlighting.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'sub');
+      ie_open('h2');
+        itext('Sub Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('Additional layouts can be created in the ');
+        ie_open('code');
+          itext('layouts');
+        ie_close('code');
+        itext(' folder of your project. These layouts are simply ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' templates that can be implemented by individual pages.');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace docs&#125;\n\n/**\n * @param content\n * @param elementClasses\n * @param page\n * @param site\n */\n&#123;template .render&#125;\n    <div class="{$elementClasses ?: \'main\'}">\n        <div class="topper">\n            <h1>{$site.title}</h1>\n        </div>\n\n        <div class="content">\n            <h2>{$page.title}</h2>\n\n            {$content}\n        </div>\n    </div>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This template can be implemented by both ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' and ');
+        ie_open('code');
+          itext('markdown');
+        ie_close('code');
+        itext(' files. The following example implements the ');
+        ie_open('code');
+          itext('docs');
+        ie_close('code');
+        itext(' layout.');
+      ie_close('p');
+      ie_open('h3');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' example.');
+      ie_close('h3');
+      ie_open('p');
+        itext('Sub layouts are rendered using soy\'s ');
+        ie_open('a', null, null,
+            'href', 'https://developers.google.com/closure/templates/docs/commands#call');
+          itext('call command');
+        ie_close('a');
+        itext('.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    {call docs.render data="all"}\n        {param content kind="html"}\n            <span>Hello, World!</span>\n        {/param}\n    {/call}\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('The ');
+        ie_open('code');
+          itext('data="all"');
+        ie_close('code');
+        itext(' property needs to be set if the layout in question needs to implement any of the global params (');
+        ie_open('code');
+          itext('site');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('page');
+        ie_close('code');
+        itext(').');
+      ie_close('p');
+      ie_open('h3');
+        ie_open('code');
+          itext('markdown');
+        ie_close('code');
+        itext(' example.');
+      ie_close('h3');
+      ie_open('p');
+        itext('Markdown implementation doesn\'t require any ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' code, rather it leverages the front matter ');
+        ie_open('code');
+          itext('layout');
+        ie_close('code');
+        itext(' property to determine the layout.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\nlayout: "docs"\ntitle: "Page"\n---\n\n# Hello, World!', mode: 'markdown'}, null, opt_ijData);
+      ie_open('p');
+        itext('By specifying ');
+        ie_open('code');
+          itext('layout: "docs"');
+        ie_close('code');
+        itext(', the generator will look for a soy template in the layouts directory with the ');
+        ie_open('code');
+          itext('docs');
+        ie_close('code');
+        itext(' namespace.');
+      ie_close('p');
+      ie_open('p');
+        itext('See the section on ');
+        ie_open('a', null, null,
+            'href', '/docs/configuration.html#options');
+          itext('configuration');
+        ie_close('a');
+        itext(' for info on configuring the markdown engine.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.page.title);
+    ie_close('input');
+    ie_open('input', null, null,
+        'type', 'hidden',
+        'value', opt_data.site.title);
+    ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param411}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param300}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'pageShowcase.render';
+  $render.soyTemplateName = 'qxBkq.render';
 }
 
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $header(opt_data, opt_ignored, opt_ijData) {
-  ie_open('header', null, null,
-      'class', 'header');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('h1', null, null,
-          'class', 'header-title');
-        var dyn17 = opt_data.page.title;
-        if (typeof dyn17 == 'function') dyn17(); else if (dyn17 != null) itext(dyn17);
-      ie_close('h1');
-      ie_open('h2', null, null,
-          'class', 'header-subtitle');
-        var dyn18 = opt_data.page.description;
-        if (typeof dyn18 == 'function') dyn18(); else if (dyn18 != null) itext(dyn18);
-      ie_close('h2');
-    ie_close('div');
-  ie_close('header');
-}
-exports.header = $header;
-if (goog.DEBUG) {
-  $header.soyTemplateName = 'pageShowcase.header';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $showcase(opt_data, opt_ignored, opt_ijData) {
-  ie_open('div', null, null,
-      'class', 'showcase');
-    ie_open('div', null, null,
-        'class', 'container');
-      ie_open('div', null, null,
-          'class', 'row');
-        var showcaseList441 = opt_data.site.showcase;
-        var showcaseListLen441 = showcaseList441.length;
-        for (var showcaseIndex441 = 0; showcaseIndex441 < showcaseListLen441; showcaseIndex441++) {
-          var showcaseData441 = showcaseList441[showcaseIndex441];
-          ie_open('div', null, null,
-              'class', 'col-xs-16 col-md-8');
-            ie_open('div', null, null,
-                'class', 'showcase-item');
-              ie_open('img', null, null,
-                  'class', 'showcase-img',
-                  'src', '/images/' + showcaseData441.image + '.png',
-                  'alt', showcaseData441.title);
-              ie_close('img');
-              ie_open('p', null, null,
-                  'class', 'showcase-title');
-                var dyn19 = showcaseData441.title;
-                if (typeof dyn19 == 'function') dyn19(); else if (dyn19 != null) itext(dyn19);
-              ie_close('p');
-              ie_open('p', null, null,
-                  'class', 'showcase-description');
-                var dyn20 = showcaseData441.description;
-                if (typeof dyn20 == 'function') dyn20(); else if (dyn20 != null) itext(dyn20);
-                ie_open('br');
-                ie_close('br');
-                ie_open('br');
-                ie_close('br');
-                ie_open('a', null, null,
-                    'href', showcaseData441.site);
-                  itext('Visit Site');
-                ie_close('a');
-                if (showcaseData441.repo) {
-                  itext(' | ');
-                  ie_open('a', null, null,
-                      'href', showcaseData441.repo);
-                    itext('Source Code');
-                  ie_close('a');
-                }
-              ie_close('p');
-            ie_close('div');
-          ie_close('div');
-        }
-      ie_close('div');
-    ie_close('div');
-  ie_close('div');
-}
-exports.showcase = $showcase;
-if (goog.DEBUG) {
-  $showcase.soyTemplateName = 'pageShowcase.showcase';
-}
-
-exports.render.params = ["site"];
-exports.render.types = {"site":"any"};
-exports.header.params = ["page"];
-exports.header.types = {"page":"any"};
-exports.showcase.params = ["site"];
-exports.showcase.types = {"site":"any"};
+exports.render.params = ["page","site"];
+exports.render.types = {"page":"any","site":"any"};
 templates = exports;
 return exports;
 
 });
 
-class pageShowcase extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageShowcase, templates);
+class qxBkq extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(qxBkq, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
 /* 115 */,
 /* 116 */,
 /* 117 */,
 /* 118 */,
 /* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12359,9 +12458,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _indexSoy = __webpack_require__(114);
+var _layoutsSoy = __webpack_require__(102);
 
-var _indexSoy2 = _interopRequireDefault(_indexSoy);
+var _layoutsSoy2 = _interopRequireDefault(_layoutsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12371,23 +12470,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageShowcase = function (_Component) {
-  _inherits(pageShowcase, _Component);
+var qxBkq = function (_Component) {
+  _inherits(qxBkq, _Component);
 
-  function pageShowcase() {
-    _classCallCheck(this, pageShowcase);
+  function qxBkq() {
+    _classCallCheck(this, qxBkq);
 
-    return _possibleConstructorReturn(this, (pageShowcase.__proto__ || Object.getPrototypeOf(pageShowcase)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (qxBkq.__proto__ || Object.getPrototypeOf(qxBkq)).apply(this, arguments));
   }
 
-  return pageShowcase;
+  return qxBkq;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageShowcase, _indexSoy2.default);
+_metalSoy2.default.register(qxBkq, _layoutsSoy2.default);
 
-exports.default = pageShowcase;
+exports.default = qxBkq;
 
 /***/ })
-],[131]);
+],[120]);
