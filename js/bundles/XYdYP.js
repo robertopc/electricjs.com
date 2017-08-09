@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([10],[
+webpackJsonppageComponent([12],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -12109,12 +12109,15 @@ module.exports = Uri;
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scosY", function() { return scosY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XYdYP", function() { return XYdYP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12126,15 +12129,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from getting-started.soy.
+// This file was automatically generated from metal-components.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace scosY.
+ * @fileoverview Templates in namespace XYdYP.
  * @public
  */
 
-goog.module('scosY.incrementaldom');
+goog.module('XYdYP.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12168,177 +12171,116 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param238 = function() {
+  var param329 = function() {
     ie_open('article', null, null,
-        'id', 'electricCli');
+        'id', 'creating');
       ie_open('h2');
-        itext('Electric CLI');
+        itext('Creating Components');
       ie_close('h2');
-      ie_open('h3');
-        itext('Install');
-      ie_close('h3');
-      $templateAlias2({code: 'npm i -g electric-cli', mode: 'text/x-sh'}, null, opt_ijData);
-      ie_open('h3');
-        itext('Initialize Project');
-      ie_close('h3');
-      $templateAlias2({code: 'electric init', mode: 'text/x-sh'}, null, opt_ijData);
       ie_open('p');
-        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
+        itext('One of the benefits of ');
         ie_open('code');
           itext('electric');
         ie_close('code');
-        itext(' project.');
-      ie_close('p');
-      ie_open('h3');
-        itext('Run');
-      ie_close('h3');
-      $templateAlias2({code: 'electric run', mode: 'text/x-sh'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will build your newly created project and start up a development server along with a watch task for quickly making changes.');
+        itext(' is the ability to create metal.js components and invoke them in your ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' layouts and pages.');
       ie_close('p');
       ie_open('p');
-        itext('You can also modify the default port ');
+        itext('Components should be placed in the the ');
         ie_open('code');
-          itext('8888');
+          itext('src/partials');
         ie_close('code');
-        itext(' by running ');
+        itext(' directory.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 partials\n    \u2502   \u251C\u2500\u2500 MyComponent.js\n    \u2502   \u2514\u2500\u2500 MyComponent.soy\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u2514\u2500\u2500 pages\n        \u2514\u2500\u2500 index.soy', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
         ie_open('code');
-          itext('electric run -p 3000');
+          itext('MyComponent.soy');
         ie_close('code');
-        itext('.');
+      ie_close('p');
+      $templateAlias2({code: '&#123;namespace MyComponent&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>Hello, World!</div>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        ie_open('code');
+          itext('MyComponent.js');
+        ie_close('code');
+      ie_close('p');
+      $templateAlias2({code: '\'use strict\';\n\nimport Component from \'metal-component\';\nimport Soy from \'metal-soy\';\n\nimport templates from \'./MyComponent.soy\';\n\nclass MyComponent extends Component {\n    attached() {\n        console.log(\'MyComponent attached!\');\n    }\n};\n\nSoy.register(MyComponent, templates);\n\nexport default MyComponent;', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now that you have the base component files, the ');
+        ie_open('code');
+          itext('MyComponent');
+        ie_close('code');
+        itext(' template simply needs to be rendered in a page/layout.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'structure');
+        'id', 'rendering');
       ie_open('h2');
-        itext('Project Structure');
+        itext('Rendering Components');
       ie_close('h2');
       ie_open('p');
-        itext('Here is a basic example of an ');
+        itext('To render a metal component in a page/layout, simply use the ');
         ie_open('code');
-          itext('electric');
+          itext('call');
         ie_close('code');
-        itext(' project.');
+        itext(' command to render the ');
+        ie_open('code');
+          itext('.render');
+        ie_close('code');
+        itext(' template of the component.');
       ie_close('p');
-      $templateAlias2({code: '.\n\u251C\u2500\u2500 electric.config.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'text/javascript'}, null, opt_ijData);
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <div>\n        {call MyComponent.render /}\n    </div>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now you should see \'MyComponent attached!\' in the browser console.');
+      ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'electric_config');
+        'id', 'electric_components');
       ie_open('h2');
-        itext('electric.config.js');
+        itext('Electric Components');
       ie_close('h2');
       ie_open('p');
-        itext('This file provides configuration options to electric. It must always be located in the root directory of your project.');
+        itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/wedeploy/electric-components');
+          itext('electric-components');
+        ie_close('a');
+        itext(' package contains a number of components that are compatible with electric site meta data, such as navigation and search components.');
+      ie_close('p');
+      ie_open('p');
+        itext('Currently these components come in two themes.');
+      ie_close('p');
+      ie_open('ul');
+        ie_open('li');
+          itext('Marble: ');
+          ie_open('a', null, null,
+              'href', 'https://github.com/wedeploy/electric-marble-components');
+            itext('electric-marble-components');
+          ie_close('a');
+        ie_close('li');
+        ie_open('li');
+          itext('Quartz: ');
+          ie_open('a', null, null,
+              'href', 'https://github.com/wedeploy/electric-quartz-components');
+            itext('electric-quartz-components');
+          ie_close('a');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('These components are invoked the same way as your own components.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n * @param site\n */\n&#123;template .render&#125;\n    <div>\n        {call ElectricNavigation.render}\n            {param depth: 1 /}\n            {param section: $site.index /}\n        {/call}\n    </div>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will render a list with all direct descendants of the index page.');
       ie_close('p');
       ie_open('p');
         itext('See ');
         ie_open('a', null, null,
-            'href', '/docs/configuration.html');
+            'href', '/docs/configuration.html#options');
           itext('configuration');
-        ie_close('a');
-        itext(' for more information.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'site_json');
-      ie_open('h2');
-        itext('site.json');
-      ie_close('h2');
-      ie_open('p');
-        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'layouts');
-      ie_open('h2');
-        itext('Layouts');
-      ie_close('h2');
-      ie_open('p');
-        itext('The file structure of ');
-        ie_open('code');
-          itext('layouts');
-        ie_close('code');
-        itext(' is flexible, as soy uses the ');
-        ie_open('code');
-          itext('namespace');
-        ie_close('code');
-        itext(' of every file as an identifier.');
-      ie_close('p');
-      ie_open('p');
-        itext('All layout files must be a soy template, and the only required layout is');
-        ie_open('code');
-          itext('base.soy');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('See ');
-        ie_open('a', null, null,
-            'href', '/docs/layouts.html');
-          itext('layouts');
-        ie_close('a');
-        itext(' for more information.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'pages');
-      ie_open('h2');
-        itext('Pages');
-      ie_close('h2');
-      ie_open('p');
-        itext('Every file in ');
-        ie_open('code');
-          itext('pages');
-        ie_close('code');
-        itext(' with a ');
-        ie_open('code');
-          itext('.soy');
-        ie_close('code');
-        itext(' or ');
-        ie_open('code');
-          itext('.md');
-        ie_close('code');
-        itext(' extension is rendered to HTML during the ');
-        ie_open('code');
-          itext('build');
-        ie_close('code');
-        itext(' command.');
-      ie_close('p');
-      ie_open('p');
-        itext('The file structure of ');
-        ie_open('code');
-          itext('pages');
-        ie_close('code');
-        itext(' determines the urls of your pages. For the above example, the ');
-        ie_open('code');
-          itext('child.md');
-        ie_close('code');
-        itext(' file will be located at ');
-        ie_open('code');
-          itext('/docs/parent/child.html');
-        ie_close('code');
-        itext(' after building.');
-      ie_close('p');
-      ie_open('p');
-        itext('Pages named ');
-        ie_open('code');
-          itext('index');
-        ie_close('code');
-        itext(' will be located at the path of it\'s parent directory, so ');
-        ie_open('code');
-          itext('pages/docs/index.soy');
-        ie_close('code');
-        itext(' will be available at ');
-        ie_open('code');
-          itext('/docs/');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('See ');
-        ie_open('a', null, null,
-            'href', '/docs/pages.html');
-          itext('pages');
         ie_close('a');
         itext(' for more information.');
       ie_close('p');
@@ -12352,11 +12294,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param238}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param329}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'scosY.render';
+  $render.soyTemplateName = 'XYdYP.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12366,17 +12308,14 @@ return exports;
 
 });
 
-class scosY extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(scosY, templates);
+class XYdYP extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XYdYP, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 101 */,
-/* 102 */,
-/* 103 */,
 /* 104 */,
 /* 105 */,
 /* 106 */,
@@ -12392,9 +12331,7 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(scosY, templates);
 /* 116 */,
 /* 117 */,
 /* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12428,9 +12365,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _gettingStartedSoy = __webpack_require__(100);
+var _metalComponentsSoy = __webpack_require__(103);
 
-var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
+var _metalComponentsSoy2 = _interopRequireDefault(_metalComponentsSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12440,23 +12377,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var scosY = function (_Component) {
-  _inherits(scosY, _Component);
+var XYdYP = function (_Component) {
+  _inherits(XYdYP, _Component);
 
-  function scosY() {
-    _classCallCheck(this, scosY);
+  function XYdYP() {
+    _classCallCheck(this, XYdYP);
 
-    return _possibleConstructorReturn(this, (scosY.__proto__ || Object.getPrototypeOf(scosY)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (XYdYP.__proto__ || Object.getPrototypeOf(XYdYP)).apply(this, arguments));
   }
 
-  return scosY;
+  return XYdYP;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(scosY, _gettingStartedSoy2.default);
+_metalSoy2.default.register(XYdYP, _metalComponentsSoy2.default);
 
-exports.default = scosY;
+exports.default = XYdYP;
 
 /***/ })
-],[121]);
+],[119]);
