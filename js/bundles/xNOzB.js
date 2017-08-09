@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([12],[
+webpackJsonppageComponent([2],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12117,7 +12117,7 @@ module.exports = Uri;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XYdYP", function() { return XYdYP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xNOzB", function() { return xNOzB; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12133,11 +12133,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace XYdYP.
+ * @fileoverview Templates in namespace xNOzB.
  * @public
  */
 
-goog.module('XYdYP.incrementaldom');
+goog.module('xNOzB.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12298,7 +12298,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'XYdYP.render';
+  $render.soyTemplateName = 'xNOzB.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12308,8 +12308,8 @@ return exports;
 
 });
 
-class XYdYP extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XYdYP, templates);
+class xNOzB extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xNOzB, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
@@ -12331,7 +12331,17 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(XYdYP, templates);
 /* 116 */,
 /* 117 */,
 /* 118 */,
-/* 119 */
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12377,23 +12387,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var XYdYP = function (_Component) {
-  _inherits(XYdYP, _Component);
+var xNOzB = function (_Component) {
+  _inherits(xNOzB, _Component);
 
-  function XYdYP() {
-    _classCallCheck(this, XYdYP);
+  function xNOzB() {
+    _classCallCheck(this, xNOzB);
 
-    return _possibleConstructorReturn(this, (XYdYP.__proto__ || Object.getPrototypeOf(XYdYP)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (xNOzB.__proto__ || Object.getPrototypeOf(xNOzB)).apply(this, arguments));
   }
 
-  return XYdYP;
+  return xNOzB;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(XYdYP, _metalComponentsSoy2.default);
+_metalSoy2.default.register(xNOzB, _metalComponentsSoy2.default);
 
-exports.default = XYdYP;
+exports.default = xNOzB;
 
 /***/ })
-],[119]);
+],[129]);

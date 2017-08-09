@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([9],[
+webpackJsonppageComponent([3],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12109,18 +12109,12 @@ module.exports = Uri;
 /* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AeMoU", function() { return AeMoU; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xFCqI", function() { return xFCqI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12132,15 +12126,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from configuration.soy.
+// This file was automatically generated from getting-started.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace AeMoU.
+ * @fileoverview Templates in namespace xFCqI.
  * @public
  */
 
-goog.module('AeMoU.incrementaldom');
+goog.module('xFCqI.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12163,7 +12157,7 @@ var iattr = IncrementalDom.attr;
 
 var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12174,326 +12168,179 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param446 = function() {
+  var param238 = function() {
     ie_open('article', null, null,
-        'id', 'registering');
+        'id', 'electricCli');
       ie_open('h2');
-        itext('Registering');
-      ie_close('h2');
-      ie_open('p');
-        itext('All tasks are registered in the project\'s ');
-        ie_open('code');
-          itext('gulpfile.js');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      $templateAlias2({code: 'const gulp = require(\'gulp\');\nconst electric = require(\'electric\');\n\nelectric.registerTasks({\n    gulp: gulp\n});', mode: 'javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'options');
-      ie_open('h2');
-        itext('Options');
+        itext('Electric CLI');
       ie_close('h2');
       ie_open('h3');
-        ie_open('code');
-          itext('registerTasks');
-        ie_close('code');
+        itext('Install');
       ie_close('h3');
-      ie_open('h4');
-        itext('gulp');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('true');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: Gulp instance');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: 'npm i -g electric-cli', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Initialize Project');
+      ie_close('h3');
+      $templateAlias2({code: 'electric init', mode: 'text/x-sh'}, null, opt_ijData);
       ie_open('p');
-        itext('An instance of ');
-        ie_open('a', null, null,
-            'href', 'http://gulpjs.com/');
-          itext('gulp');
-        ie_close('a');
+        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Run');
+      ie_close('h3');
+      $templateAlias2({code: 'electric run', mode: 'text/x-sh'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will build your newly created project and start up a development server along with a watch task for quickly making changes.');
+      ie_close('p');
+      ie_open('p');
+        itext('You can also modify the default port ');
+        ie_open('code');
+          itext('8888');
+        ie_close('code');
+        itext(' by running ');
+        ie_open('code');
+          itext('electric run -p 3000');
+        ie_close('code');
         itext('.');
       ie_close('p');
-      ie_open('h4');
-        itext('codeMirrorLanguages');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Array<languageName>');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('[\'xml\', \'css\', \'javascript\']');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'structure');
+      ie_open('h2');
+        itext('Project Structure');
+      ie_close('h2');
       ie_open('p');
-        itext('An Array of langauge names for syntax highlighting. See ');
-        ie_open('a', null, null,
-            'href', 'https://codemirror.net/mode/index.html');
-          itext('CodeMirror');
-        ie_close('a');
-        itext(' for a list of available languages.');
+        itext('Here is a basic example of an ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
       ie_close('p');
-      ie_open('h4');
-        itext('codeMirrorTheme');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('\'dracula\'');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
+      $templateAlias2({code: '.\n\u251C\u2500\u2500 electric.config.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'text/javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'electric_config');
+      ie_open('h2');
+        itext('electric.config.js');
+      ie_close('h2');
       ie_open('p');
-        itext('Theme to be used by CodeMirror. See ');
-        ie_open('a', null, null,
-            'href', 'https://codemirror.net/demo/theme.html');
-          itext('CodeMirror');
-        ie_close('a');
-        itext(' for a list of available themes.');
+        itext('This file provides configuration options to electric. It must always be located in the root directory of your project.');
       ie_close('p');
-      ie_open('h4');
-        itext('markdownOptions');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Object');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('An Object Literal containing configuration options for ');
-        ie_open('a', null, null,
-            'href', 'https://github.com/jonschlinkert/remarkable');
-          itext('Remarkable');
-        ie_close('a');
-        itext(' which is used to render Markdown files.');
-      ie_close('p');
-      ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    markdownOptions: {\n        breaks: true\n    }\n});', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
         itext('See ');
         ie_open('a', null, null,
-            'href', 'https://github.com/jonschlinkert/remarkable#options');
-          itext('Remarkable\'s documentation');
+            'href', '/docs/configuration.html');
+          itext('configuration');
         ie_close('a');
-        itext(' for list of options.');
+        itext(' for more information.');
       ie_close('p');
-      ie_open('h4');
-        itext('pathDest');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('dist');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('site.json');
+      ie_close('h2');
       ie_open('p');
-        itext('The path that generated files are placed in.');
+        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'layouts');
+      ie_open('h2');
+        itext('Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('layouts');
+        ie_close('code');
+        itext(' is flexible, as soy uses the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' of every file as an identifier.');
       ie_close('p');
       ie_open('p');
-        itext('Example:');
+        itext('All layout files must be a soy template, and the only required layout is');
+        ie_open('code');
+          itext('base.soy');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    pathDest: \'build\'\n});', mode: 'javascript'}, null, opt_ijData);
       ie_open('p');
-        itext('Now all generated files will be placed in the ');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/layouts.html');
+          itext('layouts');
+        ie_close('a');
+        itext(' for more information.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'pages');
+      ie_open('h2');
+        itext('Pages');
+      ie_close('h2');
+      ie_open('p');
+        itext('Every file in ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' with a ');
+        ie_open('code');
+          itext('.soy');
+        ie_close('code');
+        itext(' or ');
+        ie_open('code');
+          itext('.md');
+        ie_close('code');
+        itext(' extension is rendered to HTML during the ');
         ie_open('code');
           itext('build');
         ie_close('code');
-        itext(' directory.');
-      ie_close('p');
-      ie_open('h4');
-        itext('pathSrc');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Default: ');
-          ie_open('code');
-            itext('src');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('The path where all source files are located.');
+        itext(' command.');
       ie_close('p');
       ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    pathSrc: \'web\'\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('Now ');
+        itext('The file structure of ');
         ie_open('code');
-          itext('electric');
+          itext('pages');
         ie_close('code');
-        itext(' will look inside the ');
+        itext(' determines the urls of your pages. For the above example, the ');
         ie_open('code');
-          itext('web');
+          itext('child.md');
         ie_close('code');
-        itext(' directory for all source files.');
-      ie_close('p');
-      ie_open('h4');
-        itext('plugins');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('Array<String>');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('Array of ');
+        itext(' file will be located at ');
         ie_open('code');
-          itext('npm');
+          itext('/docs/parent/child.html');
         ie_close('code');
-        itext(' modules that expose Metal components.');
+        itext(' after building.');
       ie_close('p');
       ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    plugins: [\'electric-components\']\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('The components found in the ');
+        itext('Pages named ');
         ie_open('code');
-          itext('electric-components');
+          itext('index');
         ie_close('code');
-        itext(' package will now be available to all ');
+        itext(' will be located at the path of it\'s parent directory, so ');
         ie_open('code');
-          itext('soy');
+          itext('pages/docs/index.soy');
         ie_close('code');
-        itext(' files in your project.');
-      ie_close('p');
-      ie_open('p');
-        itext('Note that every package listed in ');
+        itext(' will be available at ');
         ie_open('code');
-          itext('plugins');
-        ie_close('code');
-        itext(' must also be listed as a dependency in the project\'s ');
-        ie_open('code');
-          itext('package.json');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('h4');
-        itext('taskPrefix');
-      ie_close('h4');
-      ie_open('ul');
-        ie_open('li');
-          itext('Required: ');
-          ie_open('code');
-            itext('false');
-          ie_close('code');
-        ie_close('li');
-        ie_open('li');
-          itext('Type: ');
-          ie_open('code');
-            itext('String');
-          ie_close('code');
-        ie_close('li');
-      ie_close('ul');
-      ie_open('p');
-        itext('String that is prefixed to every task exposed by ');
-        ie_open('code');
-          itext('electric');
+          itext('/docs/');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Example:');
-      ie_close('p');
-      $templateAlias2({code: 'electric.registerTasks({\n    gulp: gulp,\n    taskPrefix: \'electric:\'\n});', mode: 'javascript'}, null, opt_ijData);
-      ie_open('p');
-        itext('The ');
-        ie_open('code');
-          itext('generate');
-        ie_close('code');
-        itext(' task will now be exposed as ');
-        ie_open('code');
-          itext('electric:generate');
-        ie_close('code');
-        itext('. This option allows you to implement ');
-        ie_open('code');
-          itext('electric');
-        ie_close('code');
-        itext(' in conjunction with other packages that expose ');
-        ie_open('code');
-          itext('gulp');
-        ie_close('code');
-        itext(' tasks without the risk of overwriting previously defined tasks.');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/pages.html');
+          itext('pages');
+        ie_close('a');
+        itext(' for more information.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -12505,11 +12352,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param446}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param238}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'AeMoU.render';
+  $render.soyTemplateName = 'xFCqI.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12519,14 +12366,20 @@ return exports;
 
 });
 
-class AeMoU extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AeMoU, templates);
+class xFCqI extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(xFCqI, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
 /* 107 */,
 /* 108 */,
 /* 109 */,
@@ -12542,7 +12395,13 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(AeMoU, templates);
 /* 119 */,
 /* 120 */,
 /* 121 */,
-/* 122 */
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12576,9 +12435,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _configurationSoy = __webpack_require__(106);
+var _gettingStartedSoy = __webpack_require__(100);
 
-var _configurationSoy2 = _interopRequireDefault(_configurationSoy);
+var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12588,23 +12447,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AeMoU = function (_Component) {
-  _inherits(AeMoU, _Component);
+var xFCqI = function (_Component) {
+  _inherits(xFCqI, _Component);
 
-  function AeMoU() {
-    _classCallCheck(this, AeMoU);
+  function xFCqI() {
+    _classCallCheck(this, xFCqI);
 
-    return _possibleConstructorReturn(this, (AeMoU.__proto__ || Object.getPrototypeOf(AeMoU)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (xFCqI.__proto__ || Object.getPrototypeOf(xFCqI)).apply(this, arguments));
   }
 
-  return AeMoU;
+  return xFCqI;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(AeMoU, _configurationSoy2.default);
+_metalSoy2.default.register(xFCqI, _gettingStartedSoy2.default);
 
-exports.default = AeMoU;
+exports.default = xFCqI;
 
 /***/ })
-],[122]);
+],[128]);

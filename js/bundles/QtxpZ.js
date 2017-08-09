@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13],[
+webpackJsonppageComponent([8],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12113,12 +12113,15 @@ module.exports = Uri;
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VKplm", function() { return VKplm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QtxpZ", function() { return QtxpZ; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12130,15 +12133,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from pages.soy.
+// This file was automatically generated from getting-started.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace VKplm.
+ * @fileoverview Templates in namespace QtxpZ.
  * @public
  */
 
-goog.module('VKplm.incrementaldom');
+goog.module('QtxpZ.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12161,7 +12164,7 @@ var iattr = IncrementalDom.attr;
 
 var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
 
 
 /**
@@ -12172,156 +12175,198 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param363 = function() {
+  var param485 = function() {
     ie_open('article', null, null,
-        'id', 'front_matter');
+        'id', 'yeoman');
       ie_open('h2');
-        itext('Front Matter');
+        itext('Yeoman Generator');
       ie_close('h2');
       ie_open('p');
-        itext('All files in the ');
-        ie_open('code');
-          itext('pages');
-        ie_close('code');
-        itext(' directory must have the following front matter declared at the beginning of the file.');
-      ie_close('p');
-      $templateAlias2({code: '---\ntitle: "Page Title"\ndescription: "Description."\n---', mode: 'text'}, null, opt_ijData);
-      ie_open('p');
         itext('The ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/liferay/generator-electric');
+          itext('Yeoman Generator');
+        ie_close('a');
+        itext(' is the fastest way to get an ');
         ie_open('code');
-          itext('title');
+          itext('electric');
         ie_close('code');
-        itext(' property will be used for auto-generated navigation elements and as the page\'s ');
+        itext(' project up and running.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Install dependencies');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g gulp yo', mode: 'shell'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Install generator');
+      ie_close('h3');
+      $templateAlias2({code: 'npm i -g generator-electric', mode: 'shell'}, null, opt_ijData);
+      ie_open('h3');
+        itext('Run generator');
+      ie_close('h3');
+      $templateAlias2({code: 'yo electric', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
         ie_open('code');
-          itext('<title>');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Having issues getting the generator running? Check out ');
+        ie_open('a', null, null,
+            'href', 'http://yeoman.io/learning/faq.html');
+          itext('Yeoman\'s FAQs');
+        ie_close('a');
+        itext(' for troubleshooting tips.');
+      ie_close('p');
+      ie_open('h3');
+        itext('Build');
+      ie_close('h3');
+      ie_open('p');
+        itext('All ');
+        ie_open('code');
+          itext('gulp');
+        ie_close('code');
+        itext(' commands should be run from your project root.');
+      ie_close('p');
+      $templateAlias2({code: 'gulp', mode: 'shell'}, null, opt_ijData);
+      ie_open('p');
+        itext('This will run the default gulp task registered in your project\'s ');
+        ie_open('code');
+          itext('gulpfile.js');
+        ie_close('code');
+        itext(', which includes generating your site, starting up a development server, and starting the ');
+        ie_open('code');
+          itext('watch');
+        ie_close('code');
+        itext(' task.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'structure');
+      ie_open('h2');
+        itext('Project Structure');
+      ie_close('h2');
+      ie_open('p');
+        itext('Here is a basic example of an ');
+        ie_open('code');
+          itext('electric');
+        ie_close('code');
+        itext(' project.');
+      ie_close('p');
+      $templateAlias2({code: '.\n\u251C\u2500\u2500 gulpfile.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'site_json');
+      ie_open('h2');
+        itext('site.json');
+      ie_close('h2');
+      ie_open('p');
+        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
+      ie_close('p');
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'layouts');
+      ie_open('h2');
+        itext('Layouts');
+      ie_close('h2');
+      ie_open('p');
+        itext('The file structure of ');
+        ie_open('code');
+          itext('layouts');
+        ie_close('code');
+        itext(' is flexible, as ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' uses the ');
+        ie_open('code');
+          itext('namespace');
+        ie_close('code');
+        itext(' of every file as an identifier.');
+      ie_close('p');
+      ie_open('p');
+        itext('All layout files must be a ');
+        ie_open('code');
+          itext('soy');
+        ie_close('code');
+        itext(' template, and the only required layout is');
+        ie_open('code');
+          itext('base.soy');
         ie_close('code');
         itext('.');
       ie_close('p');
       ie_open('p');
-        itext('Both the ');
-        ie_open('code');
-          itext('title');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('description');
-        ie_close('code');
-        itext(' properties will be used for search functionality.');
+        itext('See ');
+        ie_open('a', null, null,
+            'href', '/docs/layouts.html');
+          itext('layouts');
+        ie_close('a');
+        itext(' for more information.');
       ie_close('p');
     ie_close('article');
     ie_open('article', null, null,
-        'id', 'soy_files');
+        'id', 'pages');
       ie_open('h2');
-        itext('Soy');
+        itext('Pages');
       ie_close('h2');
       ie_open('p');
-        itext('All files ending with the ');
+        itext('Every file in ');
+        ie_open('code');
+          itext('pages');
+        ie_close('code');
+        itext(' with a ');
         ie_open('code');
           itext('.soy');
         ie_close('code');
-        itext(' extension will be rendered as soy templates.');
-      ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
-      ie_open('p');
-        itext('Note: all ');
+        itext(' or ');
         ie_open('code');
-          itext('namespace');
+          itext('.md');
         ie_close('code');
-        itext(' properties must be unique across all files within the ');
+        itext(' extension is rendered to HTML during the ');
         ie_open('code');
-          itext('src');
+          itext('generate');
         ie_close('code');
-        itext(' directory, and every soy file must define a ');
-        ie_open('code');
-          itext('.render');
-        ie_close('code');
-        itext(' template.');
-      ie_close('p');
-      ie_open('h3');
-        itext('Site/Page Data');
-      ie_close('h3');
-      ie_open('p');
-        itext('Every page is passed a ');
-        ie_open('code');
-          itext('site');
-        ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('page');
-        ie_close('code');
-        itext(' param.');
+        itext(' task.');
       ie_close('p');
       ie_open('p');
-        itext('The ');
+        itext('The file structure of ');
         ie_open('code');
-          itext('page');
+          itext('pages');
         ie_close('code');
-        itext(' param represents the front matter of the current file.');
-      ie_close('p');
-      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'text/x-soy'}, null, opt_ijData);
-      ie_open('p');
-        itext('The ');
+        itext(' determines the urls of your pages. For the above example, the ');
         ie_open('code');
-          itext('site');
+          itext('child.md');
         ie_close('code');
-        itext(' param contains project meta data such as ');
+        itext(' file will be located at ');
         ie_open('code');
-          itext('site.title');
+          itext('/docs/parent/child.html');
         ie_close('code');
-        itext(' and ');
-        ie_open('code');
-          itext('site.repo');
-        ie_close('code');
-        itext('. It also contains the structure of the entire site which can be used to generate navigation elements. This structure data is defined as the ');
-        ie_open('code');
-          itext('site.index');
-        ie_close('code');
-        itext(' property representing the index page of the project.');
-      ie_close('p');
-      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'text/x-soy'}, null, opt_ijData);
-      ie_open('p');
-        itext('This data is pulled from the ');
-        ie_open('code');
-          itext('dist/site.json');
-        ie_close('code');
-        itext(' file. Additional properties can be added to this data by editing the ');
-        ie_open('code');
-          itext('src/site.json');
-        ie_close('code');
-        itext(' file.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'markdown_files');
-      ie_open('h2');
-        itext('Markdown');
-      ie_close('h2');
-      ie_open('p');
-        itext('Markdown files are intended for easier writing of documentation and content, these files are rendered to HTML and then wrapped in a ');
-        ie_open('code');
-          itext('soy');
-        ie_close('code');
-        itext(' template and rendered along all ');
-        ie_open('code');
-          itext('soy');
-        ie_close('code');
-        itext(' pages.');
+        itext(' after generating.');
       ie_close('p');
       ie_open('p');
-        itext('The ');
+        itext('Pages named ');
         ie_open('code');
-          itext('namespace');
+          itext('index');
         ie_close('code');
-        itext(' is also auto-generated based on the file path, so it does not need to be declared at the top of the file.');
+        itext(' will be located at the path of it\'s parent directory, so ');
+        ie_open('code');
+          itext('pages/docs/index.soy');
+        ie_close('code');
+        itext(' will be available at ');
+        ie_open('code');
+          itext('/docs/');
+        ie_close('code');
+        itext('.');
       ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\nlayout: "docs"\ntitle: "Page"\n---\n\n# Hello, World!', mode: 'markdown'}, null, opt_ijData);
       ie_open('p');
         itext('See ');
         ie_open('a', null, null,
-            'href', 'https://developers.google.com/closure/templates/docs/commands#specialcharacters');
-          itext('google\'s documentation');
+            'href', '/docs/pages.html');
+          itext('pages');
         ie_close('a');
-        itext(' for more info.');
+        itext(' for more information.');
       ie_close('p');
     ie_close('article');
     ie_open('input', null, null,
@@ -12333,11 +12378,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param363}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param485}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'VKplm.render';
+  $render.soyTemplateName = 'QtxpZ.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12347,17 +12392,14 @@ return exports;
 
 });
 
-class VKplm extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VKplm, templates);
+class QtxpZ extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QtxpZ, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
-/* 105 */,
-/* 106 */,
-/* 107 */,
 /* 108 */,
 /* 109 */,
 /* 110 */,
@@ -12368,7 +12410,12 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(VKplm, templates);
 /* 115 */,
 /* 116 */,
 /* 117 */,
-/* 118 */
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12402,9 +12449,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _pagesSoy = __webpack_require__(104);
+var _gettingStartedSoy = __webpack_require__(107);
 
-var _pagesSoy2 = _interopRequireDefault(_pagesSoy);
+var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12414,23 +12461,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VKplm = function (_Component) {
-  _inherits(VKplm, _Component);
+var QtxpZ = function (_Component) {
+  _inherits(QtxpZ, _Component);
 
-  function VKplm() {
-    _classCallCheck(this, VKplm);
+  function QtxpZ() {
+    _classCallCheck(this, QtxpZ);
 
-    return _possibleConstructorReturn(this, (VKplm.__proto__ || Object.getPrototypeOf(VKplm)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (QtxpZ.__proto__ || Object.getPrototypeOf(QtxpZ)).apply(this, arguments));
   }
 
-  return VKplm;
+  return QtxpZ;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(VKplm, _pagesSoy2.default);
+_metalSoy2.default.register(QtxpZ, _gettingStartedSoy2.default);
 
-exports.default = VKplm;
+exports.default = QtxpZ;
 
 /***/ })
-],[118]);
+],[123]);

@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([5],[
+webpackJsonppageComponent([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12113,19 +12113,12 @@ module.exports = Uri;
 /* 101 */,
 /* 102 */,
 /* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fyAMt", function() { return fyAMt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fcNqF", function() { return fcNqF; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12141,11 +12134,11 @@ goog.loadModule(function(exports) {
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace fyAMt.
+ * @fileoverview Templates in namespace fcNqF.
  * @public
  */
 
-goog.module('fyAMt.incrementaldom');
+goog.module('fcNqF.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12168,7 +12161,7 @@ var iattr = IncrementalDom.attr;
 
 var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricCode.incrementaldom', 'render');
 
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docsVOne.incrementaldom', 'render');
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('docs.incrementaldom', 'render');
 
 
 /**
@@ -12179,7 +12172,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param614 = function() {
+  var param363 = function() {
     ie_open('article', null, null,
         'id', 'front_matter');
       ie_open('h2');
@@ -12228,7 +12221,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' extension will be rendered as soy templates.');
       ie_close('p');
-      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '---\ndescription: "Page description."\ntitle: "Page"\n---\n\n&#123;namespace page&#125;\n\n/**\n *\n */\n&#123;template .render&#125;\n    <span>Hello, World!</span>\n&#123;/template&#125;', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('Note: all ');
         ie_open('code');
@@ -12265,7 +12258,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' param represents the front matter of the current file.');
       ie_close('p');
-      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '{$page.title}\n{$page.description}', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('The ');
         ie_open('code');
@@ -12285,7 +12278,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         ie_close('code');
         itext(' property representing the index page of the project.');
       ie_close('p');
-      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'soy'}, null, opt_ijData);
+      $templateAlias2({code: '{$site.title}\n{$site.index}', mode: 'text/x-soy'}, null, opt_ijData);
       ie_open('p');
         itext('This data is pulled from the ');
         ie_open('code');
@@ -12340,11 +12333,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param614}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param363}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'fyAMt.render';
+  $render.soyTemplateName = 'fcNqF.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12354,29 +12347,26 @@ return exports;
 
 });
 
-class fyAMt extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fyAMt, templates);
+class fcNqF extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(fcNqF, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
 /* 112 */,
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12410,7 +12400,7 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _pagesSoy = __webpack_require__(111);
+var _pagesSoy = __webpack_require__(104);
 
 var _pagesSoy2 = _interopRequireDefault(_pagesSoy);
 
@@ -12422,23 +12412,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var fyAMt = function (_Component) {
-  _inherits(fyAMt, _Component);
+var fcNqF = function (_Component) {
+  _inherits(fcNqF, _Component);
 
-  function fyAMt() {
-    _classCallCheck(this, fyAMt);
+  function fcNqF() {
+    _classCallCheck(this, fcNqF);
 
-    return _possibleConstructorReturn(this, (fyAMt.__proto__ || Object.getPrototypeOf(fyAMt)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (fcNqF.__proto__ || Object.getPrototypeOf(fcNqF)).apply(this, arguments));
   }
 
-  return fyAMt;
+  return fcNqF;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(fyAMt, _pagesSoy2.default);
+_metalSoy2.default.register(fcNqF, _pagesSoy2.default);
 
-exports.default = fyAMt;
+exports.default = fcNqF;
 
 /***/ })
-],[126]);
+],[116]);

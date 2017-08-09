@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12181,7 +12181,7 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param106 = function() {
+  var param157 = function() {
     $header(opt_data, null, opt_ijData);
     $why(null, null, opt_ijData);
     $highlights(null, null, opt_ijData);
@@ -12189,7 +12189,7 @@ function $render(opt_data, opt_ignored, opt_ijData) {
     $features(null, null, opt_ijData);
     $templateAlias2(null, null, opt_ijData);
   };
-  $templateAlias1(soy.$$assignDefaults({content: param106}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param157}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
@@ -12217,8 +12217,8 @@ function $header(opt_data, opt_ignored, opt_ijData) {
       ie_close('h1');
       ie_open('h2', null, null,
           'class', 'header-subtitle');
-        var dyn12 = opt_data.site.index.description;
-        if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
+        var dyn14 = opt_data.site.index.description;
+        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
       ie_close('h2');
       ie_open('div', null, null,
           'class', 'header-cta');
@@ -12234,14 +12234,14 @@ function $header(opt_data, opt_ignored, opt_ijData) {
     ie_open('p', null, null,
         'class', 'gh-btns');
       ie_void('iframe', null, null,
-          'src', 'http://ghbtns.com/github-btn.html?user=electricjs&repo=electric&type=watch&count=true&size=large',
+          'src', '//ghbtns.com/github-btn.html?user=electricjs&repo=electric&type=watch&count=true&size=large',
           'allowtransparency', 'true',
           'frameborder', '0',
           'scrolling', '0',
           'width', '150',
           'height', '30');
       ie_void('iframe', null, null,
-          'src', 'http://ghbtns.com/github-btn.html?user=electricjs&repo=electric&type=fork&count=true&size=large',
+          'src', '//ghbtns.com/github-btn.html?user=electricjs&repo=electric&type=fork&count=true&size=large',
           'allowtransparency', 'true',
           'frameborder', '0',
           'scrolling', '0',

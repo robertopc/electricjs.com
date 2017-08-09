@@ -2944,8 +2944,8 @@ function $logo(opt_data, opt_ignored, opt_ijData) {
           'class', 'topbar-logo-icon icon-16-flash');
       ie_open('span', null, null,
           'class', 'topbar-logo-text');
-        var dyn14 = opt_data.site.title;
-        if (typeof dyn14 == 'function') dyn14(); else if (dyn14 != null) itext(dyn14);
+        var dyn13 = opt_data.site.title;
+        if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
       ie_close('span');
     ie_close('a');
   ie_close('div');
@@ -12108,13 +12108,12 @@ module.exports = Uri;
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QpWfh", function() { return QpWfh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lSQUl", function() { return lSQUl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
@@ -12126,15 +12125,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var templates;
 goog.loadModule(function(exports) {
 
-// This file was automatically generated from getting-started.soy.
+// This file was automatically generated from configuration.soy.
 // Please don't edit this file by hand.
 
 /**
- * @fileoverview Templates in namespace QpWfh.
+ * @fileoverview Templates in namespace lSQUl.
  * @public
  */
 
-goog.module('QpWfh.incrementaldom');
+goog.module('lSQUl.incrementaldom');
 
 /** @suppress {extraRequire} */
 var soy = goog.require('soy');
@@ -12168,180 +12167,421 @@ var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTempl
  * @suppress {checkTypes}
  */
 function $render(opt_data, opt_ignored, opt_ijData) {
-  var param238 = function() {
+  var param179 = function() {
     ie_open('article', null, null,
-        'id', 'electricCli');
-      ie_open('h2');
-        itext('Electric CLI');
-      ie_close('h2');
-      ie_open('h3');
-        itext('Install');
-      ie_close('h3');
-      $templateAlias2({code: 'npm i -g electric-cli', mode: 'text/x-sh'}, null, opt_ijData);
-      ie_open('h3');
-        itext('Initialize Project');
-      ie_close('h3');
-      $templateAlias2({code: 'electric init', mode: 'text/x-sh'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will prompt you for a project id and name, then it creates a folder in your current directory with your new ');
-        ie_open('code');
-          itext('electric');
-        ie_close('code');
-        itext(' project.');
-      ie_close('p');
-      ie_open('h3');
-        itext('Run');
-      ie_close('h3');
-      $templateAlias2({code: 'electric run', mode: 'text/x-sh'}, null, opt_ijData);
-      ie_open('p');
-        itext('This will build your newly created project and start up a development server along with a watch task for quickly making changes.');
-      ie_close('p');
-      ie_open('p');
-        itext('You can also modify the default port ');
-        ie_open('code');
-          itext('8888');
-        ie_close('code');
-        itext(' by running ');
-        ie_open('code');
-          itext('electric run -p 3000');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'structure');
-      ie_open('h2');
-        itext('Project Structure');
-      ie_close('h2');
-      ie_open('p');
-        itext('Here is a basic example of an ');
-        ie_open('code');
-          itext('electric');
-        ie_close('code');
-        itext(' project.');
-      ie_close('p');
-      $templateAlias2({code: '.\n\u251C\u2500\u2500 electric.config.js\n\u2514\u2500\u2500 src\n    \u251C\u2500\u2500 layouts\n    \u2502   \u251C\u2500\u2500 base.soy\n    \u2502   \u2514\u2500\u2500 docs.soy\n    \u251C\u2500\u2500 pages\n    \u2502   \u251C\u2500\u2500 docs\n    \u2502   \u2502   \u251C\u2500\u2500 create.md\n    \u2502   \u2502   \u251C\u2500\u2500 index.soy\n    \u2502   \u2502   \u2514\u2500\u2500 parent\n    \u2502   \u2502       \u251C\u2500\u2500 child.md\n    \u2502   \u2502       \u2514\u2500\u2500 index.md\n    \u2502   \u2514\u2500\u2500 index.soy\n    \u2514\u2500\u2500 site.json', mode: 'text/javascript'}, null, opt_ijData);
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'electric_config');
+        'id', 'registering');
       ie_open('h2');
         itext('electric.config.js');
       ie_close('h2');
       ie_open('p');
-        itext('This file provides configuration options to electric. It must always be located in the root directory of your project.');
+        itext('All options can be set in the ');
+        ie_open('code');
+          itext('electric.config.js');
+        ie_close('code');
+        itext(' file located in the root of your project. This file must export an Object, or a function that returns an Object.');
       ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathDest: \'build\'\n};\n\n// or\n\nmodule.exports = function() {\n    return {\n        pathDest: \'build\'\n    };\n};', mode: 'text/javascript'}, null, opt_ijData);
+    ie_close('article');
+    ie_open('article', null, null,
+        'id', 'options');
+      ie_open('h2');
+        itext('Options');
+      ie_close('h2');
+      ie_open('h3');
+        itext('codeMirrorLanguages');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<languageName>');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('[\'xml\', \'css\', \'javascript\']');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('An Array of langauge names for syntax highlighting. See ');
+        ie_open('a', null, null,
+            'href', 'https://codemirror.net/mode/index.html');
+          itext('CodeMirror');
+        ie_close('a');
+        itext(' for a list of available languages.');
+      ie_close('p');
+      ie_open('h3');
+        itext('codeMirrorTheme');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('\'dracula\'');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Theme to be used by CodeMirror. See ');
+        ie_open('a', null, null,
+            'href', 'https://codemirror.net/demo/theme.html');
+          itext('CodeMirror');
+        ie_close('a');
+        itext(' for a list of available themes.');
+      ie_close('p');
+      ie_open('h3');
+        itext('deployOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('{ branch: \'wedeploy\' }');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Configuration options used by the ');
+        ie_open('code');
+          itext('deploy');
+        ie_close('code');
+        itext(' command. See ');
+        ie_open('a', null, null,
+            'href', 'https://www.npmjs.com/package/gulp-gh-pages#ghpages-options-');
+          itext('gulp-gh-pages');
+        ie_close('a');
+        itext(' for further configuration options.');
+      ie_close('p');
+      ie_open('h3');
+        itext('frontMatterHook');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('function');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Allows modifications of your project\'s front-matter before it\'s passed to the templates.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    frontMatterHook: function(data) {\n        data.someValue = \'Hello, World!\';\n\n        return data;\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('In this example the property ');
+        ie_open('code');
+          itext('someValue');
+        ie_close('code');
+        itext(' will be accessible via the ');
+        ie_open('code');
+          itext('$site');
+        ie_close('code');
+        itext(' parameter in your pages/templates.');
+      ie_close('p');
+      $templateAlias2({code: '---\ndescription: "Page description."\nlayout: "docs"\ntitle: "Page"\n---\n\n{$site.someValue}', mode: 'markdown'}, null, opt_ijData);
+      ie_open('h3');
+        itext('markdownOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('An Object Literal containing configuration options for ');
+        ie_open('a', null, null,
+            'href', 'https://github.com/jonschlinkert/remarkable');
+          itext('Remarkable');
+        ie_close('a');
+        itext(' which is used to render Markdown files.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    markdownOptions: {\n        breaks: true\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
       ie_open('p');
         itext('See ');
         ie_open('a', null, null,
-            'href', '/docs/configuration.html');
-          itext('configuration');
+            'href', 'https://github.com/jonschlinkert/remarkable#options');
+          itext('Remarkable\'s documentation');
         ie_close('a');
-        itext(' for more information.');
+        itext(' for list of options.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'site_json');
-      ie_open('h2');
-        itext('site.json');
-      ie_close('h2');
+      ie_open('h3');
+        itext('markdownRenderer');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('function|Remarkable');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
       ie_open('p');
-        itext('This file contains meta data about your project. Any property can be added to this file. Front matter from all pages is merged with this data and passed to every page as a soy param.');
-      ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'layouts');
-      ie_open('h2');
-        itext('Layouts');
-      ie_close('h2');
-      ie_open('p');
-        itext('The file structure of ');
-        ie_open('code');
-          itext('layouts');
-        ie_close('code');
-        itext(' is flexible, as soy uses the ');
-        ie_open('code');
-          itext('namespace');
-        ie_close('code');
-        itext(' of every file as an identifier.');
-      ie_close('p');
-      ie_open('p');
-        itext('All layout files must be a soy template, and the only required layout is');
-        ie_open('code');
-          itext('base.soy');
-        ie_close('code');
-        itext('.');
-      ie_close('p');
-      ie_open('p');
-        itext('See ');
+        itext('Allows complete customization over the markdown renderer. Value can either be instance of ');
         ie_open('a', null, null,
-            'href', '/docs/layouts.html');
-          itext('layouts');
+            'href', 'https://github.com/jonschlinkert/remarkable');
+          itext('Remarkable');
         ie_close('a');
-        itext(' for more information.');
+        itext(' or a function which receives the default instance of ');
+        ie_open('code');
+          itext('Remarkable');
+        ie_close('code');
+        itext(' as an argument.');
       ie_close('p');
-    ie_close('article');
-    ie_open('article', null, null,
-        'id', 'pages');
-      ie_open('h2');
-        itext('Pages');
-      ie_close('h2');
       ie_open('p');
-        itext('Every file in ');
-        ie_open('code');
-          itext('pages');
-        ie_close('code');
-        itext(' with a ');
-        ie_open('code');
-          itext('.soy');
-        ie_close('code');
-        itext(' or ');
-        ie_open('code');
-          itext('.md');
-        ie_close('code');
-        itext(' extension is rendered to HTML during the ');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: '// New Remarkable instance\nmodule.exports = {\n    markdownRenderer: new Remarkable()\n};\n\n// Function\nmodule.exports = {\n    markdownRenderer: function(md) {\n        md.core.ruler.enable([\n            \'abbr\'\n        ]);\n\n        return md;\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('h3');
+        itext('pathDest');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('dist');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The path that generated files are placed in.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathDest: \'build\'\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now all generated files will be placed in the ');
         ie_open('code');
           itext('build');
         ie_close('code');
-        itext(' command.');
+        itext(' directory.');
+      ie_close('p');
+      ie_open('h3');
+        itext('pathSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('String');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('src');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('The path where all source files are located.');
       ie_close('p');
       ie_open('p');
-        itext('The file structure of ');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    pathSrc: \'web\'\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('Now ');
         ie_open('code');
-          itext('pages');
+          itext('electric');
         ie_close('code');
-        itext(' determines the urls of your pages. For the above example, the ');
+        itext(' will look inside the ');
         ie_open('code');
-          itext('child.md');
+          itext('web');
         ie_close('code');
-        itext(' file will be located at ');
+        itext(' directory for all source files.');
+      ie_close('p');
+      ie_open('h3');
+        itext('metalComponents');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of ');
         ie_open('code');
-          itext('/docs/parent/child.html');
+          itext('npm');
         ie_close('code');
-        itext(' after building.');
+        itext(' modules that expose Metal components. These also must be added as ');
+        ie_open('code');
+          itext('npm');
+        ie_close('code');
+        itext(' dependencies in your package.json.');
       ie_close('p');
       ie_open('p');
-        itext('Pages named ');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    metalComponents: [\'electric-components\']\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('p');
+        itext('The components found in the ');
         ie_open('code');
-          itext('index');
+          itext('electric-components');
         ie_close('code');
-        itext(' will be located at the path of it\'s parent directory, so ');
+        itext(' package will now be available to all ');
         ie_open('code');
-          itext('pages/docs/index.soy');
+          itext('soy');
         ie_close('code');
-        itext(' will be available at ');
+        itext(' files in your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Note that every package listed in ');
         ie_open('code');
-          itext('/docs/');
+          itext('metalComponents');
+        ie_close('code');
+        itext(' must also be listed as a dependency in the project\'s ');
+        ie_open('code');
+          itext('package.json');
         ie_close('code');
         itext('.');
       ie_close('p');
+      ie_open('h3');
+        itext('sassOptions');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Object');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
       ie_open('p');
-        itext('See ');
+        itext('Config object passed to ');
         ie_open('a', null, null,
-            'href', '/docs/pages.html');
-          itext('pages');
+            'href', 'https://www.npmjs.com/package/gulp-sass');
+          itext('gulp-sass');
         ie_close('a');
-        itext(' for more information.');
+        itext('.');
       ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    sassOptions: {\n        includePaths: [\'node_modules/some-package/scss\']\n    }\n};', mode: 'text/javascript'}, null, opt_ijData);
+      ie_open('h3');
+        itext('staticSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of glob patterns for static files found in the');
+        ie_open('code');
+          itext('options.pathSrc');
+        ie_close('code');
+        itext(' directory. These glob patterns target anything that isn\'t part of the build system (pages, layouts, styles, etc.).');
+      ie_close('p');
+      ie_open('p');
+        itext('Note: it is not recommended to overwrite this property.');
+      ie_close('p');
+      ie_open('h3');
+        itext('uglifyBundle');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('boolean');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('false');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Determines if bundle files are both minified and uglified.');
+      ie_close('p');
+      ie_open('p');
+        itext('When using ');
+        ie_open('code');
+          itext('electric-cli');
+        ie_close('code');
+        itext(', this option defaults to ');
+        ie_open('code');
+          itext('true');
+        ie_close('code');
+        itext(' during the ');
+        ie_open('code');
+          itext('deploy');
+        ie_close('code');
+        itext(' task, and defaults to ');
+        ie_open('code');
+          itext('false');
+        ie_close('code');
+        itext(' during all others.');
+      ie_close('p');
+      ie_open('p');
+        itext('Warning: enabling this option can significantly increase build times.');
+      ie_close('p');
+      ie_open('h3');
+        itext('vendorSrc');
+      ie_close('h3');
+      ie_open('ul');
+        ie_open('li');
+          itext('Type: ');
+          ie_open('code');
+            itext('Array<String>');
+          ie_close('code');
+        ie_close('li');
+        ie_open('li');
+          itext('Default: ');
+          ie_open('code');
+            itext('[]');
+          ie_close('code');
+        ie_close('li');
+      ie_close('ul');
+      ie_open('p');
+        itext('Array of glob patterns for .css and .js files that should be included in the ');
+        ie_open('code');
+          itext('<head>');
+        ie_close('code');
+        itext(' of your project.');
+      ie_close('p');
+      ie_open('p');
+        itext('Example:');
+      ie_close('p');
+      $templateAlias2({code: 'module.exports = {\n    vendorSrc: [\'node_modules/some-project/src/min.js\']\n};', mode: 'text/javascript'}, null, opt_ijData);
     ie_close('article');
     ie_open('input', null, null,
         'type', 'hidden',
@@ -12352,11 +12592,11 @@ function $render(opt_data, opt_ignored, opt_ijData) {
         'value', opt_data.site.title);
     ie_close('input');
   };
-  $templateAlias1(soy.$$assignDefaults({content: param238}, opt_data), null, opt_ijData);
+  $templateAlias1(soy.$$assignDefaults({content: param179}, opt_data), null, opt_ijData);
 }
 exports.render = $render;
 if (goog.DEBUG) {
-  $render.soyTemplateName = 'QpWfh.render';
+  $render.soyTemplateName = 'lSQUl.render';
 }
 
 exports.render.params = ["page","site"];
@@ -12366,14 +12606,15 @@ return exports;
 
 });
 
-class QpWfh extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(QpWfh, templates);
+class lSQUl extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(lSQUl, templates);
 
 /* harmony default export */ __webpack_exports__["default"] = (templates);
 /* jshint ignore:end */
 
 
 /***/ }),
+/* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
@@ -12424,9 +12665,9 @@ __webpack_require__(22);
 
 __webpack_require__(20);
 
-var _gettingStartedSoy = __webpack_require__(100);
+var _configurationSoy = __webpack_require__(99);
 
-var _gettingStartedSoy2 = _interopRequireDefault(_gettingStartedSoy);
+var _configurationSoy2 = _interopRequireDefault(_configurationSoy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12436,23 +12677,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var QpWfh = function (_Component) {
-  _inherits(QpWfh, _Component);
+var lSQUl = function (_Component) {
+  _inherits(lSQUl, _Component);
 
-  function QpWfh() {
-    _classCallCheck(this, QpWfh);
+  function lSQUl() {
+    _classCallCheck(this, lSQUl);
 
-    return _possibleConstructorReturn(this, (QpWfh.__proto__ || Object.getPrototypeOf(QpWfh)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (lSQUl.__proto__ || Object.getPrototypeOf(lSQUl)).apply(this, arguments));
   }
 
-  return QpWfh;
+  return lSQUl;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(QpWfh, _gettingStartedSoy2.default);
+_metalSoy2.default.register(lSQUl, _configurationSoy2.default);
 
-exports.default = QpWfh;
+exports.default = lSQUl;
 
 /***/ })
 ],[117]);
