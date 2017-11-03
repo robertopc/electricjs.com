@@ -162,7 +162,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ComponentRenderer = exports.ComponentRegistry = exports.ComponentDataManager = exports.Component = undefined;
 
-var _events = __webpack_require__(86);
+var _events = __webpack_require__(77);
 
 Object.keys(_events).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -174,19 +174,19 @@ Object.keys(_events).forEach(function (key) {
   });
 });
 
-var _Component = __webpack_require__(139);
+var _Component = __webpack_require__(107);
 
 var _Component2 = _interopRequireDefault(_Component);
 
-var _ComponentDataManager = __webpack_require__(84);
+var _ComponentDataManager = __webpack_require__(75);
 
 var _ComponentDataManager2 = _interopRequireDefault(_ComponentDataManager);
 
-var _ComponentRegistry = __webpack_require__(140);
+var _ComponentRegistry = __webpack_require__(108);
 
 var _ComponentRegistry2 = _interopRequireDefault(_ComponentRegistry);
 
-var _ComponentRenderer = __webpack_require__(85);
+var _ComponentRenderer = __webpack_require__(76);
 
 var _ComponentRenderer2 = _interopRequireDefault(_ComponentRenderer);
 
@@ -214,7 +214,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-__webpack_require__(154);
+__webpack_require__(126);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -222,15 +222,11 @@ var _metal = __webpack_require__(2);
 
 var _metalState = __webpack_require__(8);
 
-var _html2incdom = __webpack_require__(138);
-
-var _html2incdom2 = _interopRequireDefault(_html2incdom);
-
-var _metalIncrementalDom = __webpack_require__(90);
+var _metalIncrementalDom = __webpack_require__(81);
 
 var _metalIncrementalDom2 = _interopRequireDefault(_metalIncrementalDom);
 
-var _SoyAop = __webpack_require__(155);
+var _SoyAop = __webpack_require__(127);
 
 var _SoyAop2 = _interopRequireDefault(_SoyAop);
 
@@ -492,7 +488,7 @@ var Soy = function (_IncrementalDomRender) {
 				value = value.content;
 			}
 			if ((0, _metal.isString)(value)) {
-				value = _html2incdom2.default.buildFn(value);
+				value = _metalIncrementalDom.HTML2IncDom.buildFn(value);
 			}
 			return value;
 		}
@@ -522,7 +518,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.string = exports.object = exports.Disposable = exports.async = exports.array = undefined;
 
-var _core = __webpack_require__(98);
+var _core = __webpack_require__(88);
 
 Object.keys(_core).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -536,23 +532,23 @@ Object.keys(_core).forEach(function (key) {
 
 var _core2 = _interopRequireDefault(_core);
 
-var _array = __webpack_require__(159);
+var _array = __webpack_require__(131);
 
 var _array2 = _interopRequireDefault(_array);
 
-var _async = __webpack_require__(160);
+var _async = __webpack_require__(132);
 
 var _async2 = _interopRequireDefault(_async);
 
-var _Disposable = __webpack_require__(162);
+var _Disposable = __webpack_require__(134);
 
 var _Disposable2 = _interopRequireDefault(_Disposable);
 
-var _object = __webpack_require__(163);
+var _object = __webpack_require__(135);
 
 var _object2 = _interopRequireDefault(_object);
 
-var _string = __webpack_require__(164);
+var _string = __webpack_require__(136);
 
 var _string2 = _interopRequireDefault(_string);
 
@@ -577,7 +573,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.globalEvalStyles = exports.globalEval = exports.features = exports.DomEventHandle = exports.DomEventEmitterProxy = exports.domData = undefined;
 
-var _dom = __webpack_require__(80);
+var _dom = __webpack_require__(69);
 
 Object.keys(_dom).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -591,31 +587,31 @@ Object.keys(_dom).forEach(function (key) {
 
 var _dom2 = _interopRequireDefault(_dom);
 
-var _domData = __webpack_require__(82);
+var _domData = __webpack_require__(71);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomEventEmitterProxy = __webpack_require__(143);
+var _DomEventEmitterProxy = __webpack_require__(111);
 
 var _DomEventEmitterProxy2 = _interopRequireDefault(_DomEventEmitterProxy);
 
-var _DomEventHandle = __webpack_require__(87);
+var _DomEventHandle = __webpack_require__(78);
 
 var _DomEventHandle2 = _interopRequireDefault(_DomEventHandle);
 
-var _features = __webpack_require__(88);
+var _features = __webpack_require__(79);
 
 var _features2 = _interopRequireDefault(_features);
 
-var _globalEval = __webpack_require__(146);
+var _globalEval = __webpack_require__(114);
 
 var _globalEval2 = _interopRequireDefault(_globalEval);
 
-var _globalEvalStyles = __webpack_require__(147);
+var _globalEvalStyles = __webpack_require__(115);
 
 var _globalEvalStyles2 = _interopRequireDefault(_globalEvalStyles);
 
-__webpack_require__(145);
+__webpack_require__(113);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -642,19 +638,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.EventHandler = exports.EventHandle = exports.EventEmitterProxy = exports.EventEmitter = undefined;
 
-var _EventEmitter = __webpack_require__(148);
+var _EventEmitter = __webpack_require__(116);
 
 var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
 
-var _EventEmitterProxy = __webpack_require__(149);
+var _EventEmitterProxy = __webpack_require__(117);
 
 var _EventEmitterProxy2 = _interopRequireDefault(_EventEmitterProxy);
 
-var _EventHandle = __webpack_require__(89);
+var _EventHandle = __webpack_require__(80);
 
 var _EventHandle2 = _interopRequireDefault(_EventHandle);
 
-var _EventHandler = __webpack_require__(150);
+var _EventHandler = __webpack_require__(118);
 
 var _EventHandler2 = _interopRequireDefault(_EventHandler);
 
@@ -678,15 +674,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.State = exports.Config = exports.validators = undefined;
 
-var _validators = __webpack_require__(97);
+var _validators = __webpack_require__(87);
 
 var _validators2 = _interopRequireDefault(_validators);
 
-var _Config = __webpack_require__(156);
+var _Config = __webpack_require__(128);
 
 var _Config2 = _interopRequireDefault(_Config);
 
-var _State = __webpack_require__(157);
+var _State = __webpack_require__(129);
 
 var _State2 = _interopRequireDefault(_State);
 
@@ -731,11 +727,11 @@ var _metalSoy = __webpack_require__(1);
 
 var _metalSoy2 = _interopRequireDefault(_metalSoy);
 
-var _metalToggler = __webpack_require__(158);
+var _metalToggler = __webpack_require__(130);
 
 var _metalToggler2 = _interopRequireDefault(_metalToggler);
 
-var _Sidebar = __webpack_require__(115);
+var _Sidebar = __webpack_require__(153);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
@@ -827,43 +823,269 @@ exports.default = Sidebar;
 /* 66 */,
 /* 67 */,
 /* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */
-/***/ (function(module, exports) {
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+"use strict";
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
 
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
+// This file exists just for backwards compatibility, making sure that old
+// default imports for this file still work. It's best to use the named exports
+// for each function instead though, since that allows bundlers like Rollup to
+// reduce the bundle size by removing unused code.
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.dom = undefined;
 
-module.exports = g;
+var _domNamed = __webpack_require__(112);
 
+Object.keys(_domNamed).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _domNamed[key];
+    }
+  });
+});
+
+var dom = _interopRequireWildcard(_domNamed);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = dom;
+exports.dom = dom;
 
 /***/ }),
-/* 79 */
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clearData = clearData;
+exports.getData = getData;
+var RENDERER_DATA = '__METAL_IC_RENDERER_DATA__';
+
+/**
+ * Removes the incremental dom renderer data object for this component.
+ * @param {!Component} component
+ */
+function clearData(component) {
+  component[RENDERER_DATA] = null;
+}
+
+/**
+ * Gets the incremental dom renderer data object for this component, creating
+ * it if it doesn't exist yet.
+ * @param {!Component} component
+ * @return {!Object}
+ */
+function getData(component) {
+  if (!component[RENDERER_DATA]) {
+    component[RENDERER_DATA] = {};
+  }
+  return component[RENDERER_DATA];
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var METAL_DATA = '__metal_data__';
+
+var domData = function () {
+	function domData() {
+		_classCallCheck(this, domData);
+	}
+
+	_createClass(domData, null, [{
+		key: 'get',
+
+		/**
+   * Gets Metal.js's data for the given element.
+   * @param {!Element} element
+   * @param {string=} opt_name Optional property from the data to be returned.
+   * @param {*} opt_initialVal Optinal value to the set the requested property
+   *     to if it doesn't exist yet in the data.
+   * @return {!Object}
+   */
+		value: function get(element, opt_name, opt_initialVal) {
+			if (!element[METAL_DATA]) {
+				element[METAL_DATA] = {};
+			}
+			if (!opt_name) {
+				return element[METAL_DATA];
+			}
+			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
+				element[METAL_DATA][opt_name] = opt_initialVal;
+			}
+			return element[METAL_DATA][opt_name];
+		}
+
+		/**
+   * Checks if the given element has data stored in it.
+   * @param {!Element} element
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'has',
+		value: function has(element) {
+			return !!element[METAL_DATA];
+		}
+	}]);
+
+	return domData;
+}();
+
+exports.default = domData;
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.getOriginalFns = getOriginalFns;
+exports.getOriginalFn = getOriginalFn;
+exports.startInterception = startInterception;
+exports.stopInterception = stopInterception;
+
+__webpack_require__(85);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/**
+ * Gets the original incremental dom functions.
+ * @return {!Object}
+ */
+function getOriginalFns() {
+	return originalFns;
+}
+
+/**
+ * Gets the original incremental dom function with the given name.
+ * @param {string} name
+ * @return {!Object}
+ */
+function getOriginalFn(name) {
+	return originalFns[name];
+}
+
+/**
+ * Starts intercepting calls to incremental dom, replacing them with the given
+ * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
+ * and `attr` are the only ones that can't be intercepted, since they'll
+ * automatically be converted into equivalent calls to `elementOpen` and
+ * `elementClose`.
+ * @param {!Object} fns Functions to be called instead of the original ones
+ *     from incremental DOM. Should be given as a map from the function name
+ *     to the function that should intercept it. All interceptors will receive
+ *     the original function as the first argument, the actual arguments from
+ *     from the original call following it.
+ */
+function startInterception(fns) {
+	fns.attr = fnAttr;
+	fns.elementOpenEnd = fnOpenEnd;
+	fns.elementOpenStart = fnOpenStart;
+	fns.elementVoid = fnVoid;
+	fnStack.push(fns);
+}
+
+/**
+ * Restores the original `elementOpen` function from incremental dom to the
+ * implementation it used before the last call to `startInterception`.
+ */
+function stopInterception() {
+	fnStack.pop();
+}
+
+var originalFns = {
+	attr: IncrementalDOM.attr,
+	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
+	elementClose: IncrementalDOM.elementClose,
+	elementOpen: IncrementalDOM.elementOpen,
+	elementOpenEnd: IncrementalDOM.elementOpenEnd,
+	elementOpenStart: IncrementalDOM.elementOpenStart,
+	elementVoid: IncrementalDOM.elementVoid,
+	text: IncrementalDOM.text
+};
+
+var fnStack = [];
+
+var collectedArgs = [];
+
+function fnAttr(name, value) {
+	collectedArgs.push(name, value);
+}
+
+function fnOpenStart(tag, key, statics) {
+	collectedArgs = [tag, key, statics];
+}
+
+function fnOpenEnd() {
+	var _IncrementalDOM;
+
+	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
+}
+
+function fnVoid() {
+	IncrementalDOM.elementOpen.apply(null, arguments);
+	return IncrementalDOM.elementClose.apply(null, arguments);
+}
+
+function getStack() {
+	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
+}
+
+function buildHandleCall(name) {
+	var data = {
+		name: name
+	};
+	var fn = handleCall.bind(data);
+	return fn;
+}
+
+function handleCall() {
+	var name = this.name; // eslint-disable-line
+	var stack = getStack();
+	var fn = stack && stack[name] || originalFns[name];
+	return fn.apply(null, arguments);
+}
+
+IncrementalDOM.attr = buildHandleCall('attr');
+IncrementalDOM.elementClose = buildHandleCall('elementClose');
+IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
+IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
+IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
+IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
+IncrementalDOM.text = buildHandleCall('text');
+
+IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -1053,271 +1275,34 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 74 */
+/***/ (function(module, exports) {
 
-"use strict";
+var g;
 
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
 
-// This file exists just for backwards compatibility, making sure that old
-// default imports for this file still work. It's best to use the named exports
-// for each function instead though, since that allows bundlers like Rollup to
-// reduce the bundle size by removing unused code.
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.dom = undefined;
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
 
-var _domNamed = __webpack_require__(144);
+module.exports = g;
 
-Object.keys(_domNamed).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _domNamed[key];
-    }
-  });
-});
-
-var dom = _interopRequireWildcard(_domNamed);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-exports.default = dom;
-exports.dom = dom;
 
 /***/ }),
-/* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.clearData = clearData;
-exports.getData = getData;
-var RENDERER_DATA = '__METAL_IC_RENDERER_DATA__';
-
-/**
- * Removes the incremental dom renderer data object for this component.
- * @param {!Component} component
- */
-function clearData(component) {
-  component[RENDERER_DATA] = null;
-}
-
-/**
- * Gets the incremental dom renderer data object for this component, creating
- * it if it doesn't exist yet.
- * @param {!Component} component
- * @return {!Object}
- */
-function getData(component) {
-  if (!component[RENDERER_DATA]) {
-    component[RENDERER_DATA] = {};
-  }
-  return component[RENDERER_DATA];
-}
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var METAL_DATA = '__metal_data__';
-
-var domData = function () {
-	function domData() {
-		_classCallCheck(this, domData);
-	}
-
-	_createClass(domData, null, [{
-		key: 'get',
-
-		/**
-   * Gets Metal.js's data for the given element.
-   * @param {!Element} element
-   * @param {string=} opt_name Optional property from the data to be returned.
-   * @param {*} opt_initialVal Optinal value to the set the requested property
-   *     to if it doesn't exist yet in the data.
-   * @return {!Object}
-   */
-		value: function get(element, opt_name, opt_initialVal) {
-			if (!element[METAL_DATA]) {
-				element[METAL_DATA] = {};
-			}
-			if (!opt_name) {
-				return element[METAL_DATA];
-			}
-			if (!element[METAL_DATA][opt_name] && opt_initialVal) {
-				element[METAL_DATA][opt_name] = opt_initialVal;
-			}
-			return element[METAL_DATA][opt_name];
-		}
-
-		/**
-   * Checks if the given element has data stored in it.
-   * @param {!Element} element
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'has',
-		value: function has(element) {
-			return !!element[METAL_DATA];
-		}
-	}]);
-
-	return domData;
-}();
-
-exports.default = domData;
-
-/***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.getOriginalFns = getOriginalFns;
-exports.getOriginalFn = getOriginalFn;
-exports.startInterception = startInterception;
-exports.stopInterception = stopInterception;
-
-__webpack_require__(95);
-
-__webpack_require__(94);
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-/**
- * Gets the original incremental dom functions.
- * @return {!Object}
- */
-function getOriginalFns() {
-	return originalFns;
-}
-
-/**
- * Gets the original incremental dom function with the given name.
- * @param {string} name
- * @return {!Object}
- */
-function getOriginalFn(name) {
-	return originalFns[name];
-}
-
-/**
- * Starts intercepting calls to incremental dom, replacing them with the given
- * functions. Note that `elementVoid`, `elementOpenStart`, `elementOpenEnd`
- * and `attr` are the only ones that can't be intercepted, since they'll
- * automatically be converted into equivalent calls to `elementOpen` and
- * `elementClose`.
- * @param {!Object} fns Functions to be called instead of the original ones
- *     from incremental DOM. Should be given as a map from the function name
- *     to the function that should intercept it. All interceptors will receive
- *     the original function as the first argument, the actual arguments from
- *     from the original call following it.
- */
-function startInterception(fns) {
-	fns.attr = fnAttr;
-	fns.elementOpenEnd = fnOpenEnd;
-	fns.elementOpenStart = fnOpenStart;
-	fns.elementVoid = fnVoid;
-	fnStack.push(fns);
-}
-
-/**
- * Restores the original `elementOpen` function from incremental dom to the
- * implementation it used before the last call to `startInterception`.
- */
-function stopInterception() {
-	fnStack.pop();
-}
-
-var originalFns = {
-	attr: IncrementalDOM.attr,
-	attributes: IncrementalDOM.attributes[IncrementalDOM.symbols.default],
-	elementClose: IncrementalDOM.elementClose,
-	elementOpen: IncrementalDOM.elementOpen,
-	elementOpenEnd: IncrementalDOM.elementOpenEnd,
-	elementOpenStart: IncrementalDOM.elementOpenStart,
-	elementVoid: IncrementalDOM.elementVoid,
-	text: IncrementalDOM.text
-};
-
-var fnStack = [];
-
-var collectedArgs = [];
-
-function fnAttr(name, value) {
-	collectedArgs.push(name, value);
-}
-
-function fnOpenStart(tag, key, statics) {
-	collectedArgs = [tag, key, statics];
-}
-
-function fnOpenEnd() {
-	var _IncrementalDOM;
-
-	return (_IncrementalDOM = IncrementalDOM).elementOpen.apply(_IncrementalDOM, _toConsumableArray(collectedArgs));
-}
-
-function fnVoid() {
-	IncrementalDOM.elementOpen.apply(null, arguments);
-	return IncrementalDOM.elementClose.apply(null, arguments);
-}
-
-function getStack() {
-	return fnStack.length > 0 ? fnStack[fnStack.length - 1] : null;
-}
-
-function buildHandleCall(name) {
-	var data = {
-		name: name
-	};
-	var fn = handleCall.bind(data);
-	return fn;
-}
-
-function handleCall() {
-	var name = this.name; // eslint-disable-line
-	var stack = getStack();
-	var fn = stack && stack[name] || originalFns[name];
-	return fn.apply(null, arguments);
-}
-
-IncrementalDOM.attr = buildHandleCall('attr');
-IncrementalDOM.elementClose = buildHandleCall('elementClose');
-IncrementalDOM.elementOpen = buildHandleCall('elementOpen');
-IncrementalDOM.elementOpenEnd = buildHandleCall('elementOpenEnd');
-IncrementalDOM.elementOpenStart = buildHandleCall('elementOpenStart');
-IncrementalDOM.elementVoid = buildHandleCall('elementVoid');
-IncrementalDOM.text = buildHandleCall('text');
-
-IncrementalDOM.attributes[IncrementalDOM.symbols.default] = buildHandleCall('attributes');
-
-/***/ }),
-/* 84 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1519,7 +1504,7 @@ var ComponentDataManager = function () {
 exports.default = new ComponentDataManager();
 
 /***/ }),
-/* 85 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1612,7 +1597,7 @@ var ComponentRenderer = function () {
 exports.default = new ComponentRenderer();
 
 /***/ }),
-/* 86 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1687,7 +1672,7 @@ function getComponentFn(component, fnName) {
 }
 
 /***/ }),
-/* 87 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1751,7 +1736,7 @@ var DomEventHandle = function (_EventHandle) {
 exports.default = DomEventHandle;
 
 /***/ }),
-/* 88 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1763,7 +1748,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dom = __webpack_require__(80);
+var _dom = __webpack_require__(69);
 
 var _metal = __webpack_require__(2);
 
@@ -1808,6 +1793,9 @@ var features = function () {
 			var prefixes = ['Webkit', 'MS', 'O', ''];
 			var typeTitleCase = _metal.string.replaceInterval(type, 0, 1, type.substring(0, 1).toUpperCase());
 			var suffixes = [typeTitleCase + 'End', typeTitleCase + 'End', typeTitleCase + 'End', type + 'end'];
+			if (!features.animationElement_) {
+				features.animationElement_ = document.createElement('div');
+			}
 			for (var i = 0; i < prefixes.length; i++) {
 				if (features.animationElement_.style[prefixes[i] + typeTitleCase] !== undefined) {
 					return prefixes[i].toLowerCase() + suffixes[i];
@@ -1839,14 +1827,14 @@ var features = function () {
 	return features;
 }();
 
-features.animationElement_ = document.createElement('div');
+features.animationElement_ = undefined;
 features.animationEventName_ = undefined;
 features.attrOrderChange_ = undefined;
 
 exports.default = features;
 
 /***/ }),
-/* 89 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1942,332 +1930,32 @@ var EventHandle = function (_Disposable) {
 exports.default = EventHandle;
 
 /***/ }),
-/* 90 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
+exports.HTML2IncDom = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _HTML2IncDom = __webpack_require__(121);
 
-__webpack_require__(95);
+var _HTML2IncDom2 = _interopRequireDefault(_HTML2IncDom);
 
-__webpack_require__(94);
+var _IncrementalDomRenderer = __webpack_require__(119);
 
-var _changes = __webpack_require__(92);
+var _IncrementalDomRenderer2 = _interopRequireDefault(_IncrementalDomRenderer);
 
-var _data = __webpack_require__(81);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _children = __webpack_require__(93);
-
-var _patch2 = __webpack_require__(153);
-
-var _render = __webpack_require__(96);
-
-var _metalComponent = __webpack_require__(0);
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var IncrementalDomRenderer = function (_ComponentRenderer$co) {
-	_inherits(IncrementalDomRenderer, _ComponentRenderer$co);
-
-	function IncrementalDomRenderer() {
-		_classCallCheck(this, IncrementalDomRenderer);
-
-		return _possibleConstructorReturn(this, (IncrementalDomRenderer.__proto__ || Object.getPrototypeOf(IncrementalDomRenderer)).apply(this, arguments));
-	}
-
-	_createClass(IncrementalDomRenderer, [{
-		key: 'buildShouldUpdateArgs',
-
-		/**
-   * Returns an array with the args that should be passed to the component's
-   * `shouldUpdate` method. This can be overridden by sub classes to change
-   * what the method should receive.
-   * @param {Object} changes
-   * @return {!Array}
-   */
-		value: function buildShouldUpdateArgs(changes) {
-			return [changes.props];
-		}
-
-		/**
-   * @inheritDoc
-   */
-
-	}, {
-		key: 'dispose',
-		value: function dispose(component) {
-			var data = (0, _data.getData)(component);
-			var ref = data.config.ref;
-			var owner = data.owner;
-			if (owner && owner.components && owner.components[ref] === component) {
-				delete owner.components[ref];
-			}
-
-			if (data.childComponents) {
-				for (var i = 0; i < data.childComponents.length; i++) {
-					var child = data.childComponents[i];
-					if (!child.isDisposed()) {
-						child.element = null;
-						child.dispose();
-					}
-				}
-			}
-
-			(0, _data.clearData)(component);
-		}
-
-		/**
-   * Generates a key for the element currently being rendered in the given
-   * component. By default, just returns the original key. Sub classes can
-   * override this to change the behavior.
-   * @param {!Component} component
-   * @param {string} key
-   * @return {?string}
-   */
-
-	}, {
-		key: 'generateKey',
-		value: function generateKey(component, key) {
-			return key;
-		}
-
-		/**
-   * Get the component's config data.
-   * @param {!Component} component
-   * @return {!Object}
-   */
-
-	}, {
-		key: 'getConfig',
-		value: function getConfig(component) {
-			return (0, _data.getData)(component).config;
-		}
-
-		/**
-   * Get the component's incremental dom renderer data.
-   * @param {!Component} component
-   * @return {!Object}
-   */
-
-	}, {
-		key: 'getData',
-		value: function getData(component) {
-			return (0, _data.getData)(component);
-		}
-
-		/**
-   * Gets the component that triggered the current patch operation.
-   * @return {Component}
-   */
-
-	}, {
-		key: 'getPatchingComponent',
-		value: function getPatchingComponent() {
-			return (0, _patch2.getPatchingComponent)();
-		}
-
-		/**
-   * Handles a node having just been rendered. Sub classes should override this
-   * for custom behavior.
-   */
-
-	}, {
-		key: 'handleNodeRendered',
-		value: function handleNodeRendered() {}
-
-		/**
-   * Checks if the given object is an incremental dom node.
-   * @param {!Object} node
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'isIncDomNode',
-		value: function isIncDomNode(node) {
-			return !!(0, _children.getOwner)(node);
-		}
-
-		/**
-   * Calls incremental dom's patch function to render the component.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'patch',
-		value: function patch(component) {
-			(0, _patch2.patch)(component);
-		}
-
-		/**
-   * Renders the renderer's component for the first time, patching its element
-   * through incremental dom function calls. If the first arg is a function
-   * instead of a component instance, creates and renders this function, which
-   * can either be a simple incremental dom function or a component constructor.
-   * @param {!Component} component
-   * @param {!Component|function()} component Can be a component instance, a
-   *     simple incremental dom function or a component constructor.
-   * @param {Object|Element=} opt_dataOrElement Optional config data for the
-   *     function, or parent for the rendered content.
-   * @param {Element=} opt_parent Optional parent for the rendered content.
-   * @return {!Component} The rendered component's instance.
-   */
-
-	}, {
-		key: 'render',
-		value: function render(component, opt_dataOrElement, opt_parent) {
-			if (component instanceof _metalComponent.Component) {
-				this.patch(component);
-			} else {
-				return (0, _render.renderFunction)(this, component, opt_dataOrElement, opt_parent);
-			}
-		}
-
-		/**
-   * Renders the given child node via its owner renderer.
-   * @param {!Object} child
-   */
-
-	}, {
-		key: 'renderChild',
-		value: function renderChild(child) {
-			(0, _render.renderChild)(child);
-		}
-
-		/**
-   * Calls functions from `IncrementalDOM` to build the component element's
-   * content. Can be overriden by subclasses (for integration with template
-   * engines for example).
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'renderIncDom',
-		value: function renderIncDom(component) {
-			if (component.render) {
-				component.render();
-			} else {
-				IncrementalDOM.elementVoid('div');
-			}
-		}
-
-		/**
-   * Runs the incremental dom functions for rendering this component, without
-   * calling `patch`. This function needs to be called inside a `patch`.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'renderInsidePatch',
-		value: function renderInsidePatch(component) {
-			var shouldRender = !component.wasRendered || this.shouldUpdate(component, (0, _changes.getChanges)(component)) || IncrementalDOM.currentPointer() !== component.element;
-			if (shouldRender) {
-				(0, _render.render)(component);
-			} else if (component.element) {
-				this.skipRender();
-			}
-		}
-
-		/**
-   * Sets up this component to be used by this renderer.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'setUp',
-		value: function setUp(component) {
-			component.context = {};
-			component.components = {};
-			component.refs = {};
-
-			var data = (0, _data.getData)(component);
-			data.config = component.getInitialConfig();
-			(0, _changes.trackChanges)(component);
-		}
-
-		/**
-   * Checks if the component should be updated with the current state changes.
-   * @param {!Component} component
-   * @param {Object} changes
-   * @return {boolean}
-   */
-
-	}, {
-		key: 'shouldUpdate',
-		value: function shouldUpdate(component, changes) {
-			if (!changes) {
-				return false;
-			}
-			if (component.shouldUpdate) {
-				return component.shouldUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
-			}
-			return true;
-		}
-
-		/**
-   * Skips the next disposal of children components, by clearing the array as
-   * if there were no children rendered the last time. This can be useful for
-   * allowing components to be reused by other parent components in separate
-   * render update cycles.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'skipNextChildrenDisposal',
-		value: function skipNextChildrenDisposal(component) {
-			(0, _data.getData)(component).childComponents = null;
-		}
-
-		/**
-   * Skips rendering the current node.
-   */
-
-	}, {
-		key: 'skipRender',
-		value: function skipRender() {
-			IncrementalDOM.skipNode();
-		}
-
-		/**
-   * Updates the renderer's component when state changes, patching its element
-   * through incremental dom function calls.
-   * @param {!Component} component
-   */
-
-	}, {
-		key: 'update',
-		value: function update(component) {
-			if (this.shouldUpdate(component, (0, _changes.getChanges)(component))) {
-				this.patch(component);
-			}
-		}
-	}]);
-
-	return IncrementalDomRenderer;
-}(_metalComponent.ComponentRenderer.constructor);
-
-var renderer = new IncrementalDomRenderer();
-
-// Name of this renderer. Renderers should provide this as a way to identify
-// them via a simple string (when calling enableCompatibilityMode to add
-// support to old features for specific renderers for example).
-renderer.RENDERER_NAME = 'incremental-dom';
-
-exports.default = renderer;
+exports.HTML2IncDom = _HTML2IncDom2.default;
+exports.default = _IncrementalDomRenderer2.default;
 
 /***/ }),
-/* 91 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2315,7 +2003,7 @@ function buildCallFromConfig(tag, config) {
 }
 
 /***/ }),
-/* 92 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2328,7 +2016,7 @@ exports.clearChanges = clearChanges;
 exports.getChanges = getChanges;
 exports.trackChanges = trackChanges;
 
-var _data = __webpack_require__(81);
+var _data = __webpack_require__(70);
 
 /**
  * Clears the changes tracked so far.
@@ -2371,7 +2059,7 @@ function trackChanges(component) {
 }
 
 /***/ }),
-/* 93 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2386,11 +2074,11 @@ exports.isChildTag = isChildTag;
 exports.getOwner = getOwner;
 exports.renderChildTree = renderChildTree;
 
-var _callArgs = __webpack_require__(91);
+var _callArgs = __webpack_require__(82);
 
 var _metal = __webpack_require__(2);
 
-var _incrementalDomAop = __webpack_require__(83);
+var _incrementalDomAop = __webpack_require__(72);
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2572,1544 +2260,39 @@ function handleInterceptedTextCall_() {
 }
 
 /***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process, global) {
-
-/*eslint-disable */
-
-// Sets to true if running inside Node.js environment with extra check for
-// `process.browser` to skip Karma runner environment. Karma environment has
-// `process` defined even though it runs on the browser.
-var isNode = typeof process !== 'undefined' && !process.browser;
-
-if (isNode && process.env.NODE_ENV !== 'test') {
-  // Overrides global.IncrementalDOM virutal elements with incremental dom
-  // string implementation for server side rendering. At the moment it does not
-  // override for Node.js tests since tests are using jsdom to simulate the
-  // browser.
-
-  var scope = global;
-
-  (function (global, factory) {
-    factory(global.IncrementalDOM = global.IncrementalDOM || {});
-  })(scope, function (exports) {
-
-    // =========================================================================
-
-    /**
-     * An array used to store the strings generated by calls to
-     * elementOpen, elementOpenStart, elementOpenEnd, elementEnd and elementVoid
-     */
-    exports.buffer = [];
-
-    /** @type {?Object} */
-    exports.currentParent = null;
-
-    /**
-     * Gets the current Element being patched.
-     * @return {!Element}
-     */
-    var currentElement = function currentElement() {
-      return exports.currentParent;
-    };
-
-    /**
-     * @return {Node} The Node that will be evaluated for the next instruction.
-     */
-    var currentPointer = function currentPointer() {
-      return {};
-    };
-
-    /**
-     * Patches an Element with the the provided function. Exactly one top level
-     * element call should be made corresponding to `node`.
-     *
-     * @param {?object} node The Element where the patch should start.
-     * @param {!function(T)} fn A function containing open/close/etc. calls that
-     *     describe the DOM. This should have at most one top level element call.
-     * @param {T=} data An argument passed to fn to represent DOM state.
-     * @return {void} Nothing.
-     */
-    var patch = function patch(node, fn, data) {
-      exports.currentParent = node;
-      fn(data);
-      exports.currentParent.innerHTML = exports.buffer.join('');
-      exports.buffer = [];
-      return exports.currentParent;
-    };
-
-    var patchOuter = patch;
-    var patchInner = patch;
-
-    /**
-     * Declares a virtual Text at this point in the document.
-     *
-     * @param {string|number|boolean} value The value of the Text.
-     * @param {...(function((string|number|boolean)):string)} var_args
-     *     Functions to format the value which are called only when the value has
-     *     changed.
-     *
-     * @return {void} Nothing.
-     */
-    var text = function text(value, var_args) {
-      var formatted = value;
-      for (var i = 1; i < arguments.length; i += 1) {
-        var fn = arguments[i];
-        formatted = fn(formatted);
-      }
-      exports.buffer.push(formatted);
-    };
-
-    /** @const */
-    var symbols = {
-      default: '__default'
-    };
-
-    /** @const */
-    var attributes = {};
-
-    /**
-     * Calls the appropriate attribute mutator for this attribute.
-     * @param {!Array.<string>} el Buffer representation of element attributes.
-     * @param {string} name The attribute's name.
-     * @param {*} value The attribute's value.
-     */
-    var updateAttribute = function updateAttribute(el, name, value) {
-      var mutator = attributes[name] || attributes[symbols.default];
-      mutator(el, name, value);
-    };
-
-    // Special generic mutator that's called for any attribute that does not
-    // have a specific mutator.
-    attributes[symbols.default] = function (el, name, value) {
-      if (Array.isArray(el)) {
-        el.push(' ' + name + '="' + value + '"');
-      }
-    };
-
-    /**
-     * Truncates an array, removing items up until length.
-     * @param {!Array<*>} arr The array to truncate.
-     * @param {number} length The new length of the array.
-     */
-    var truncateArray = function truncateArray(arr, length) {
-      while (arr.length > length) {
-        arr.pop();
-      }
-    };
-
-    /**
-     * The offset in the virtual element declaration where the attributes are
-     * specified.
-     * @const
-     */
-    var ATTRIBUTES_OFFSET = 3;
-
-    /**
-     * Builds an array of arguments for use with elementOpenStart, attr and
-     * elementOpenEnd.
-     * @const {!Array<*>}
-     */
-    var argsBuilder = [];
-
-    /**
-     * Defines a virtual attribute at this point of the DOM. This is only valid
-     * when called between elementOpenStart and elementOpenEnd.
-     *
-     * @param {string} name The attribute's name.
-     * @param {*} value The attribute's value.
-     * @return {void} Nothing.
-     */
-    var attr = function attr(name, value) {
-      argsBuilder.push(name);
-      argsBuilder.push(value);
-    };
-
-    /**
-     * Closes an open virtual Element.
-     *
-     * @param {string} The Element's tag.
-     * @return {void} Nothing.
-     */
-    var elementClose = function elementClose(nameOrCtor) {
-      if (typeof nameOrCtor === 'function') {
-        new nameOrCtor();
-        return;
-      }
-      exports.buffer.push('</' + nameOrCtor + '>');
-    };
-
-    /**
-     * Declares a virtual Element at the current location in the document that has
-     * no children.
-     *
-     * @param {string} The Element's tag or constructor.
-     * @param {?string=} key The key used to identify this element. This can be an
-     *     empty string, but performance may be better if a unique value is used
-     *     when iterating over an array of items.
-     * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-     *     static attributes for the Element. These will only be set once when the
-     *     Element is created.
-     * @param {...*} var_args Attribute name/value pairs of the dynamic attributes
-     *     for the Element.
-     * @return {void} Nothing.
-     */
-    var elementVoid = function elementVoid(nameOrCtor, key, statics, var_args) {
-      elementOpen.apply(null, arguments);
-      return elementClose(nameOrCtor);
-    };
-
-    /**
-     * @param {!string} nameOrCtor The Element's tag or constructor.
-     * @param {?string=} key The key used to identify this element. This can be an
-     *     empty string, but performance may be better if a unique value is used
-     *     when iterating over an array of items.
-     * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-     *     static attributes for the Element. These will only be set once when the
-     *     Element is created.
-     * @param {...*} var_args, Attribute name/value pairs of the dynamic attributes
-     *     for the Element.
-     * @return {void} Nothing.
-     */
-    var elementOpen = function elementOpen(nameOrCtor, key, statics, var_args) {
-      if (typeof nameOrCtor === 'function') {
-        new nameOrCtor();
-        return exports.currentParent;
-      }
-
-      exports.buffer.push('<' + nameOrCtor);
-
-      if (statics) {
-        for (var _i = 0; _i < statics.length; _i += 2) {
-          var name = /** @type {string} */statics[_i];
-          var value = statics[_i + 1];
-          updateAttribute(exports.buffer, name, value);
-        }
-      }
-
-      var i = ATTRIBUTES_OFFSET;
-      var j = 0;
-
-      for (; i < arguments.length; i += 2, j += 2) {
-        var _name = arguments[i];
-        var _value = arguments[i + 1];
-        updateAttribute(exports.buffer, _name, _value);
-      }
-
-      exports.buffer.push('>');
-
-      return exports.currentParent;
-    };
-
-    /**
-     * Closes an open tag started with elementOpenStart.
-     *
-     * @return {void} Nothing.
-     */
-    var elementOpenEnd = function elementOpenEnd() {
-      elementOpen.apply(null, argsBuilder);
-      truncateArray(argsBuilder, 0);
-    };
-
-    /**
-     * Declares a virtual Element at the current location in the document. This
-     * corresponds to an opening tag and a elementClose tag is required. This is
-     * like elementOpen, but the attributes are defined using the attr function
-     * rather than being passed as arguments. Must be folllowed by 0 or more calls
-     * to attr, then a call to elementOpenEnd.
-     * @param {string} nameOrCtor The Element's tag or constructor.
-     * @param {?string=} key The key used to identify this element. This can be an
-     *     empty string, but performance may be better if a unique value is used
-     *     when iterating over an array of items.
-     * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-     *     static attributes for the Element. These will only be set once when the
-     *     Element is created.
-     * @return {void} Nothing.
-     */
-    var elementOpenStart = function elementOpenStart(nameOrCtor, key, statics) {
-      argsBuilder[0] = nameOrCtor;
-      argsBuilder[1] = key;
-      argsBuilder[2] = statics;
-    };
-
-    /**
-     * Returns the constructred DOM string at this point.
-     * @param {function} fn
-     * @return {string} The constructed DOM string.
-     */
-    var renderToString = function renderToString(fn) {
-      patch({}, fn);
-      return currentElement().innerHTML;
-    };
-
-    exports.currentElement = currentElement;
-    exports.currentPointer = currentPointer;
-    exports.patch = patch;
-    exports.patchInner = patchInner;
-    exports.patchOuter = patchOuter;
-    exports.text = text;
-    exports.attr = attr;
-    exports.elementClose = elementClose;
-    exports.elementOpen = elementOpen;
-    exports.elementOpenEnd = elementOpenEnd;
-    exports.elementOpenStart = elementOpenStart;
-    exports.elementVoid = elementVoid;
-    exports.renderToString = renderToString;
-    exports.symbols = symbols;
-    exports.attributes = attributes;
-    exports.updateAttribute = updateAttribute;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
-
-    // =========================================================================
-  });
-
-  /* eslint-enable */
-}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(79), __webpack_require__(78)))
-
-/***/ }),
-/* 95 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _incrementalDom = __webpack_require__(106);
 
-/*eslint-disable */
+var IncrementalDOM = _interopRequireWildcard(_incrementalDom);
 
-/**
- * @license
- * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS-IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+var _incrementalDomString = __webpack_require__(105);
 
-var scope = typeof exports !== 'undefined' && typeof global !== 'undefined' ? global : window;
+var IncrementalDOMString = _interopRequireWildcard(_incrementalDomString);
 
-(function (global, factory) {
-  factory(global.IncrementalDOM = global.IncrementalDOM || {});
-})(scope, function (exports) {
-  'use strict';
+var _metal = __webpack_require__(2);
 
-  /**
-   * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS-IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-  /**
-   * A cached reference to the hasOwnProperty function.
-   */
+if ((0, _metal.isServerSide)()) {
+	// Overrides global.IncrementalDOM virtual elements with incremental dom
+	// string implementation for server side rendering. At the moment it does not
+	// override for Node.js tests since tests are using jsdom to simulate the
+	// browser.
+	global.IncrementalDOM = IncrementalDOMString;
+} else {
+	var scope = typeof exports !== 'undefined' && typeof global !== 'undefined' ? global : window;
 
-  var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-  /**
-   * A constructor function that will create blank objects.
-   * @constructor
-   */
-  function Blank() {}
-
-  Blank.prototype = Object.create(null);
-
-  /**
-   * Used to prevent property collisions between our "map" and its prototype.
-   * @param {!Object<string, *>} map The map to check.
-   * @param {string} property The property to check.
-   * @return {boolean} Whether map has property.
-   */
-  var has = function has(map, property) {
-    return hasOwnProperty.call(map, property);
-  };
-
-  /**
-   * Creates an map object without a prototype.
-   * @return {!Object}
-   */
-  var createMap = function createMap() {
-    return new Blank();
-  };
-
-  /**
-   * The property name where we store Incremental DOM data.
-   */
-  var DATA_PROP = '__incrementalDOMData';
-
-  /**
-   * Keeps track of information needed to perform diffs for a given DOM node.
-   * @param {!string} nodeName
-   * @param {?string=} key
-   * @constructor
-   */
-  function NodeData(nodeName, key) {
-    /**
-     * The attributes and their values.
-     * @const {!Object<string, *>}
-     */
-    this.attrs = createMap();
-
-    /**
-     * An array of attribute name/value pairs, used for quickly diffing the
-     * incomming attributes to see if the DOM node's attributes need to be
-     * updated.
-     * @const {Array<*>}
-     */
-    this.attrsArr = [];
-
-    /**
-     * The incoming attributes for this Node, before they are updated.
-     * @const {!Object<string, *>}
-     */
-    this.newAttrs = createMap();
-
-    /**
-     * Whether or not the statics have been applied for the node yet.
-     * {boolean}
-     */
-    this.staticsApplied = false;
-
-    /**
-     * The key used to identify this node, used to preserve DOM nodes when they
-     * move within their parent.
-     * @const
-     */
-    this.key = key;
-
-    /**
-     * Keeps track of children within this node by their key.
-     * {!Object<string, !Element>}
-     */
-    this.keyMap = createMap();
-
-    /**
-     * Whether or not the keyMap is currently valid.
-     * @type {boolean}
-     */
-    this.keyMapValid = true;
-
-    /**
-     * Whether or the associated node is, or contains, a focused Element.
-     * @type {boolean}
-     */
-    this.focused = false;
-
-    /**
-     * The node name for this node.
-     * @const {string}
-     */
-    this.nodeName = nodeName;
-
-    /**
-     * @type {?string}
-     */
-    this.text = null;
-  }
-
-  /**
-   * Initializes a NodeData object for a Node.
-   *
-   * @param {Node} node The node to initialize data for.
-   * @param {string} nodeName The node name of node.
-   * @param {?string=} key The key that identifies the node.
-   * @return {!NodeData} The newly initialized data object
-   */
-  var initData = function initData(node, nodeName, key) {
-    var data = new NodeData(nodeName, key);
-    node[DATA_PROP] = data;
-    return data;
-  };
-
-  /**
-   * Retrieves the NodeData object for a Node, creating it if necessary.
-   *
-   * @param {?Node} node The Node to retrieve the data for.
-   * @return {!NodeData} The NodeData for this Node.
-   */
-  var getData = function getData(node) {
-    importNode(node);
-    return node[DATA_PROP];
-  };
-
-  /**
-   * Imports node and its subtree, initializing caches.
-   *
-   * @param {?Node} node The Node to import.
-   */
-  var importNode = function importNode(node) {
-    if (node[DATA_PROP]) {
-      return;
-    }
-
-    var isElement = node instanceof Element;
-    var nodeName = isElement ? node.localName : node.nodeName;
-    var key = isElement ? node.getAttribute('key') : null;
-    var data = initData(node, nodeName, key);
-
-    if (key) {
-      getData(node.parentNode).keyMap[key] = node;
-    }
-
-    if (isElement) {
-      var attributes = node.attributes;
-      var attrs = data.attrs;
-      var newAttrs = data.newAttrs;
-      var attrsArr = data.attrsArr;
-
-      for (var i = 0; i < attributes.length; i += 1) {
-        var attr = attributes[i];
-        var name = attr.name;
-        var value = attr.value;
-
-        attrs[name] = value;
-        newAttrs[name] = undefined;
-        attrsArr.push(name);
-        attrsArr.push(value);
-      }
-    }
-
-    for (var child = node.firstChild; child; child = child.nextSibling) {
-      importNode(child);
-    }
-  };
-
-  /**
-   * Gets the namespace to create an element (of a given tag) in.
-   * @param {string} tag The tag to get the namespace for.
-   * @param {?Node} parent
-   * @return {?string} The namespace to create the tag in.
-   */
-  var getNamespaceForTag = function getNamespaceForTag(tag, parent) {
-    if (tag === 'svg') {
-      return 'http://www.w3.org/2000/svg';
-    }
-
-    if (getData(parent).nodeName === 'foreignObject') {
-      return null;
-    }
-
-    return parent.namespaceURI;
-  };
-
-  /**
-   * Creates an Element.
-   * @param {Document} doc The document with which to create the Element.
-   * @param {?Node} parent
-   * @param {string} tag The tag for the Element.
-   * @param {?string=} key A key to identify the Element.
-   * @return {!Element}
-   */
-  var createElement = function createElement(doc, parent, tag, key) {
-    var namespace = getNamespaceForTag(tag, parent);
-    var el = undefined;
-
-    if (namespace) {
-      el = doc.createElementNS(namespace, tag);
-    } else {
-      el = doc.createElement(tag);
-    }
-
-    initData(el, tag, key);
-
-    return el;
-  };
-
-  /**
-   * Creates a Text Node.
-   * @param {Document} doc The document with which to create the Element.
-   * @return {!Text}
-   */
-  var createText = function createText(doc) {
-    var node = doc.createTextNode('');
-    initData(node, '#text', null);
-    return node;
-  };
-
-  /**
-   * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS-IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
-
-  /** @const */
-  var notifications = {
-    /**
-     * Called after patch has compleated with any Nodes that have been created
-     * and added to the DOM.
-     * @type {?function(Array<!Node>)}
-     */
-    nodesCreated: null,
-
-    /**
-     * Called after patch has compleated with any Nodes that have been removed
-     * from the DOM.
-     * Note it's an applications responsibility to handle any childNodes.
-     * @type {?function(Array<!Node>)}
-     */
-    nodesDeleted: null
-  };
-
-  /**
-   * Keeps track of the state of a patch.
-   * @constructor
-   */
-  function Context() {
-    /**
-     * @type {(Array<!Node>|undefined)}
-     */
-    this.created = notifications.nodesCreated && [];
-
-    /**
-     * @type {(Array<!Node>|undefined)}
-     */
-    this.deleted = notifications.nodesDeleted && [];
-  }
-
-  /**
-   * @param {!Node} node
-   */
-  Context.prototype.markCreated = function (node) {
-    if (this.created) {
-      this.created.push(node);
-    }
-  };
-
-  /**
-   * @param {!Node} node
-   */
-  Context.prototype.markDeleted = function (node) {
-    if (this.deleted) {
-      this.deleted.push(node);
-    }
-  };
-
-  /**
-   * Notifies about nodes that were created during the patch opearation.
-   */
-  Context.prototype.notifyChanges = function () {
-    if (this.created && this.created.length > 0) {
-      notifications.nodesCreated(this.created);
-    }
-
-    if (this.deleted && this.deleted.length > 0) {
-      notifications.nodesDeleted(this.deleted);
-    }
-  };
-
-  /**
-   * Copyright 2016 The Incremental DOM Authors. All Rights Reserved.
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS-IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
-
-  /**
-   * @param {!Node} node
-   * @return {boolean} True if the node the root of a document, false otherwise.
-   */
-  var isDocumentRoot = function isDocumentRoot(node) {
-    // For ShadowRoots, check if they are a DocumentFragment instead of if they
-    // are a ShadowRoot so that this can work in 'use strict' if ShadowRoots are
-    // not supported.
-    return node instanceof Document || node instanceof DocumentFragment;
-  };
-
-  /**
-   * @param {!Node} node The node to start at, inclusive.
-   * @param {?Node} root The root ancestor to get until, exclusive.
-   * @return {!Array<!Node>} The ancestry of DOM nodes.
-   */
-  var getAncestry = function getAncestry(node, root) {
-    var ancestry = [];
-    var cur = node;
-
-    while (cur !== root) {
-      ancestry.push(cur);
-      cur = cur.parentNode;
-    }
-
-    return ancestry;
-  };
-
-  /**
-   * @param {!Node} node
-   * @return {!Node} The root node of the DOM tree that contains node.
-   */
-  var getRoot = function getRoot(node) {
-    var cur = node;
-    var prev = cur;
-
-    while (cur) {
-      prev = cur;
-      cur = cur.parentNode;
-    }
-
-    return prev;
-  };
-
-  /**
-   * @param {!Node} node The node to get the activeElement for.
-   * @return {?Element} The activeElement in the Document or ShadowRoot
-   *     corresponding to node, if present.
-   */
-  var getActiveElement = function getActiveElement(node) {
-    var root = getRoot(node);
-    return isDocumentRoot(root) ? root.activeElement : null;
-  };
-
-  /**
-   * Gets the path of nodes that contain the focused node in the same document as
-   * a reference node, up until the root.
-   * @param {!Node} node The reference node to get the activeElement for.
-   * @param {?Node} root The root to get the focused path until.
-   * @return {!Array<Node>}
-   */
-  var getFocusedPath = function getFocusedPath(node, root) {
-    var activeElement = getActiveElement(node);
-
-    if (!activeElement || !node.contains(activeElement)) {
-      return [];
-    }
-
-    return getAncestry(activeElement, root);
-  };
-
-  /**
-   * Like insertBefore, but instead instead of moving the desired node, instead
-   * moves all the other nodes after.
-   * @param {?Node} parentNode
-   * @param {!Node} node
-   * @param {?Node} referenceNode
-   */
-  var moveBefore = function moveBefore(parentNode, node, referenceNode) {
-    var insertReferenceNode = node.nextSibling;
-    var cur = referenceNode;
-
-    while (cur !== node) {
-      var next = cur.nextSibling;
-      parentNode.insertBefore(cur, insertReferenceNode);
-      cur = next;
-    }
-  };
-
-  /** @type {?Context} */
-  var context = null;
-
-  /** @type {?Node} */
-  var currentNode = null;
-
-  /** @type {?Node} */
-  var currentParent = null;
-
-  /** @type {?Document} */
-  var doc = null;
-
-  /**
-   * @param {!Array<Node>} focusPath The nodes to mark.
-   * @param {boolean} focused Whether or not they are focused.
-   */
-  var markFocused = function markFocused(focusPath, focused) {
-    for (var i = 0; i < focusPath.length; i += 1) {
-      getData(focusPath[i]).focused = focused;
-    }
-  };
-
-  /**
-   * Returns a patcher function that sets up and restores a patch context,
-   * running the run function with the provided data.
-   * @param {function((!Element|!DocumentFragment),!function(T),T=): ?Node} run
-   * @return {function((!Element|!DocumentFragment),!function(T),T=): ?Node}
-   * @template T
-   */
-  var patchFactory = function patchFactory(run) {
-    /**
-     * TODO(moz): These annotations won't be necessary once we switch to Closure
-     * Compiler's new type inference. Remove these once the switch is done.
-     *
-     * @param {(!Element|!DocumentFragment)} node
-     * @param {!function(T)} fn
-     * @param {T=} data
-     * @return {?Node} node
-     * @template T
-     */
-    var f = function f(node, fn, data) {
-      var prevContext = context;
-      var prevDoc = doc;
-      var prevCurrentNode = currentNode;
-      var prevCurrentParent = currentParent;
-      var previousInAttributes = false;
-      var previousInSkip = false;
-
-      context = new Context();
-      doc = node.ownerDocument;
-      currentParent = node.parentNode;
-
-      if (false) {}
-
-      var focusPath = getFocusedPath(node, currentParent);
-      markFocused(focusPath, true);
-      var retVal = run(node, fn, data);
-      markFocused(focusPath, false);
-
-      if (false) {}
-
-      context.notifyChanges();
-
-      context = prevContext;
-      doc = prevDoc;
-      currentNode = prevCurrentNode;
-      currentParent = prevCurrentParent;
-
-      return retVal;
-    };
-    return f;
-  };
-
-  /**
-   * Patches the document starting at node with the provided function. This
-   * function may be called during an existing patch operation.
-   * @param {!Element|!DocumentFragment} node The Element or Document
-   *     to patch.
-   * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
-   *     calls that describe the DOM.
-   * @param {T=} data An argument passed to fn to represent DOM state.
-   * @return {!Node} The patched node.
-   * @template T
-   */
-  var patchInner = patchFactory(function (node, fn, data) {
-    currentNode = node;
-
-    enterNode();
-    fn(data);
-    exitNode();
-
-    if (false) {}
-
-    return node;
-  });
-
-  /**
-   * Patches an Element with the the provided function. Exactly one top level
-   * element call should be made corresponding to `node`.
-   * @param {!Element} node The Element where the patch should start.
-   * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
-   *     calls that describe the DOM. This should have at most one top level
-   *     element call.
-   * @param {T=} data An argument passed to fn to represent DOM state.
-   * @return {?Node} The node if it was updated, its replacedment or null if it
-   *     was removed.
-   * @template T
-   */
-  var patchOuter = patchFactory(function (node, fn, data) {
-    var startNode = /** @type {!Element} */{ nextSibling: node };
-    var expectedNextNode = null;
-    var expectedPrevNode = null;
-
-    if (false) {}
-
-    currentNode = startNode;
-    fn(data);
-
-    if (false) {}
-
-    if (node !== currentNode && node.parentNode) {
-      removeChild(currentParent, node, getData(currentParent).keyMap);
-    }
-
-    return startNode === currentNode ? null : currentNode;
-  });
-
-  /**
-   * Checks whether or not the current node matches the specified nodeName and
-   * key.
-   *
-   * @param {!Node} matchNode A node to match the data to.
-   * @param {?string} nodeName The nodeName for this node.
-   * @param {?string=} key An optional key that identifies a node.
-   * @return {boolean} True if the node matches, false otherwise.
-   */
-  var matches = function matches(matchNode, nodeName, key) {
-    var data = getData(matchNode);
-
-    // Key check is done using double equals as we want to treat a null key the
-    // same as undefined. This should be okay as the only values allowed are
-    // strings, null and undefined so the == semantics are not too weird.
-    return nodeName === data.nodeName && key == data.key;
-  };
-
-  /**
-   * Aligns the virtual Element definition with the actual DOM, moving the
-   * corresponding DOM node to the correct location or creating it if necessary.
-   * @param {string} nodeName For an Element, this should be a valid tag string.
-   *     For a Text, this should be #text.
-   * @param {?string=} key The key used to identify this element.
-   */
-  var alignWithDOM = function alignWithDOM(nodeName, key) {
-    if (currentNode && matches(currentNode, nodeName, key)) {
-      return;
-    }
-
-    var parentData = getData(currentParent);
-    var currentNodeData = currentNode && getData(currentNode);
-    var keyMap = parentData.keyMap;
-    var node = undefined;
-
-    // Check to see if the node has moved within the parent.
-    if (key) {
-      var keyNode = keyMap[key];
-      if (keyNode) {
-        if (matches(keyNode, nodeName, key)) {
-          node = keyNode;
-        } else if (keyNode === currentNode) {
-          context.markDeleted(keyNode);
-        } else {
-          removeChild(currentParent, keyNode, keyMap);
-        }
-      }
-    }
-
-    // Create the node if it doesn't exist.
-    if (!node) {
-      if (nodeName === '#text') {
-        node = createText(doc);
-      } else {
-        node = createElement(doc, currentParent, nodeName, key);
-      }
-
-      if (key) {
-        keyMap[key] = node;
-      }
-
-      context.markCreated(node);
-    }
-
-    // Re-order the node into the right position, preserving focus if either
-    // node or currentNode are focused by making sure that they are not detached
-    // from the DOM.
-    if (getData(node).focused) {
-      // Move everything else before the node.
-      moveBefore(currentParent, node, currentNode);
-    } else if (currentNodeData && currentNodeData.key && !currentNodeData.focused) {
-      // Remove the currentNode, which can always be added back since we hold a
-      // reference through the keyMap. This prevents a large number of moves when
-      // a keyed item is removed or moved backwards in the DOM.
-      currentParent.replaceChild(node, currentNode);
-      parentData.keyMapValid = false;
-    } else {
-      currentParent.insertBefore(node, currentNode);
-    }
-
-    currentNode = node;
-  };
-
-  /**
-   * @param {?Node} node
-   * @param {?Node} child
-   * @param {?Object<string, !Element>} keyMap
-   */
-  var removeChild = function removeChild(node, child, keyMap) {
-    if (child.parentNode === node) {
-      node.removeChild(child);
-    }
-    context.markDeleted( /** @type {!Node}*/child);
-
-    var key = getData(child).key;
-    if (key) {
-      delete keyMap[key];
-    }
-  };
-
-  /**
-   * Clears out any unvisited Nodes, as the corresponding virtual element
-   * functions were never called for them.
-   */
-  var clearUnvisitedDOM = function clearUnvisitedDOM() {
-    var node = currentParent;
-    var data = getData(node);
-    var keyMap = data.keyMap;
-    var keyMapValid = data.keyMapValid;
-    var child = node.lastChild;
-    var key = undefined;
-
-    if (child === currentNode && keyMapValid) {
-      return;
-    }
-
-    while (child !== currentNode) {
-      removeChild(node, child, keyMap);
-      child = node.lastChild;
-    }
-
-    // Clean the keyMap, removing any unusued keys.
-    if (!keyMapValid) {
-      for (key in keyMap) {
-        child = keyMap[key];
-        if (child.parentNode !== node) {
-          context.markDeleted(child);
-          delete keyMap[key];
-        }
-      }
-
-      data.keyMapValid = true;
-    }
-  };
-
-  /**
-   * Changes to the first child of the current node.
-   */
-  var enterNode = function enterNode() {
-    currentParent = currentNode;
-    currentNode = null;
-  };
-
-  /**
-   * @return {?Node} The next Node to be patched.
-   */
-  var getNextNode = function getNextNode() {
-    if (currentNode) {
-      return currentNode.nextSibling;
-    } else {
-      return currentParent.firstChild;
-    }
-  };
-
-  /**
-   * Changes to the next sibling of the current node.
-   */
-  var nextNode = function nextNode() {
-    currentNode = getNextNode();
-  };
-
-  /**
-   * Changes to the parent of the current node, removing any unvisited children.
-   */
-  var exitNode = function exitNode() {
-    clearUnvisitedDOM();
-
-    currentNode = currentParent;
-    currentParent = currentParent.parentNode;
-  };
-
-  /**
-   * Makes sure that the current node is an Element with a matching tagName and
-   * key.
-   *
-   * @param {string} tag The element's tag.
-   * @param {?string=} key The key used to identify this element. This can be an
-   *     empty string, but performance may be better if a unique value is used
-   *     when iterating over an array of items.
-   * @return {!Element} The corresponding Element.
-   */
-  var coreElementOpen = function coreElementOpen(tag, key) {
-    nextNode();
-    alignWithDOM(tag, key);
-    enterNode();
-    return (/** @type {!Element} */currentParent
-    );
-  };
-
-  /**
-   * Closes the currently open Element, removing any unvisited children if
-   * necessary.
-   *
-   * @return {!Element} The corresponding Element.
-   */
-  var coreElementClose = function coreElementClose() {
-    if (false) {}
-
-    exitNode();
-    return (/** @type {!Element} */currentNode
-    );
-  };
-
-  /**
-   * Makes sure the current node is a Text node and creates a Text node if it is
-   * not.
-   *
-   * @return {!Text} The corresponding Text Node.
-   */
-  var coreText = function coreText() {
-    nextNode();
-    alignWithDOM('#text', null);
-    return (/** @type {!Text} */currentNode
-    );
-  };
-
-  /**
-   * Gets the current Element being patched.
-   * @return {!Element}
-   */
-  var currentElement = function currentElement() {
-    if (false) {}
-    return (/** @type {!Element} */currentParent
-    );
-  };
-
-  /**
-   * @return {Node} The Node that will be evaluated for the next instruction.
-   */
-  var currentPointer = function currentPointer() {
-    if (false) {}
-    return getNextNode();
-  };
-
-  /**
-   * Skips the children in a subtree, allowing an Element to be closed without
-   * clearing out the children.
-   */
-  var skip = function skip() {
-    if (false) {}
-    currentNode = currentParent.lastChild;
-  };
-
-  /**
-   * Skips the next Node to be patched, moving the pointer forward to the next
-   * sibling of the current pointer.
-   */
-  var skipNode = nextNode;
-
-  /**
-   * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *      http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS-IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */
-
-  /** @const */
-  var symbols = {
-    default: '__default'
-  };
-
-  /**
-   * @param {string} name
-   * @return {string|undefined} The namespace to use for the attribute.
-   */
-  var getNamespace = function getNamespace(name) {
-    if (name.lastIndexOf('xml:', 0) === 0) {
-      return 'http://www.w3.org/XML/1998/namespace';
-    }
-
-    if (name.lastIndexOf('xlink:', 0) === 0) {
-      return 'http://www.w3.org/1999/xlink';
-    }
-  };
-
-  /**
-   * Applies an attribute or property to a given Element. If the value is null
-   * or undefined, it is removed from the Element. Otherwise, the value is set
-   * as an attribute.
-   * @param {!Element} el
-   * @param {string} name The attribute's name.
-   * @param {?(boolean|number|string)=} value The attribute's value.
-   */
-  var applyAttr = function applyAttr(el, name, value) {
-    if (value == null) {
-      el.removeAttribute(name);
-    } else {
-      var attrNS = getNamespace(name);
-      if (attrNS) {
-        el.setAttributeNS(attrNS, name, value);
-      } else {
-        el.setAttribute(name, value);
-      }
-    }
-  };
-
-  /**
-   * Applies a property to a given Element.
-   * @param {!Element} el
-   * @param {string} name The property's name.
-   * @param {*} value The property's value.
-   */
-  var applyProp = function applyProp(el, name, value) {
-    el[name] = value;
-  };
-
-  /**
-   * Applies a value to a style declaration. Supports CSS custom properties by
-   * setting properties containing a dash using CSSStyleDeclaration.setProperty.
-   * @param {CSSStyleDeclaration} style
-   * @param {!string} prop
-   * @param {*} value
-   */
-  var setStyleValue = function setStyleValue(style, prop, value) {
-    if (prop.indexOf('-') >= 0) {
-      style.setProperty(prop, /** @type {string} */value);
-    } else {
-      style[prop] = value;
-    }
-  };
-
-  /**
-   * Applies a style to an Element. No vendor prefix expansion is done for
-   * property names/values.
-   * @param {!Element} el
-   * @param {string} name The attribute's name.
-   * @param {*} style The style to set. Either a string of css or an object
-   *     containing property-value pairs.
-   */
-  var applyStyle = function applyStyle(el, name, style) {
-    if (typeof style === 'string') {
-      el.style.cssText = style;
-    } else {
-      el.style.cssText = '';
-      var elStyle = el.style;
-      var obj = /** @type {!Object<string,string>} */style;
-
-      for (var prop in obj) {
-        if (has(obj, prop)) {
-          setStyleValue(elStyle, prop, obj[prop]);
-        }
-      }
-    }
-  };
-
-  /**
-   * Updates a single attribute on an Element.
-   * @param {!Element} el
-   * @param {string} name The attribute's name.
-   * @param {*} value The attribute's value. If the value is an object or
-   *     function it is set on the Element, otherwise, it is set as an HTML
-   *     attribute.
-   */
-  var applyAttributeTyped = function applyAttributeTyped(el, name, value) {
-    var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
-
-    if (type === 'object' || type === 'function') {
-      applyProp(el, name, value);
-    } else {
-      applyAttr(el, name, /** @type {?(boolean|number|string)} */value);
-    }
-  };
-
-  /**
-   * Calls the appropriate attribute mutator for this attribute.
-   * @param {!Element} el
-   * @param {string} name The attribute's name.
-   * @param {*} value The attribute's value.
-   */
-  var updateAttribute = function updateAttribute(el, name, value) {
-    var data = getData(el);
-    var attrs = data.attrs;
-
-    if (attrs[name] === value) {
-      return;
-    }
-
-    var mutator = attributes[name] || attributes[symbols.default];
-    mutator(el, name, value);
-
-    attrs[name] = value;
-  };
-
-  /**
-   * A publicly mutable object to provide custom mutators for attributes.
-   * @const {!Object<string, function(!Element, string, *)>}
-   */
-  var attributes = createMap();
-
-  // Special generic mutator that's called for any attribute that does not
-  // have a specific mutator.
-  attributes[symbols.default] = applyAttributeTyped;
-
-  attributes['style'] = applyStyle;
-
-  /**
-   * The offset in the virtual element declaration where the attributes are
-   * specified.
-   * @const
-   */
-  var ATTRIBUTES_OFFSET = 3;
-
-  /**
-   * Builds an array of arguments for use with elementOpenStart, attr and
-   * elementOpenEnd.
-   * @const {Array<*>}
-   */
-  var argsBuilder = [];
-
-  /**
-   * @param {string} tag The element's tag.
-   * @param {?string=} key The key used to identify this element. This can be an
-   *     empty string, but performance may be better if a unique value is used
-   *     when iterating over an array of items.
-   * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-   *     static attributes for the Element. These will only be set once when the
-   *     Element is created.
-   * @param {...*} var_args, Attribute name/value pairs of the dynamic attributes
-   *     for the Element.
-   * @return {!Element} The corresponding Element.
-   */
-  var elementOpen = function elementOpen(tag, key, statics, var_args) {
-    if (false) {}
-
-    var node = coreElementOpen(tag, key);
-    var data = getData(node);
-
-    if (!data.staticsApplied) {
-      if (statics) {
-        for (var _i = 0; _i < statics.length; _i += 2) {
-          var name = /** @type {string} */statics[_i];
-          var value = statics[_i + 1];
-          updateAttribute(node, name, value);
-        }
-      }
-      // Down the road, we may want to keep track of the statics array to use it
-      // as an additional signal about whether a node matches or not. For now,
-      // just use a marker so that we do not reapply statics.
-      data.staticsApplied = true;
-    }
-
-    /*
-     * Checks to see if one or more attributes have changed for a given Element.
-     * When no attributes have changed, this is much faster than checking each
-     * individual argument. When attributes have changed, the overhead of this is
-     * minimal.
-     */
-    var attrsArr = data.attrsArr;
-    var newAttrs = data.newAttrs;
-    var isNew = !attrsArr.length;
-    var i = ATTRIBUTES_OFFSET;
-    var j = 0;
-
-    for (; i < arguments.length; i += 2, j += 2) {
-      var _attr = arguments[i];
-      if (isNew) {
-        attrsArr[j] = _attr;
-        newAttrs[_attr] = undefined;
-      } else if (attrsArr[j] !== _attr) {
-        break;
-      }
-
-      var value = arguments[i + 1];
-      if (isNew || attrsArr[j + 1] !== value) {
-        attrsArr[j + 1] = value;
-        updateAttribute(node, _attr, value);
-      }
-    }
-
-    if (i < arguments.length || j < attrsArr.length) {
-      for (; i < arguments.length; i += 1, j += 1) {
-        attrsArr[j] = arguments[i];
-      }
-
-      if (j < attrsArr.length) {
-        attrsArr.length = j;
-      }
-
-      /*
-       * Actually perform the attribute update.
-       */
-      for (i = 0; i < attrsArr.length; i += 2) {
-        var name = /** @type {string} */attrsArr[i];
-        var value = attrsArr[i + 1];
-        newAttrs[name] = value;
-      }
-
-      for (var _attr2 in newAttrs) {
-        updateAttribute(node, _attr2, newAttrs[_attr2]);
-        newAttrs[_attr2] = undefined;
-      }
-    }
-
-    return node;
-  };
-
-  /**
-   * Declares a virtual Element at the current location in the document. This
-   * corresponds to an opening tag and a elementClose tag is required. This is
-   * like elementOpen, but the attributes are defined using the attr function
-   * rather than being passed as arguments. Must be folllowed by 0 or more calls
-   * to attr, then a call to elementOpenEnd.
-   * @param {string} tag The element's tag.
-   * @param {?string=} key The key used to identify this element. This can be an
-   *     empty string, but performance may be better if a unique value is used
-   *     when iterating over an array of items.
-   * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-   *     static attributes for the Element. These will only be set once when the
-   *     Element is created.
-   */
-  var elementOpenStart = function elementOpenStart(tag, key, statics) {
-    if (false) {}
-
-    argsBuilder[0] = tag;
-    argsBuilder[1] = key;
-    argsBuilder[2] = statics;
-  };
-
-  /***
-   * Defines a virtual attribute at this point of the DOM. This is only valid
-   * when called between elementOpenStart and elementOpenEnd.
-   *
-   * @param {string} name
-   * @param {*} value
-   */
-  var attr = function attr(name, value) {
-    if (false) {}
-
-    argsBuilder.push(name);
-    argsBuilder.push(value);
-  };
-
-  /**
-   * Closes an open tag started with elementOpenStart.
-   * @return {!Element} The corresponding Element.
-   */
-  var elementOpenEnd = function elementOpenEnd() {
-    if (false) {}
-
-    var node = elementOpen.apply(null, argsBuilder);
-    argsBuilder.length = 0;
-    return node;
-  };
-
-  /**
-   * Closes an open virtual Element.
-   *
-   * @param {string} tag The element's tag.
-   * @return {!Element} The corresponding Element.
-   */
-  var elementClose = function elementClose(tag) {
-    if (false) {}
-
-    var node = coreElementClose();
-
-    if (false) {}
-
-    return node;
-  };
-
-  /**
-   * Declares a virtual Element at the current location in the document that has
-   * no children.
-   * @param {string} tag The element's tag.
-   * @param {?string=} key The key used to identify this element. This can be an
-   *     empty string, but performance may be better if a unique value is used
-   *     when iterating over an array of items.
-   * @param {?Array<*>=} statics An array of attribute name/value pairs of the
-   *     static attributes for the Element. These will only be set once when the
-   *     Element is created.
-   * @param {...*} var_args Attribute name/value pairs of the dynamic attributes
-   *     for the Element.
-   * @return {!Element} The corresponding Element.
-   */
-  var elementVoid = function elementVoid(tag, key, statics, var_args) {
-    elementOpen.apply(null, arguments);
-    return elementClose(tag);
-  };
-
-  /**
-   * Declares a virtual Text at this point in the document.
-   *
-   * @param {string|number|boolean} value The value of the Text.
-   * @param {...(function((string|number|boolean)):string)} var_args
-   *     Functions to format the value which are called only when the value has
-   *     changed.
-   * @return {!Text} The corresponding text node.
-   */
-  var text = function text(value, var_args) {
-    if (false) {}
-
-    var node = coreText();
-    var data = getData(node);
-
-    if (data.text !== value) {
-      data.text = /** @type {string} */value;
-
-      var formatted = value;
-      for (var i = 1; i < arguments.length; i += 1) {
-        /*
-         * Call the formatter function directly to prevent leaking arguments.
-         * https://github.com/google/incremental-dom/pull/204#issuecomment-178223574
-         */
-        var fn = arguments[i];
-        formatted = fn(formatted);
-      }
-
-      node.data = formatted;
-    }
-
-    return node;
-  };
-
-  exports.patch = patchInner;
-  exports.patchInner = patchInner;
-  exports.patchOuter = patchOuter;
-  exports.currentElement = currentElement;
-  exports.currentPointer = currentPointer;
-  exports.skip = skip;
-  exports.skipNode = skipNode;
-  exports.elementVoid = elementVoid;
-  exports.elementOpenStart = elementOpenStart;
-  exports.elementOpenEnd = elementOpenEnd;
-  exports.elementOpen = elementOpen;
-  exports.elementClose = elementClose;
-  exports.text = text;
-  exports.attr = attr;
-  exports.symbols = symbols;
-  exports.attributes = attributes;
-  exports.applyAttr = applyAttr;
-  exports.applyProp = applyProp;
-  exports.notifications = notifications;
-  exports.importNode = importNode;
-});
-
-/* eslint-enable */
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
+	scope.IncrementalDOM = IncrementalDOM;
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74)))
 
 /***/ }),
-/* 96 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4127,23 +2310,23 @@ exports.render = render;
 exports.renderChild = renderChild;
 exports.renderFunction = renderFunction;
 
-var _attributes = __webpack_require__(152);
+var _attributes = __webpack_require__(124);
 
-var _callArgs = __webpack_require__(91);
+var _callArgs = __webpack_require__(82);
 
-var _children = __webpack_require__(93);
+var _children = __webpack_require__(84);
 
-var _changes = __webpack_require__(92);
+var _changes = __webpack_require__(83);
 
 var _metalDom = __webpack_require__(3);
 
-var _data = __webpack_require__(81);
+var _data = __webpack_require__(70);
 
 var _metal = __webpack_require__(2);
 
-var _unused = __webpack_require__(151);
+var _unused = __webpack_require__(120);
 
-var _incrementalDomAop = __webpack_require__(83);
+var _incrementalDomAop = __webpack_require__(72);
 
 var _metalComponent = __webpack_require__(0);
 
@@ -4439,6 +2622,26 @@ function handleSubComponentCall_() {
 }
 
 /**
+ * Passes down elementClasses to a child component if the parent component
+ * returns another component at the top level (HOC).
+ * @param {*} parent The parent component
+ * @param {*} config The config of the subcomponent
+ */
+function inheritElementClasses_(parent, config) {
+	var parentData = (0, _data.getData)(parent);
+	var parentConfig = parentData.config;
+
+	if (!parentData.rootElementReached && parentConfig && (0, _metal.isString)(parentConfig.elementClasses)) {
+		var currentClasses = '';
+		if ((0, _metal.isString)(config.elementClasses)) {
+			currentClasses = config.elementClasses + ' ';
+		}
+
+		config.elementClasses = currentClasses + parentConfig.elementClasses;
+	}
+}
+
+/**
  * Checks if the given tag represents a metal component.
  * @param {string} tag
  * @return {boolean}
@@ -4630,6 +2833,9 @@ function renderFunction(renderer, fnOrCtor, opt_dataOrElement, opt_parent) {
 function renderSubComponent_(tagOrCtor, config, opt_owner) {
 	var parent = getComponentBeingRendered();
 	var owner = opt_owner || parent;
+
+	inheritElementClasses_(parent, config);
+
 	var comp = getSubComponent_(tagOrCtor, config, owner);
 	updateContext_(comp, parent);
 
@@ -4704,7 +2910,7 @@ function updateElementIfNotReached_(component, node) {
 }
 
 /***/ }),
-/* 97 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4720,7 +2926,7 @@ var _metal = __webpack_require__(2);
 
 var ERROR_ARRAY_OF_TYPE = 'Expected an array of single type.';
 var ERROR_OBJECT_OF_TYPE = 'Expected object of one type.';
-var ERROR_ONE_OF = 'Expected one of given values.';
+var ERROR_ONE_OF = 'Expected one of the following values:';
 var ERROR_ONE_OF_TYPE = 'Expected one of given types.';
 var ERROR_SHAPE_OF = 'Expected object with a specific shape.';
 
@@ -4803,7 +3009,7 @@ var validators = {
 			if (isInvalid(result)) {
 				return result;
 			}
-			return arrayOfValues.indexOf(value) === -1 ? composeError(ERROR_ONE_OF, name, context) : true;
+			return arrayOfValues.indexOf(value) === -1 ? composeError(composeOneOfErrorMessage(arrayOfValues), name, context) : true;
 		});
 	},
 
@@ -4899,6 +3105,15 @@ function composeError(error, name, context) {
 }
 
 /**
+ * Composes an error message for Config.oneOf validator.
+ * @param {!Array} arrayOfValues Array of values to check equality against.
+ * @return {!Error}
+ */
+function composeOneOfErrorMessage(arrayOfValues) {
+	return ERROR_ONE_OF + ' ' + JSON.stringify(arrayOfValues) + '.';
+}
+
+/**
  * Returns the type of the given value.
  * @param {*} value Any value.
  * @return {string} Type of value.
@@ -4966,7 +3181,7 @@ function validateType(expectedType, value, name, context) {
 exports.default = validators;
 
 /***/ }),
-/* 98 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4982,7 +3197,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.core = undefined;
 
-var _coreNamed = __webpack_require__(161);
+var _coreNamed = __webpack_require__(133);
 
 Object.keys(_coreNamed).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -5002,910 +3217,1727 @@ exports.default = core;
 exports.core = core;
 
 /***/ }),
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
 /* 99 */,
 /* 100 */,
 /* 101 */,
 /* 102 */,
 /* 103 */,
 /* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */,
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return Sidebar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
-/* jshint ignore:start */
-
-
-var templates;
-goog.loadModule(function(exports) {
-
-// This file was automatically generated from Sidebar.soy.
-// Please don't edit this file by hand.
-
-/**
- * @fileoverview Templates in namespace Sidebar.
- * @hassoydeltemplate {ElectricNavigation.anchor.idom}
- * @public
- */
-
-goog.module('Sidebar.incrementaldom');
-
-/** @suppress {extraRequire} */
-var soy = goog.require('soy');
-/** @suppress {extraRequire} */
-var soydata = goog.require('soydata');
-/** @suppress {extraRequire} */
-goog.require('goog.i18n.bidi');
-/** @suppress {extraRequire} */
-goog.require('goog.asserts');
-/** @suppress {extraRequire} */
-goog.require('goog.string');
-var IncrementalDom = goog.require('incrementaldom');
-var ie_open = IncrementalDom.elementOpen;
-var ie_close = IncrementalDom.elementClose;
-var ie_void = IncrementalDom.elementVoid;
-var ie_open_start = IncrementalDom.elementOpenStart;
-var ie_open_end = IncrementalDom.elementOpenEnd;
-var itext = IncrementalDom.text;
-var iattr = IncrementalDom.attr;
-
-var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricNavigation.incrementaldom', 'render');
-
-var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function $render(opt_data, opt_ignored, opt_ijData) {
-  ie_open('nav', null, null,
-      'class', 'sidebar');
-    ie_open('a', null, null,
-        'class', 'sidebar-header toggler-header-collapsed');
-      ie_void('span', null, null,
-          'class', 'sidebar-icon icon-16-menu');
-      ie_open('span');
-        itext('Docs Menu');
-      ie_close('span');
-      ie_open('span', null, null,
-          'class', 'sidebar-icon-right');
-        ie_void('span', null, null,
-            'class', 'icon-12-arrow-down-short');
-        ie_void('span', null, null,
-            'class', 'icon-12-arrow-up-short');
-      ie_close('span');
-    ie_close('a');
-    ie_open('div', null, null,
-        'class', 'sidebar-toggler-content toggler-collapsed');
-      ie_open('div', null, null,
-          'class', 'sidebar-search');
-        $templateAlias1({excludePath: opt_data.searchExcludePath, maxResults: 3, path: opt_data.searchPath ? opt_data.searchPath : '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
-      ie_close('div');
-      $templateAlias2({elementClasses: 'sidebar-list sidebar-list-1', listItemClasses: 'sidebar-item', anchorVariant: 'sidebar', section: opt_data.section}, null, opt_ijData);
-    ie_close('div');
-  ie_close('nav');
-}
-exports.render = $render;
-if (goog.DEBUG) {
-  $render.soyTemplateName = 'Sidebar.render';
-}
-
-
-/**
- * @param {Object<string, *>=} opt_data
- * @param {(null|undefined)=} opt_ignored
- * @param {Object<string, *>=} opt_ijData
- * @return {void}
- * @suppress {checkTypes}
- */
-function __deltemplate_s122_d34389eb(opt_data, opt_ignored, opt_ijData) {
-  ie_open('a', null, null,
-      'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''),
-      'href', opt_data.page.url);
-    if (opt_data.page.icon) {
-      ie_void('span', null, null,
-          'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
-    }
-    ie_open('span');
-      var dyn12 = opt_data.page.title;
-      if (typeof dyn12 == 'function') dyn12(); else if (dyn12 != null) itext(dyn12);
-    ie_close('span');
-  ie_close('a');
-}
-exports.__deltemplate_s122_d34389eb = __deltemplate_s122_d34389eb;
-if (goog.DEBUG) {
-  __deltemplate_s122_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s122_d34389eb';
-}
-soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s122_d34389eb);
-
-exports.render.params = ["section","searchExcludePath","searchPath"];
-exports.render.types = {"section":"any","searchExcludePath":"any","searchPath":"any"};
-templates = exports;
-return exports;
-
-});
-
-class Sidebar extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
-__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
-
-/* harmony default export */ __webpack_exports__["default"] = (templates);
-/* jshint ignore:end */
-
-
-/***/ }),
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var win;
+(function (global, factory) {
+	 true ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.IncrementalDOM = global.IncrementalDOM || {})));
+}(this, (function (exports) { 'use strict';
 
-if (typeof window !== "undefined") {
-    win = window;
-} else if (typeof global !== "undefined") {
-    win = global;
-} else if (typeof self !== "undefined"){
-    win = self;
-} else {
-    win = {};
-}
+/**
+ * An array used to store the strings generated by calls to
+ * elementOpen, elementOpenStart, elementOpenEnd, elementEnd and elementVoid
+ */
+exports.buffer = [];
 
-module.exports = win;
+/** @type {?Object} */
+exports.currentParent = null;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
-    "use strict";
-
-    if (global.setImmediate) {
-        return;
-    }
-
-    var nextHandle = 1; // Spec says greater than zero
-    var tasksByHandle = {};
-    var currentlyRunningATask = false;
-    var doc = global.document;
-    var registerImmediate;
-
-    function setImmediate(callback) {
-      // Callback can either be a function or a string
-      if (typeof callback !== "function") {
-        callback = new Function("" + callback);
-      }
-      // Copy function arguments
-      var args = new Array(arguments.length - 1);
-      for (var i = 0; i < args.length; i++) {
-          args[i] = arguments[i + 1];
-      }
-      // Store and register the task
-      var task = { callback: callback, args: args };
-      tasksByHandle[nextHandle] = task;
-      registerImmediate(nextHandle);
-      return nextHandle++;
-    }
-
-    function clearImmediate(handle) {
-        delete tasksByHandle[handle];
-    }
-
-    function run(task) {
-        var callback = task.callback;
-        var args = task.args;
-        switch (args.length) {
-        case 0:
-            callback();
-            break;
-        case 1:
-            callback(args[0]);
-            break;
-        case 2:
-            callback(args[0], args[1]);
-            break;
-        case 3:
-            callback(args[0], args[1], args[2]);
-            break;
-        default:
-            callback.apply(undefined, args);
-            break;
-        }
-    }
-
-    function runIfPresent(handle) {
-        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
-        // So if we're currently running a task, we'll need to delay this invocation.
-        if (currentlyRunningATask) {
-            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
-            // "too much recursion" error.
-            setTimeout(runIfPresent, 0, handle);
-        } else {
-            var task = tasksByHandle[handle];
-            if (task) {
-                currentlyRunningATask = true;
-                try {
-                    run(task);
-                } finally {
-                    clearImmediate(handle);
-                    currentlyRunningATask = false;
-                }
-            }
-        }
-    }
-
-    function installNextTickImplementation() {
-        registerImmediate = function(handle) {
-            process.nextTick(function () { runIfPresent(handle); });
-        };
-    }
-
-    function canUsePostMessage() {
-        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
-        // where `global.postMessage` means something completely different and can't be used for this purpose.
-        if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous = true;
-            var oldOnMessage = global.onmessage;
-            global.onmessage = function() {
-                postMessageIsAsynchronous = false;
-            };
-            global.postMessage("", "*");
-            global.onmessage = oldOnMessage;
-            return postMessageIsAsynchronous;
-        }
-    }
-
-    function installPostMessageImplementation() {
-        // Installs an event handler on `global` for the `message` event: see
-        // * https://developer.mozilla.org/en/DOM/window.postMessage
-        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
-
-        var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event) {
-            if (event.source === global &&
-                typeof event.data === "string" &&
-                event.data.indexOf(messagePrefix) === 0) {
-                runIfPresent(+event.data.slice(messagePrefix.length));
-            }
-        };
-
-        if (global.addEventListener) {
-            global.addEventListener("message", onGlobalMessage, false);
-        } else {
-            global.attachEvent("onmessage", onGlobalMessage);
-        }
-
-        registerImmediate = function(handle) {
-            global.postMessage(messagePrefix + handle, "*");
-        };
-    }
-
-    function installMessageChannelImplementation() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = function(event) {
-            var handle = event.data;
-            runIfPresent(handle);
-        };
-
-        registerImmediate = function(handle) {
-            channel.port2.postMessage(handle);
-        };
-    }
-
-    function installReadyStateChangeImplementation() {
-        var html = doc.documentElement;
-        registerImmediate = function(handle) {
-            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-            var script = doc.createElement("script");
-            script.onreadystatechange = function () {
-                runIfPresent(handle);
-                script.onreadystatechange = null;
-                html.removeChild(script);
-                script = null;
-            };
-            html.appendChild(script);
-        };
-    }
-
-    function installSetTimeoutImplementation() {
-        registerImmediate = function(handle) {
-            setTimeout(runIfPresent, 0, handle);
-        };
-    }
-
-    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
-    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
-
-    // Don't get fooled by e.g. browserify environments.
-    if ({}.toString.call(global.process) === "[object process]") {
-        // For Node.js before 0.9
-        installNextTickImplementation();
-
-    } else if (canUsePostMessage()) {
-        // For non-IE10 modern browsers
-        installPostMessageImplementation();
-
-    } else if (global.MessageChannel) {
-        // For web workers, where supported
-        installMessageChannelImplementation();
-
-    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-        // For IE 6–8
-        installReadyStateChangeImplementation();
-
-    } else {
-        // For older browsers
-        installSetTimeoutImplementation();
-    }
-
-    attachTo.setImmediate = setImmediate;
-    attachTo.clearImmediate = clearImmediate;
-}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78), __webpack_require__(79)))
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var apply = Function.prototype.apply;
-
-// DOM APIs, for completeness
-
-exports.setTimeout = function() {
-  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+/**
+ * Gets the current Element being patched.
+ * @return {!Element}
+ */
+var currentElement = function currentElement() {
+  return exports.currentParent;
 };
-exports.setInterval = function() {
-  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+
+/**
+ * @return {Node} The Node that will be evaluated for the next instruction.
+ */
+var currentPointer = function currentPointer() {
+  return {};
 };
-exports.clearTimeout =
-exports.clearInterval = function(timeout) {
-  if (timeout) {
-    timeout.close();
+
+/**
+ * Patches an Element with the the provided function. Exactly one top level
+ * element call should be made corresponding to `node`.
+ *
+ * @param {?object} node The Element where the patch should start.
+ * @param {!function(T)} fn A function containing open/close/etc. calls that
+ *     describe the DOM. This should have at most one top level element call.
+ * @param {T=} data An argument passed to fn to represent DOM state.
+ * @return {void} Nothing.
+ */
+var patch = function patch(node, fn, data) {
+  exports.currentParent = node;
+  fn(data);
+  exports.currentParent.innerHTML = exports.buffer.join('');
+  exports.buffer = [];
+  return exports.currentParent;
+};
+
+var patchOuter = patch;
+var patchInner = patch;
+
+/**
+ * Declares a virtual Text at this point in the document.
+ *
+ * @param {string|number|boolean} value The value of the Text.
+ * @param {...(function((string|number|boolean)):string)} var_args
+ *     Functions to format the value which are called only when the value has
+ *     changed.
+ *
+ * @return {void} Nothing.
+ */
+var text = function text(value, var_args) {
+  var formatted = value;
+  for (var i = 1; i < arguments.length; i += 1) {
+    var fn = arguments[i];
+    formatted = fn(formatted);
+  }
+  exports.buffer.push(formatted);
+};
+
+/** @const */
+var symbols = {
+  default: '__default'
+};
+
+/** @const */
+var attributes = {};
+
+/**
+ * Calls the appropriate attribute mutator for this attribute.
+ * @param {!Array.<string>} el Buffer to append element attributes.
+ * @param {string} name The attribute's name.
+ * @param {*} value The attribute's value.
+ */
+var updateAttribute = function updateAttribute(el, name, value) {
+  var mutator = attributes[name] || attributes[symbols.default];
+  mutator(el, name, value);
+};
+
+// Special generic mutator that's called for any attribute that does not
+// have a specific mutator.
+attributes[symbols.default] = function (el, name, value) {
+  if (Array.isArray(el)) {
+    el.push(' ' + name + '="' + value + '"');
   }
 };
 
-function Timeout(id, clearFn) {
-  this._id = id;
-  this._clearFn = clearFn;
-}
-Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-Timeout.prototype.close = function() {
-  this._clearFn.call(window, this._id);
-};
-
-// Does not start the time, just sets up the members needed.
-exports.enroll = function(item, msecs) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = msecs;
-};
-
-exports.unenroll = function(item) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = -1;
-};
-
-exports._unrefActive = exports.active = function(item) {
-  clearTimeout(item._idleTimeoutId);
-
-  var msecs = item._idleTimeout;
-  if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout() {
-      if (item._onTimeout)
-        item._onTimeout();
-    }, msecs);
+/**
+ * Truncates an array, removing items up until length.
+ * @param {!Array<*>} arr The array to truncate.
+ * @param {number} length The new length of the array.
+ */
+var truncateArray = function truncateArray(arr, length) {
+  while (arr.length > length) {
+    arr.pop();
   }
 };
 
-// setimmediate attaches itself to the global object
-__webpack_require__(133);
-var global = __webpack_require__(132);
-exports.setImmediate = global.setImmediate;
-exports.clearImmediate = global.clearImmediate;
+/**
+ * The offset in the virtual element declaration where the attributes are
+ * specified.
+ * @const
+ */
+var ATTRIBUTES_OFFSET = 3;
+
+/**
+ * Builds an array of arguments for use with elementOpenStart, attr and
+ * elementOpenEnd.
+ * @const {!Array<*>}
+ */
+var argsBuilder = [];
+
+/**
+ * Defines a virtual attribute at this point of the DOM. This is only valid
+ * when called between elementOpenStart and elementOpenEnd.
+ *
+ * @param {string} name The attribute's name.
+ * @param {*} value The attribute's value.
+ * @return {void} Nothing.
+ */
+var attr = function attr(name, value) {
+  argsBuilder.push(name);
+  argsBuilder.push(value);
+};
+
+/**
+ * Closes an open virtual Element.
+ *
+ * @param {string} The Element's tag.
+ * @return {void} Nothing.
+ */
+var elementClose = function elementClose(nameOrCtor) {
+  if (typeof nameOrCtor === 'function') {
+    new nameOrCtor();
+    return;
+  }
+  exports.buffer.push('</' + nameOrCtor + '>');
+};
+
+/**
+ * Declares a virtual Element at the current location in the document that has
+ * no children.
+ *
+ * @param {string} The Element's tag or constructor.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ * @param {...*} var_args Attribute name/value pairs of the dynamic attributes
+ *     for the Element.
+ * @return {void} Nothing.
+ */
+var elementVoid = function elementVoid(nameOrCtor, key, statics, var_args) {
+  elementOpen.apply(null, arguments);
+  return elementClose(nameOrCtor);
+};
+
+/**
+ * @param {!string} nameOrCtor The Element's tag or constructor.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ * @param {...*} var_args, Attribute name/value pairs of the dynamic attributes
+ *     for the Element.
+ * @return {void} Nothing.
+ */
+var elementOpen = function elementOpen(nameOrCtor, key, statics, var_args) {
+  if (typeof nameOrCtor === 'function') {
+    new nameOrCtor();
+    return exports.currentParent;
+  }
+
+  exports.buffer.push('<' + nameOrCtor);
+
+  if (statics) {
+    for (var _i = 0; _i < statics.length; _i += 2) {
+      var name = /** @type {string} */statics[_i];
+      var value = statics[_i + 1];
+      updateAttribute(exports.buffer, name, value);
+    }
+  }
+
+  var i = ATTRIBUTES_OFFSET;
+  var j = 0;
+
+  for (; i < arguments.length; i += 2, j += 2) {
+    var _name = arguments[i];
+    var _value = arguments[i + 1];
+    updateAttribute(exports.buffer, _name, _value);
+  }
+
+  exports.buffer.push('>');
+
+  return exports.currentParent;
+};
+
+/**
+ * Closes an open tag started with elementOpenStart.
+ *
+ * @return {void} Nothing.
+ */
+var elementOpenEnd = function elementOpenEnd() {
+  elementOpen.apply(null, argsBuilder);
+  truncateArray(argsBuilder, 0);
+};
+
+/**
+ * Declares a virtual Element at the current location in the document. This
+ * corresponds to an opening tag and a elementClose tag is required. This is
+ * like elementOpen, but the attributes are defined using the attr function
+ * rather than being passed as arguments. Must be folllowed by 0 or more calls
+ * to attr, then a call to elementOpenEnd.
+ * @param {string} nameOrCtor The Element's tag or constructor.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ * @return {void} Nothing.
+ */
+var elementOpenStart = function elementOpenStart(nameOrCtor, key, statics) {
+  argsBuilder[0] = nameOrCtor;
+  argsBuilder[1] = key;
+  argsBuilder[2] = statics;
+};
+
+/**
+ * Returns the constructred DOM string at this point.
+ * @param {function} fn
+ * @return {string} The constructed DOM string.
+ */
+var renderToString = function renderToString(fn) {
+  patch({}, fn);
+  return currentElement().innerHTML;
+};
+
+exports.currentElement = currentElement;
+exports.currentPointer = currentPointer;
+exports.patch = patch;
+exports.patchInner = patchInner;
+exports.patchOuter = patchOuter;
+exports.text = text;
+exports.attr = attr;
+exports.elementClose = elementClose;
+exports.elementOpen = elementOpen;
+exports.elementOpenEnd = elementOpenEnd;
+exports.elementOpenStart = elementOpenStart;
+exports.elementVoid = elementVoid;
+exports.renderToString = renderToString;
+exports.symbols = symbols;
+exports.attributes = attributes;
+exports.updateAttribute = updateAttribute;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 
 
 /***/ }),
-/* 135 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _unescape = __webpack_require__(137);
-
-var _unescape2 = _interopRequireDefault(_unescape);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var parser_;
-
-var HTML2IncDom = function () {
-	function HTML2IncDom() {
-		_classCallCheck(this, HTML2IncDom);
-	}
-
-	_createClass(HTML2IncDom, null, [{
-		key: 'buildFn',
-
-		/**
-   * Should convert the given html string to a function with calls to
-   * incremental dom methods.
-   * @param {string} html
-   * @return {!function()} Function with incremental dom calls for building
-   *     the given html string.
-   */
-		value: function buildFn(html) {
-			return function () {
-				return HTML2IncDom.run(html);
-			};
-		}
-
-		/**
-   * Gets the html parser being currently used.
-   * @return {!function()}
-   */
-
-	}, {
-		key: 'getParser',
-		value: function getParser() {
-			return parser_ || window.HTMLParser;
-		}
-
-		/**
-   * Should convert the given html string to calls to incremental dom methods.
-   * @param {string} html
-   */
-
-	}, {
-		key: 'run',
-		value: function run(html) {
-			HTML2IncDom.getParser()(html, {
-				start: function start(tag, attrs, unary) {
-					var fn = unary ? IncrementalDOM.elementVoid : IncrementalDOM.elementOpen;
-					var args = [tag, null, []];
-					for (var i = 0; i < attrs.length; i++) {
-						args.push(attrs[i].name, attrs[i].value);
-					}
-					fn.apply(null, args);
-				},
-
-				end: function end(tag) {
-					IncrementalDOM.elementClose(tag);
-				},
-
-				chars: function chars(text) {
-					IncrementalDOM.text(text, _unescape2.default);
-				}
-			});
-		}
-
-		/**
-   * Changes the function that will be used to parse html strings. By default
-   * this will use the `HTMLParser` function from
-   * https://github.com/blowsie/Pure-JavaScript-HTML5-Parser. This will accept
-   * any function that follows that same api, basically accepting the html
-   * string and an object with `start`, `end` and `chars` functions to be called
-   * during the parsing.
-   * @param {!function(string, !Object} newParser
-   */
-
-	}, {
-		key: 'setParser',
-		value: function setParser(newParser) {
-			parser_ = newParser;
-		}
-	}]);
-
-	return HTML2IncDom;
-}();
-
-exports.default = HTML2IncDom;
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* jshint ignore:start */
-
-/*
- * HTML5 Parser By Sam Blowes
- *
- * Designed for HTML5 documents
- *
- * Original code by John Resig (ejohn.org)
- * http://ejohn.org/blog/pure-javascript-html-parser/
- * Original code by Erik Arvidsson, Mozilla Public License
- * http://erik.eae.net/simplehtmlparser/simplehtmlparser.js
- *
- * ----------------------------------------------------------------------------
- * License
- * ----------------------------------------------------------------------------
- *
- * This code is triple licensed using Apache Software License 2.0,
- * Mozilla Public License or GNU Public License
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License.  You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * The contents of this file are subject to the Mozilla Public License
- * Version 1.1 (the "License"); you may not use this file except in
- * compliance with the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS"
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * License for the specific language governing rights and limitations
- * under the License.
- *
- * The Original Code is Simple HTML Parser.
- *
- * The Initial Developer of the Original Code is Erik Arvidsson.
- * Portions created by Erik Arvidssson are Copyright (C) 2004. All Rights
- * Reserved.
- *
- * ////////////////////////////////////////////////////////////////////////////
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+/* WEBPACK VAR INJECTION */(function(process) {
+/**
  * @license
+ * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
-/*
- *
- * ----------------------------------------------------------------------------
- * Usage
- * ----------------------------------------------------------------------------
- *
- * // Use like so:
- * HTMLParser(htmlString, {
- *     start: function(tag, attrs, unary) {},
- *     end: function(tag) {},
- *     chars: function(text) {},
- *     comment: function(text) {}
- * });
- *
- * // or to get an XML string:
- * HTMLtoXML(htmlString);
- *
- * // or to get an XML DOM Document
- * HTMLtoDOM(htmlString);
- *
- * // or to inject into an existing document/DOM node
- * HTMLtoDOM(htmlString, document);
- * HTMLtoDOM(htmlString, document.body);
- *
- */
 
-(function () {
-	// Regular Expressions for parsing tags and attributes
-	var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
-	    endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/,
-	    attr = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;
-
-	// Empty Elements - HTML 5
-	var empty = makeMap("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr");
-
-	// Block Elements - HTML 5
-	var block = makeMap("a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video");
-
-	// Inline Elements - HTML 5
-	var inline = makeMap("abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var");
-
-	// Elements that you can, intentionally, leave open
-	// (and which close themselves)
-	var closeSelf = makeMap("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr");
-
-	// Attributes that have their values filled in disabled="disabled"
-	var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected");
-
-	// Special Elements (can contain anything)
-	var special = makeMap("script,style");
-
-	var HTMLParser = window.HTMLParser = function (html, handler) {
-		var index,
-		    chars,
-		    match,
-		    stack = [],
-		    last = html;
-		stack.last = function () {
-			return this[this.length - 1];
-		};
-
-		while (html) {
-			chars = true;
-
-			// Make sure we're not in a script or style element
-			if (!stack.last() || !special[stack.last()]) {
-
-				// Comment
-				if (html.indexOf("<!--") == 0) {
-					index = html.indexOf("-->");
-
-					if (index >= 0) {
-						if (handler.comment) handler.comment(html.substring(4, index));
-						html = html.substring(index + 3);
-						chars = false;
-					}
-
-					// end tag
-				} else if (html.indexOf("</") == 0) {
-						match = html.match(endTag);
-
-						if (match) {
-							html = html.substring(match[0].length);
-							match[0].replace(endTag, parseEndTag);
-							chars = false;
-						}
-
-						// start tag
-					} else if (html.indexOf("<") == 0) {
-							match = html.match(startTag);
-
-							if (match) {
-								html = html.substring(match[0].length);
-								match[0].replace(startTag, parseStartTag);
-								chars = false;
-							}
-						}
-
-				if (chars) {
-					index = html.indexOf("<");
-
-					var text = index < 0 ? html : html.substring(0, index);
-					html = index < 0 ? "" : html.substring(index);
-
-					if (handler.chars) handler.chars(text);
-				}
-			} else {
-				html = html.replace(new RegExp("([\\s\\S]*?)<\/" + stack.last() + "[^>]*>"), function (all, text) {
-					text = text.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, "$1$2");
-					if (handler.chars) handler.chars(text);
-
-					return "";
-				});
-
-				parseEndTag("", stack.last());
-			}
-
-			if (html == last) throw "Parse Error: " + html;
-			last = html;
-		}
-
-		// Clean up any remaining tags
-		parseEndTag();
-
-		function parseStartTag(tag, tagName, rest, unary) {
-			tagName = tagName.toLowerCase();
-
-			if (block[tagName]) {
-				// Close last tag if it's inline, except if it's a "span" (since people
-				// usually add anything they want to spans, and browsers allow it).
-				// Note: this exception for "span" was added manually (i.e. it's not
-				// present in the original code).
-				while (stack.last() && inline[stack.last()] && stack.last() !== 'span') {
-					parseEndTag("", stack.last());
-				}
-			}
-
-			if (closeSelf[tagName] && stack.last() == tagName) {
-				parseEndTag("", tagName);
-			}
-
-			unary = empty[tagName] || !!unary;
-
-			if (!unary) stack.push(tagName);
-
-			if (handler.start) {
-				var attrs = [];
-
-				rest.replace(attr, function (match, name) {
-					var value = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : fillAttrs[name] ? name : "";
-
-					attrs.push({
-						name: name,
-						value: value,
-						escaped: value.replace(/(^|[^\\])"/g, '$1\\\"') //"
-					});
-				});
-
-				if (handler.start) handler.start(tagName, attrs, unary);
-			}
-		}
-
-		function parseEndTag(tag, tagName) {
-			// If no tag name is provided, clean shop
-			if (!tagName) var pos = 0;
-
-			// Find the closest opened tag of the same type
-			else for (var pos = stack.length - 1; pos >= 0; pos--) {
-					if (stack[pos] == tagName) break;
-				}if (pos >= 0) {
-				// Close all the open elements, up the stack
-				for (var i = stack.length - 1; i >= pos; i--) {
-					if (handler.end) handler.end(stack[i]);
-				} // Remove the open elements from the stack
-				stack.length = pos;
-			}
-		}
-	};
-
-	function makeMap(str) {
-		var obj = {},
-		    items = str.split(",");
-		for (var i = 0; i < items.length; i++) {
-			obj[items[i]] = true;
-		}return obj;
-	}
-}).call(undefined);
-
-/* jshint ignore:end */
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Copyright 2006 The Closure Library Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS-IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
 
 /**
- * Unescapes an HTML string using a DOM to resolve non-XML, non-numeric
- * entities. This function is XSS-safe and whitespace-preserving.
- * @private
- * @param {string} str The string to unescape.
- * @return {string} The unescaped {@code str} string.
+ * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function unescape(str) {
-  /** @type {!Object<string, string>} */
-  var seen = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"' };
-  var div = document.createElement('div');
+/**
+ * A cached reference to the hasOwnProperty function.
+ */
+var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-  // Match as many valid entity characters as possible. If the actual entity
-  // happens to be shorter, it will still work as innerHTML will return the
-  // trailing characters unchanged. Since the entity characters do not include
-  // open angle bracket, there is no chance of XSS from the innerHTML use.
-  // Since no whitespace is passed to innerHTML, whitespace is preserved.
-  return str.replace(HTML_ENTITY_PATTERN_, function (s, entity) {
-    // Check for cached entity.
-    var value = seen[s];
-    if (value) {
-      return value;
-    }
-    // Check for numeric entity.
-    if (entity.charAt(0) === '#') {
-      // Prefix with 0 so that hex entities (e.g. &#x10) parse as hex numbers.
-      var n = Number('0' + entity.substr(1));
-      if (!isNaN(n)) {
-        value = String.fromCharCode(n);
-      }
-    }
-    // Fall back to innerHTML otherwise.
-    if (!value) {
-      // Append a non-entity character to avoid a bug in Webkit that parses
-      // an invalid entity at the end of innerHTML text as the empty string.
-      div.innerHTML = s + ' ';
-      // Then remove the trailing character from the result.
-      value = div.firstChild.nodeValue.slice(0, -1);
-    }
-    // Cache and return.
-    seen[s] = value;
-    return value;
-  });
+/**
+ * A constructor function that will create blank objects.
+ * @constructor
+ */
+function Blank() {}
+
+Blank.prototype = Object.create(null);
+
+/**
+ * Used to prevent property collisions between our "map" and its prototype.
+ * @param {!Object<string, *>} map The map to check.
+ * @param {string} property The property to check.
+ * @return {boolean} Whether map has property.
+ */
+var has = function (map, property) {
+  return hasOwnProperty.call(map, property);
+};
+
+/**
+ * Creates an map object without a prototype.
+ * @return {!Object}
+ */
+var createMap = function () {
+  return new Blank();
+};
+
+/**
+ * Keeps track of information needed to perform diffs for a given DOM node.
+ * @param {!string} nodeName
+ * @param {?string=} key
+ * @constructor
+ */
+function NodeData(nodeName, key) {
+  /**
+   * The attributes and their values.
+   * @const {!Object<string, *>}
+   */
+  this.attrs = createMap();
+
+  /**
+   * An array of attribute name/value pairs, used for quickly diffing the
+   * incomming attributes to see if the DOM node's attributes need to be
+   * updated.
+   * @const {Array<*>}
+   */
+  this.attrsArr = [];
+
+  /**
+   * The incoming attributes for this Node, before they are updated.
+   * @const {!Object<string, *>}
+   */
+  this.newAttrs = createMap();
+
+  /**
+   * Whether or not the statics have been applied for the node yet.
+   * {boolean}
+   */
+  this.staticsApplied = false;
+
+  /**
+   * The key used to identify this node, used to preserve DOM nodes when they
+   * move within their parent.
+   * @const
+   */
+  this.key = key;
+
+  /**
+   * Keeps track of children within this node by their key.
+   * {!Object<string, !Element>}
+   */
+  this.keyMap = createMap();
+
+  /**
+   * Whether or not the keyMap is currently valid.
+   * @type {boolean}
+   */
+  this.keyMapValid = true;
+
+  /**
+   * Whether or the associated node is, or contains, a focused Element.
+   * @type {boolean}
+   */
+  this.focused = false;
+
+  /**
+   * The node name for this node.
+   * @const {string}
+   */
+  this.nodeName = nodeName;
+
+  /**
+   * @type {?string}
+   */
+  this.text = null;
 }
 
-exports.default = unescape;
+/**
+ * Initializes a NodeData object for a Node.
+ *
+ * @param {Node} node The node to initialize data for.
+ * @param {string} nodeName The node name of node.
+ * @param {?string=} key The key that identifies the node.
+ * @return {!NodeData} The newly initialized data object
+ */
+var initData = function (node, nodeName, key) {
+  var data = new NodeData(nodeName, key);
+  node['__incrementalDOMData'] = data;
+  return data;
+};
 
 /**
- * Regular expression that matches an HTML entity.
- * @type {!RegExp}
+ * Retrieves the NodeData object for a Node, creating it if necessary.
+ *
+ * @param {?Node} node The Node to retrieve the data for.
+ * @return {!NodeData} The NodeData for this Node.
+ */
+var getData = function (node) {
+  importNode(node);
+  return node['__incrementalDOMData'];
+};
+
+/**
+ * Imports node and its subtree, initializing caches.
+ *
+ * @param {?Node} node The Node to import.
+ */
+var importNode = function (node) {
+  if (node['__incrementalDOMData']) {
+    return;
+  }
+
+  var isElement = node instanceof Element;
+  var nodeName = isElement ? node.localName : node.nodeName;
+  var key = isElement ? node.getAttribute('key') : null;
+  var data = initData(node, nodeName, key);
+
+  if (key) {
+    getData(node.parentNode).keyMap[key] = node;
+  }
+
+  if (isElement) {
+    var attributes = node.attributes;
+    var attrs = data.attrs;
+    var newAttrs = data.newAttrs;
+    var attrsArr = data.attrsArr;
+
+    for (var i = 0; i < attributes.length; i += 1) {
+      var attr = attributes[i];
+      var name = attr.name;
+      var value = attr.value;
+
+      attrs[name] = value;
+      newAttrs[name] = undefined;
+      attrsArr.push(name);
+      attrsArr.push(value);
+    }
+  }
+
+  for (var child = node.firstChild; child; child = child.nextSibling) {
+    importNode(child);
+  }
+};
+
+/**
+ * Gets the namespace to create an element (of a given tag) in.
+ * @param {string} tag The tag to get the namespace for.
+ * @param {?Node} parent
+ * @return {?string} The namespace to create the tag in.
+ */
+var getNamespaceForTag = function (tag, parent) {
+  if (tag === 'svg') {
+    return 'http://www.w3.org/2000/svg';
+  }
+
+  if (getData(parent).nodeName === 'foreignObject') {
+    return null;
+  }
+
+  return parent.namespaceURI;
+};
+
+/**
+ * Creates an Element.
+ * @param {Document} doc The document with which to create the Element.
+ * @param {?Node} parent
+ * @param {string} tag The tag for the Element.
+ * @param {?string=} key A key to identify the Element.
+ * @return {!Element}
+ */
+var createElement = function (doc, parent, tag, key) {
+  var namespace = getNamespaceForTag(tag, parent);
+  var el = undefined;
+
+  if (namespace) {
+    el = doc.createElementNS(namespace, tag);
+  } else {
+    el = doc.createElement(tag);
+  }
+
+  initData(el, tag, key);
+
+  return el;
+};
+
+/**
+ * Creates a Text Node.
+ * @param {Document} doc The document with which to create the Element.
+ * @return {!Text}
+ */
+var createText = function (doc) {
+  var node = doc.createTextNode('');
+  initData(node, '#text', null);
+  return node;
+};
+
+/**
+ * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
-var HTML_ENTITY_PATTERN_ = /&([^;\s<&]+);?/g;
+/** @const */
+var notifications = {
+  /**
+   * Called after patch has compleated with any Nodes that have been created
+   * and added to the DOM.
+   * @type {?function(Array<!Node>)}
+   */
+  nodesCreated: null,
 
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
+  /**
+   * Called after patch has compleated with any Nodes that have been removed
+   * from the DOM.
+   * Note it's an applications responsibility to handle any childNodes.
+   * @type {?function(Array<!Node>)}
+   */
+  nodesDeleted: null
+};
 
-"use strict";
+/**
+ * Keeps track of the state of a patch.
+ * @constructor
+ */
+function Context() {
+  /**
+   * @type {(Array<!Node>|undefined)}
+   */
+  this.created = notifications.nodesCreated && [];
 
+  /**
+   * @type {(Array<!Node>|undefined)}
+   */
+  this.deleted = notifications.nodesDeleted && [];
+}
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+/**
+ * @param {!Node} node
+ */
+Context.prototype.markCreated = function (node) {
+  if (this.created) {
+    this.created.push(node);
+  }
+};
+
+/**
+ * @param {!Node} node
+ */
+Context.prototype.markDeleted = function (node) {
+  if (this.deleted) {
+    this.deleted.push(node);
+  }
+};
+
+/**
+ * Notifies about nodes that were created during the patch opearation.
+ */
+Context.prototype.notifyChanges = function () {
+  if (this.created && this.created.length > 0) {
+    notifications.nodesCreated(this.created);
+  }
+
+  if (this.deleted && this.deleted.length > 0) {
+    notifications.nodesDeleted(this.deleted);
+  }
+};
+
+/**
+ * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+  * Keeps track whether or not we are in an attributes declaration (after
+  * elementOpenStart, but before elementOpenEnd).
+  * @type {boolean}
+  */
+var inAttributes = false;
+
+/**
+  * Keeps track whether or not we are in an element that should not have its
+  * children cleared.
+  * @type {boolean}
+  */
+var inSkip = false;
+
+/**
+ * Makes sure that there is a current patch context.
+ * @param {string} functionName
+ * @param {*} context
+ */
+var assertInPatch = function (functionName, context) {
+  if (!context) {
+    throw new Error('Cannot call ' + functionName + '() unless in patch.');
+  }
+};
+
+/**
+ * Makes sure that a patch closes every node that it opened.
+ * @param {?Node} openElement
+ * @param {!Node|!DocumentFragment} root
+ */
+var assertNoUnclosedTags = function (openElement, root) {
+  if (openElement === root) {
+    return;
+  }
+
+  var currentElement = openElement;
+  var openTags = [];
+  while (currentElement && currentElement !== root) {
+    openTags.push(currentElement.nodeName.toLowerCase());
+    currentElement = currentElement.parentNode;
+  }
+
+  throw new Error('One or more tags were not closed:\n' + openTags.join('\n'));
+};
+
+/**
+ * Makes sure that the caller is not where attributes are expected.
+ * @param {string} functionName
+ */
+var assertNotInAttributes = function (functionName) {
+  if (inAttributes) {
+    throw new Error(functionName + '() can not be called between ' + 'elementOpenStart() and elementOpenEnd().');
+  }
+};
+
+/**
+ * Makes sure that the caller is not inside an element that has declared skip.
+ * @param {string} functionName
+ */
+var assertNotInSkip = function (functionName) {
+  if (inSkip) {
+    throw new Error(functionName + '() may not be called inside an element ' + 'that has called skip().');
+  }
+};
+
+/**
+ * Makes sure that the caller is where attributes are expected.
+ * @param {string} functionName
+ */
+var assertInAttributes = function (functionName) {
+  if (!inAttributes) {
+    throw new Error(functionName + '() can only be called after calling ' + 'elementOpenStart().');
+  }
+};
+
+/**
+ * Makes sure the patch closes virtual attributes call
+ */
+var assertVirtualAttributesClosed = function () {
+  if (inAttributes) {
+    throw new Error('elementOpenEnd() must be called after calling ' + 'elementOpenStart().');
+  }
+};
+
+/**
+  * Makes sure that tags are correctly nested.
+  * @param {string} nodeName
+  * @param {string} tag
+  */
+var assertCloseMatchesOpenTag = function (nodeName, tag) {
+  if (nodeName !== tag) {
+    throw new Error('Received a call to close "' + tag + '" but "' + nodeName + '" was open.');
+  }
+};
+
+/**
+ * Makes sure that no children elements have been declared yet in the current
+ * element.
+ * @param {string} functionName
+ * @param {?Node} previousNode
+ */
+var assertNoChildrenDeclaredYet = function (functionName, previousNode) {
+  if (previousNode !== null) {
+    throw new Error(functionName + '() must come before any child ' + 'declarations inside the current element.');
+  }
+};
+
+/**
+ * Checks that a call to patchOuter actually patched the element.
+ * @param {?Node} startNode The value for the currentNode when the patch
+ *     started.
+ * @param {?Node} currentNode The currentNode when the patch finished.
+ * @param {?Node} expectedNextNode The Node that is expected to follow the
+ *    currentNode after the patch;
+ * @param {?Node} expectedPrevNode The Node that is expected to preceed the
+ *    currentNode after the patch.
+ */
+var assertPatchElementNoExtras = function (startNode, currentNode, expectedNextNode, expectedPrevNode) {
+  var wasUpdated = currentNode.nextSibling === expectedNextNode && currentNode.previousSibling === expectedPrevNode;
+  var wasChanged = currentNode.nextSibling === startNode.nextSibling && currentNode.previousSibling === expectedPrevNode;
+  var wasRemoved = currentNode === startNode;
+
+  if (!wasUpdated && !wasChanged && !wasRemoved) {
+    throw new Error('There must be exactly one top level call corresponding ' + 'to the patched element.');
+  }
+};
+
+/**
+ * Updates the state of being in an attribute declaration.
+ * @param {boolean} value
+ * @return {boolean} the previous value.
+ */
+var setInAttributes = function (value) {
+  var previous = inAttributes;
+  inAttributes = value;
+  return previous;
+};
+
+/**
+ * Updates the state of being in a skip element.
+ * @param {boolean} value
+ * @return {boolean} the previous value.
+ */
+var setInSkip = function (value) {
+  var previous = inSkip;
+  inSkip = value;
+  return previous;
+};
+
+/**
+ * Copyright 2016 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @param {!Node} node
+ * @return {boolean} True if the node the root of a document, false otherwise.
+ */
+var isDocumentRoot = function (node) {
+  // For ShadowRoots, check if they are a DocumentFragment instead of if they
+  // are a ShadowRoot so that this can work in 'use strict' if ShadowRoots are
+  // not supported.
+  return node instanceof Document || node instanceof DocumentFragment;
+};
+
+/**
+ * @param {!Node} node The node to start at, inclusive.
+ * @param {?Node} root The root ancestor to get until, exclusive.
+ * @return {!Array<!Node>} The ancestry of DOM nodes.
+ */
+var getAncestry = function (node, root) {
+  var ancestry = [];
+  var cur = node;
+
+  while (cur !== root) {
+    ancestry.push(cur);
+    cur = cur.parentNode;
+  }
+
+  return ancestry;
+};
+
+/**
+ * @param {!Node} node
+ * @return {!Node} The root node of the DOM tree that contains node.
+ */
+var getRoot = function (node) {
+  var cur = node;
+  var prev = cur;
+
+  while (cur) {
+    prev = cur;
+    cur = cur.parentNode;
+  }
+
+  return prev;
+};
+
+/**
+ * @param {!Node} node The node to get the activeElement for.
+ * @return {?Element} The activeElement in the Document or ShadowRoot
+ *     corresponding to node, if present.
+ */
+var getActiveElement = function (node) {
+  var root = getRoot(node);
+  return isDocumentRoot(root) ? root.activeElement : null;
+};
+
+/**
+ * Gets the path of nodes that contain the focused node in the same document as
+ * a reference node, up until the root.
+ * @param {!Node} node The reference node to get the activeElement for.
+ * @param {?Node} root The root to get the focused path until.
+ * @return {!Array<Node>}
+ */
+var getFocusedPath = function (node, root) {
+  var activeElement = getActiveElement(node);
+
+  if (!activeElement || !node.contains(activeElement)) {
+    return [];
+  }
+
+  return getAncestry(activeElement, root);
+};
+
+/**
+ * Like insertBefore, but instead instead of moving the desired node, instead
+ * moves all the other nodes after.
+ * @param {?Node} parentNode
+ * @param {!Node} node
+ * @param {?Node} referenceNode
+ */
+var moveBefore = function (parentNode, node, referenceNode) {
+  var insertReferenceNode = node.nextSibling;
+  var cur = referenceNode;
+
+  while (cur !== node) {
+    var next = cur.nextSibling;
+    parentNode.insertBefore(cur, insertReferenceNode);
+    cur = next;
+  }
+};
+
+/** @type {?Context} */
+var context = null;
+
+/** @type {?Node} */
+var currentNode = null;
+
+/** @type {?Node} */
+var currentParent = null;
+
+/** @type {?Document} */
+var doc = null;
+
+/**
+ * @param {!Array<Node>} focusPath The nodes to mark.
+ * @param {boolean} focused Whether or not they are focused.
+ */
+var markFocused = function (focusPath, focused) {
+  for (var i = 0; i < focusPath.length; i += 1) {
+    getData(focusPath[i]).focused = focused;
+  }
+};
+
+/**
+ * Returns a patcher function that sets up and restores a patch context,
+ * running the run function with the provided data.
+ * @param {function((!Element|!DocumentFragment),!function(T),T=): ?Node} run
+ * @return {function((!Element|!DocumentFragment),!function(T),T=): ?Node}
+ * @template T
+ */
+var patchFactory = function (run) {
+  /**
+   * TODO(moz): These annotations won't be necessary once we switch to Closure
+   * Compiler's new type inference. Remove these once the switch is done.
+   *
+   * @param {(!Element|!DocumentFragment)} node
+   * @param {!function(T)} fn
+   * @param {T=} data
+   * @return {?Node} node
+   * @template T
+   */
+  var f = function (node, fn, data) {
+    var prevContext = context;
+    var prevDoc = doc;
+    var prevCurrentNode = currentNode;
+    var prevCurrentParent = currentParent;
+    var previousInAttributes = false;
+    var previousInSkip = false;
+
+    context = new Context();
+    doc = node.ownerDocument;
+    currentParent = node.parentNode;
+
+    if (process.env.NODE_ENV !== 'production') {
+      previousInAttributes = setInAttributes(false);
+      previousInSkip = setInSkip(false);
+    }
+
+    var focusPath = getFocusedPath(node, currentParent);
+    markFocused(focusPath, true);
+    var retVal = run(node, fn, data);
+    markFocused(focusPath, false);
+
+    if (process.env.NODE_ENV !== 'production') {
+      assertVirtualAttributesClosed();
+      setInAttributes(previousInAttributes);
+      setInSkip(previousInSkip);
+    }
+
+    context.notifyChanges();
+
+    context = prevContext;
+    doc = prevDoc;
+    currentNode = prevCurrentNode;
+    currentParent = prevCurrentParent;
+
+    return retVal;
+  };
+  return f;
+};
+
+/**
+ * Patches the document starting at node with the provided function. This
+ * function may be called during an existing patch operation.
+ * @param {!Element|!DocumentFragment} node The Element or Document
+ *     to patch.
+ * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
+ *     calls that describe the DOM.
+ * @param {T=} data An argument passed to fn to represent DOM state.
+ * @return {!Node} The patched node.
+ * @template T
+ */
+var patchInner = patchFactory(function (node, fn, data) {
+  currentNode = node;
+
+  enterNode();
+  fn(data);
+  exitNode();
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertNoUnclosedTags(currentNode, node);
+  }
+
+  return node;
 });
 
-__webpack_require__(136);
+/**
+ * Patches an Element with the the provided function. Exactly one top level
+ * element call should be made corresponding to `node`.
+ * @param {!Element} node The Element where the patch should start.
+ * @param {!function(T)} fn A function containing elementOpen/elementClose/etc.
+ *     calls that describe the DOM. This should have at most one top level
+ *     element call.
+ * @param {T=} data An argument passed to fn to represent DOM state.
+ * @return {?Node} The node if it was updated, its replacedment or null if it
+ *     was removed.
+ * @template T
+ */
+var patchOuter = patchFactory(function (node, fn, data) {
+  var startNode = /** @type {!Element} */{ nextSibling: node };
+  var expectedNextNode = null;
+  var expectedPrevNode = null;
 
-var _HTML2IncDom = __webpack_require__(135);
+  if (process.env.NODE_ENV !== 'production') {
+    expectedNextNode = node.nextSibling;
+    expectedPrevNode = node.previousSibling;
+  }
 
-var _HTML2IncDom2 = _interopRequireDefault(_HTML2IncDom);
+  currentNode = startNode;
+  fn(data);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  if (process.env.NODE_ENV !== 'production') {
+    assertPatchElementNoExtras(startNode, currentNode, expectedNextNode, expectedPrevNode);
+  }
 
-exports.default = _HTML2IncDom2.default;
+  if (node !== currentNode && node.parentNode) {
+    removeChild(currentParent, node, getData(currentParent).keyMap);
+  }
+
+  return startNode === currentNode ? null : currentNode;
+});
+
+/**
+ * Checks whether or not the current node matches the specified nodeName and
+ * key.
+ *
+ * @param {!Node} matchNode A node to match the data to.
+ * @param {?string} nodeName The nodeName for this node.
+ * @param {?string=} key An optional key that identifies a node.
+ * @return {boolean} True if the node matches, false otherwise.
+ */
+var matches = function (matchNode, nodeName, key) {
+  var data = getData(matchNode);
+
+  // Key check is done using double equals as we want to treat a null key the
+  // same as undefined. This should be okay as the only values allowed are
+  // strings, null and undefined so the == semantics are not too weird.
+  return nodeName === data.nodeName && key == data.key;
+};
+
+/**
+ * Aligns the virtual Element definition with the actual DOM, moving the
+ * corresponding DOM node to the correct location or creating it if necessary.
+ * @param {string} nodeName For an Element, this should be a valid tag string.
+ *     For a Text, this should be #text.
+ * @param {?string=} key The key used to identify this element.
+ */
+var alignWithDOM = function (nodeName, key) {
+  if (currentNode && matches(currentNode, nodeName, key)) {
+    return;
+  }
+
+  var parentData = getData(currentParent);
+  var currentNodeData = currentNode && getData(currentNode);
+  var keyMap = parentData.keyMap;
+  var node = undefined;
+
+  // Check to see if the node has moved within the parent.
+  if (key) {
+    var keyNode = keyMap[key];
+    if (keyNode) {
+      if (matches(keyNode, nodeName, key)) {
+        node = keyNode;
+      } else if (keyNode === currentNode) {
+        context.markDeleted(keyNode);
+      } else {
+        removeChild(currentParent, keyNode, keyMap);
+      }
+    }
+  }
+
+  // Create the node if it doesn't exist.
+  if (!node) {
+    if (nodeName === '#text') {
+      node = createText(doc);
+    } else {
+      node = createElement(doc, currentParent, nodeName, key);
+    }
+
+    if (key) {
+      keyMap[key] = node;
+    }
+
+    context.markCreated(node);
+  }
+
+  // Re-order the node into the right position, preserving focus if either
+  // node or currentNode are focused by making sure that they are not detached
+  // from the DOM.
+  if (getData(node).focused) {
+    // Move everything else before the node.
+    moveBefore(currentParent, node, currentNode);
+  } else if (currentNodeData && currentNodeData.key && !currentNodeData.focused) {
+    // Remove the currentNode, which can always be added back since we hold a
+    // reference through the keyMap. This prevents a large number of moves when
+    // a keyed item is removed or moved backwards in the DOM.
+    currentParent.replaceChild(node, currentNode);
+    parentData.keyMapValid = false;
+  } else {
+    currentParent.insertBefore(node, currentNode);
+  }
+
+  currentNode = node;
+};
+
+/**
+ * @param {?Node} node
+ * @param {?Node} child
+ * @param {?Object<string, !Element>} keyMap
+ */
+var removeChild = function (node, child, keyMap) {
+  node.removeChild(child);
+  context.markDeleted( /** @type {!Node}*/child);
+
+  var key = getData(child).key;
+  if (key) {
+    delete keyMap[key];
+  }
+};
+
+/**
+ * Clears out any unvisited Nodes, as the corresponding virtual element
+ * functions were never called for them.
+ */
+var clearUnvisitedDOM = function () {
+  var node = currentParent;
+  var data = getData(node);
+  var keyMap = data.keyMap;
+  var keyMapValid = data.keyMapValid;
+  var child = node.lastChild;
+  var key = undefined;
+
+  if (child === currentNode && keyMapValid) {
+    return;
+  }
+
+  while (child !== currentNode) {
+    removeChild(node, child, keyMap);
+    child = node.lastChild;
+  }
+
+  // Clean the keyMap, removing any unusued keys.
+  if (!keyMapValid) {
+    for (key in keyMap) {
+      child = keyMap[key];
+      if (child.parentNode !== node) {
+        context.markDeleted(child);
+        delete keyMap[key];
+      }
+    }
+
+    data.keyMapValid = true;
+  }
+};
+
+/**
+ * Changes to the first child of the current node.
+ */
+var enterNode = function () {
+  currentParent = currentNode;
+  currentNode = null;
+};
+
+/**
+ * @return {?Node} The next Node to be patched.
+ */
+var getNextNode = function () {
+  if (currentNode) {
+    return currentNode.nextSibling;
+  } else {
+    return currentParent.firstChild;
+  }
+};
+
+/**
+ * Changes to the next sibling of the current node.
+ */
+var nextNode = function () {
+  currentNode = getNextNode();
+};
+
+/**
+ * Changes to the parent of the current node, removing any unvisited children.
+ */
+var exitNode = function () {
+  clearUnvisitedDOM();
+
+  currentNode = currentParent;
+  currentParent = currentParent.parentNode;
+};
+
+/**
+ * Makes sure that the current node is an Element with a matching tagName and
+ * key.
+ *
+ * @param {string} tag The element's tag.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @return {!Element} The corresponding Element.
+ */
+var coreElementOpen = function (tag, key) {
+  nextNode();
+  alignWithDOM(tag, key);
+  enterNode();
+  return (/** @type {!Element} */currentParent
+  );
+};
+
+/**
+ * Closes the currently open Element, removing any unvisited children if
+ * necessary.
+ *
+ * @return {!Element} The corresponding Element.
+ */
+var coreElementClose = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    setInSkip(false);
+  }
+
+  exitNode();
+  return (/** @type {!Element} */currentNode
+  );
+};
+
+/**
+ * Makes sure the current node is a Text node and creates a Text node if it is
+ * not.
+ *
+ * @return {!Text} The corresponding Text Node.
+ */
+var coreText = function () {
+  nextNode();
+  alignWithDOM('#text', null);
+  return (/** @type {!Text} */currentNode
+  );
+};
+
+/**
+ * Gets the current Element being patched.
+ * @return {!Element}
+ */
+var currentElement = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInPatch('currentElement', context);
+    assertNotInAttributes('currentElement');
+  }
+  return (/** @type {!Element} */currentParent
+  );
+};
+
+/**
+ * @return {Node} The Node that will be evaluated for the next instruction.
+ */
+var currentPointer = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInPatch('currentPointer', context);
+    assertNotInAttributes('currentPointer');
+  }
+  return getNextNode();
+};
+
+/**
+ * Skips the children in a subtree, allowing an Element to be closed without
+ * clearing out the children.
+ */
+var skip = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNoChildrenDeclaredYet('skip', currentNode);
+    setInSkip(true);
+  }
+  currentNode = currentParent.lastChild;
+};
+
+/**
+ * Skips the next Node to be patched, moving the pointer forward to the next
+ * sibling of the current pointer.
+ */
+var skipNode = nextNode;
+
+/**
+ * Copyright 2015 The Incremental DOM Authors. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS-IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/** @const */
+var symbols = {
+  default: '__default'
+};
+
+/**
+ * @param {string} name
+ * @return {string|undefined} The namespace to use for the attribute.
+ */
+var getNamespace = function (name) {
+  if (name.lastIndexOf('xml:', 0) === 0) {
+    return 'http://www.w3.org/XML/1998/namespace';
+  }
+
+  if (name.lastIndexOf('xlink:', 0) === 0) {
+    return 'http://www.w3.org/1999/xlink';
+  }
+};
+
+/**
+ * Applies an attribute or property to a given Element. If the value is null
+ * or undefined, it is removed from the Element. Otherwise, the value is set
+ * as an attribute.
+ * @param {!Element} el
+ * @param {string} name The attribute's name.
+ * @param {?(boolean|number|string)=} value The attribute's value.
+ */
+var applyAttr = function (el, name, value) {
+  if (value == null) {
+    el.removeAttribute(name);
+  } else {
+    var attrNS = getNamespace(name);
+    if (attrNS) {
+      el.setAttributeNS(attrNS, name, value);
+    } else {
+      el.setAttribute(name, value);
+    }
+  }
+};
+
+/**
+ * Applies a property to a given Element.
+ * @param {!Element} el
+ * @param {string} name The property's name.
+ * @param {*} value The property's value.
+ */
+var applyProp = function (el, name, value) {
+  el[name] = value;
+};
+
+/**
+ * Applies a value to a style declaration. Supports CSS custom properties by
+ * setting properties containing a dash using CSSStyleDeclaration.setProperty.
+ * @param {CSSStyleDeclaration} style
+ * @param {!string} prop
+ * @param {*} value
+ */
+var setStyleValue = function (style, prop, value) {
+  if (prop.indexOf('-') >= 0) {
+    style.setProperty(prop, /** @type {string} */value);
+  } else {
+    style[prop] = value;
+  }
+};
+
+/**
+ * Applies a style to an Element. No vendor prefix expansion is done for
+ * property names/values.
+ * @param {!Element} el
+ * @param {string} name The attribute's name.
+ * @param {*} style The style to set. Either a string of css or an object
+ *     containing property-value pairs.
+ */
+var applyStyle = function (el, name, style) {
+  if (typeof style === 'string') {
+    el.style.cssText = style;
+  } else {
+    el.style.cssText = '';
+    var elStyle = el.style;
+    var obj = /** @type {!Object<string,string>} */style;
+
+    for (var prop in obj) {
+      if (has(obj, prop)) {
+        setStyleValue(elStyle, prop, obj[prop]);
+      }
+    }
+  }
+};
+
+/**
+ * Updates a single attribute on an Element.
+ * @param {!Element} el
+ * @param {string} name The attribute's name.
+ * @param {*} value The attribute's value. If the value is an object or
+ *     function it is set on the Element, otherwise, it is set as an HTML
+ *     attribute.
+ */
+var applyAttributeTyped = function (el, name, value) {
+  var type = typeof value;
+
+  if (type === 'object' || type === 'function') {
+    applyProp(el, name, value);
+  } else {
+    applyAttr(el, name, /** @type {?(boolean|number|string)} */value);
+  }
+};
+
+/**
+ * Calls the appropriate attribute mutator for this attribute.
+ * @param {!Element} el
+ * @param {string} name The attribute's name.
+ * @param {*} value The attribute's value.
+ */
+var updateAttribute = function (el, name, value) {
+  var data = getData(el);
+  var attrs = data.attrs;
+
+  if (attrs[name] === value) {
+    return;
+  }
+
+  var mutator = attributes[name] || attributes[symbols.default];
+  mutator(el, name, value);
+
+  attrs[name] = value;
+};
+
+/**
+ * A publicly mutable object to provide custom mutators for attributes.
+ * @const {!Object<string, function(!Element, string, *)>}
+ */
+var attributes = createMap();
+
+// Special generic mutator that's called for any attribute that does not
+// have a specific mutator.
+attributes[symbols.default] = applyAttributeTyped;
+
+attributes['style'] = applyStyle;
+
+/**
+ * The offset in the virtual element declaration where the attributes are
+ * specified.
+ * @const
+ */
+var ATTRIBUTES_OFFSET = 3;
+
+/**
+ * Builds an array of arguments for use with elementOpenStart, attr and
+ * elementOpenEnd.
+ * @const {Array<*>}
+ */
+var argsBuilder = [];
+
+/**
+ * @param {string} tag The element's tag.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ * @param {...*} var_args, Attribute name/value pairs of the dynamic attributes
+ *     for the Element.
+ * @return {!Element} The corresponding Element.
+ */
+var elementOpen = function (tag, key, statics, var_args) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementOpen');
+    assertNotInSkip('elementOpen');
+  }
+
+  var node = coreElementOpen(tag, key);
+  var data = getData(node);
+
+  if (!data.staticsApplied) {
+    if (statics) {
+      for (var _i = 0; _i < statics.length; _i += 2) {
+        var name = /** @type {string} */statics[_i];
+        var value = statics[_i + 1];
+        updateAttribute(node, name, value);
+      }
+    }
+    // Down the road, we may want to keep track of the statics array to use it
+    // as an additional signal about whether a node matches or not. For now,
+    // just use a marker so that we do not reapply statics.
+    data.staticsApplied = true;
+  }
+
+  /*
+   * Checks to see if one or more attributes have changed for a given Element.
+   * When no attributes have changed, this is much faster than checking each
+   * individual argument. When attributes have changed, the overhead of this is
+   * minimal.
+   */
+  var attrsArr = data.attrsArr;
+  var newAttrs = data.newAttrs;
+  var isNew = !attrsArr.length;
+  var i = ATTRIBUTES_OFFSET;
+  var j = 0;
+
+  for (; i < arguments.length; i += 2, j += 2) {
+    var _attr = arguments[i];
+    if (isNew) {
+      attrsArr[j] = _attr;
+      newAttrs[_attr] = undefined;
+    } else if (attrsArr[j] !== _attr) {
+      break;
+    }
+
+    var value = arguments[i + 1];
+    if (isNew || attrsArr[j + 1] !== value) {
+      attrsArr[j + 1] = value;
+      updateAttribute(node, _attr, value);
+    }
+  }
+
+  if (i < arguments.length || j < attrsArr.length) {
+    for (; i < arguments.length; i += 1, j += 1) {
+      attrsArr[j] = arguments[i];
+    }
+
+    if (j < attrsArr.length) {
+      attrsArr.length = j;
+    }
+
+    /*
+     * Actually perform the attribute update.
+     */
+    for (i = 0; i < attrsArr.length; i += 2) {
+      var name = /** @type {string} */attrsArr[i];
+      var value = attrsArr[i + 1];
+      newAttrs[name] = value;
+    }
+
+    for (var _attr2 in newAttrs) {
+      updateAttribute(node, _attr2, newAttrs[_attr2]);
+      newAttrs[_attr2] = undefined;
+    }
+  }
+
+  return node;
+};
+
+/**
+ * Declares a virtual Element at the current location in the document. This
+ * corresponds to an opening tag and a elementClose tag is required. This is
+ * like elementOpen, but the attributes are defined using the attr function
+ * rather than being passed as arguments. Must be folllowed by 0 or more calls
+ * to attr, then a call to elementOpenEnd.
+ * @param {string} tag The element's tag.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ */
+var elementOpenStart = function (tag, key, statics) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementOpenStart');
+    setInAttributes(true);
+  }
+
+  argsBuilder[0] = tag;
+  argsBuilder[1] = key;
+  argsBuilder[2] = statics;
+};
+
+/***
+ * Defines a virtual attribute at this point of the DOM. This is only valid
+ * when called between elementOpenStart and elementOpenEnd.
+ *
+ * @param {string} name
+ * @param {*} value
+ */
+var attr = function (name, value) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInAttributes('attr');
+  }
+
+  argsBuilder.push(name);
+  argsBuilder.push(value);
+};
+
+/**
+ * Closes an open tag started with elementOpenStart.
+ * @return {!Element} The corresponding Element.
+ */
+var elementOpenEnd = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInAttributes('elementOpenEnd');
+    setInAttributes(false);
+  }
+
+  var node = elementOpen.apply(null, argsBuilder);
+  argsBuilder.length = 0;
+  return node;
+};
+
+/**
+ * Closes an open virtual Element.
+ *
+ * @param {string} tag The element's tag.
+ * @return {!Element} The corresponding Element.
+ */
+var elementClose = function (tag) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementClose');
+  }
+
+  var node = coreElementClose();
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertCloseMatchesOpenTag(getData(node).nodeName, tag);
+  }
+
+  return node;
+};
+
+/**
+ * Declares a virtual Element at the current location in the document that has
+ * no children.
+ * @param {string} tag The element's tag.
+ * @param {?string=} key The key used to identify this element. This can be an
+ *     empty string, but performance may be better if a unique value is used
+ *     when iterating over an array of items.
+ * @param {?Array<*>=} statics An array of attribute name/value pairs of the
+ *     static attributes for the Element. These will only be set once when the
+ *     Element is created.
+ * @param {...*} var_args Attribute name/value pairs of the dynamic attributes
+ *     for the Element.
+ * @return {!Element} The corresponding Element.
+ */
+var elementVoid = function (tag, key, statics, var_args) {
+  elementOpen.apply(null, arguments);
+  return elementClose(tag);
+};
+
+/**
+ * Declares a virtual Text at this point in the document.
+ *
+ * @param {string|number|boolean} value The value of the Text.
+ * @param {...(function((string|number|boolean)):string)} var_args
+ *     Functions to format the value which are called only when the value has
+ *     changed.
+ * @return {!Text} The corresponding text node.
+ */
+var text = function (value, var_args) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('text');
+    assertNotInSkip('text');
+  }
+
+  var node = coreText();
+  var data = getData(node);
+
+  if (data.text !== value) {
+    data.text = /** @type {string} */value;
+
+    var formatted = value;
+    for (var i = 1; i < arguments.length; i += 1) {
+      /*
+       * Call the formatter function directly to prevent leaking arguments.
+       * https://github.com/google/incremental-dom/pull/204#issuecomment-178223574
+       */
+      var fn = arguments[i];
+      formatted = fn(formatted);
+    }
+
+    node.data = formatted;
+  }
+
+  return node;
+};
+
+exports.patch = patchInner;
+exports.patchInner = patchInner;
+exports.patchOuter = patchOuter;
+exports.currentElement = currentElement;
+exports.currentPointer = currentPointer;
+exports.skip = skip;
+exports.skipNode = skipNode;
+exports.elementVoid = elementVoid;
+exports.elementOpenStart = elementOpenStart;
+exports.elementOpenEnd = elementOpenEnd;
+exports.elementOpen = elementOpen;
+exports.elementClose = elementClose;
+exports.text = text;
+exports.attr = attr;
+exports.symbols = symbols;
+exports.attributes = attributes;
+exports.applyAttr = applyAttr;
+exports.applyProp = applyProp;
+exports.notifications = notifications;
+exports.importNode = importNode;
+
+//# sourceMappingURL=incremental-dom-cjs.js.map
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(73)))
 
 /***/ }),
-/* 139 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5919,19 +4951,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _events = __webpack_require__(86);
+var _events = __webpack_require__(77);
 
 var _metal = __webpack_require__(2);
 
-var _sync = __webpack_require__(141);
+var _sync = __webpack_require__(109);
 
 var _metalDom = __webpack_require__(3);
 
-var _ComponentDataManager = __webpack_require__(84);
+var _ComponentDataManager = __webpack_require__(75);
 
 var _ComponentDataManager2 = _interopRequireDefault(_ComponentDataManager);
 
-var _ComponentRenderer = __webpack_require__(85);
+var _ComponentRenderer = __webpack_require__(76);
 
 var _ComponentRenderer2 = _interopRequireDefault(_ComponentRenderer);
 
@@ -5972,7 +5004,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *   rendered() {
  *   }
  *
+ *   willAttach() {
+ *   }
+ *
  *   attached() {
+ *   }
+ *
+ *   willReceiveState() {
+ *   }
+ *
+ *   // willReceiveProps is only available in JSX components
+ *   willReceiveProps() {
+ *   }
+ *
+ *   shouldUpdate() {
+ *   }
+ *
+ *   willUpdate() {
+ *   }
+ *
+ *   willDetach() {
  *   }
  *
  *   detached() {
@@ -6026,6 +5077,13 @@ var Component = function (_EventEmitter) {
 		_this.eventsStateKeyHandler_ = null;
 
 		/**
+   * Stores the pending callback function for when `forceUpdate` is used
+   * to trigger a rerender.
+   * @type {?function}
+   */
+		_this.forceUpdateCallback_ = null;
+
+		/**
    * Whether the element is in document.
    * @type {boolean}
    */
@@ -6039,6 +5097,13 @@ var Component = function (_EventEmitter) {
 		_this.initialConfig_ = opt_config || {};
 
 		/**
+   * Whether the current environment is server side.
+   * @type {boolean}
+   * @protected
+   */
+		_this.serverSide_ = (0, _metal.isServerSide)();
+
+		/**
    * Whether the element was rendered.
    * @type {boolean}
    */
@@ -6050,7 +5115,7 @@ var Component = function (_EventEmitter) {
    * `attach`.
    * @type {!Element}
    */
-		_this.DEFAULT_ELEMENT_PARENT = document.body;
+		_this.DEFAULT_ELEMENT_PARENT = !_this.serverSide_ ? document.body : null;
 
 		_this.setShouldUseFacade(true);
 		_this.element = _this.initialConfig_.element;
@@ -6059,6 +5124,7 @@ var Component = function (_EventEmitter) {
 		_this.setUpDataManager_();
 		_this.setUpSyncUpdates_();
 
+		_this.on('stateWillChange', _this.handleStateWillChange_);
 		_this.on('stateChanged', _this.handleComponentStateChanged_);
 		_this.on('eventsChanged', _this.onEventsChanged_);
 		_this.addListenersFromObj_(_this.dataManager_.get(_this, 'events'));
@@ -6114,6 +5180,8 @@ var Component = function (_EventEmitter) {
 		key: 'attach',
 		value: function attach(opt_parentElement, opt_siblingElement) {
 			if (!this.inDocument) {
+				this.emit('willAttach');
+				this.willAttach();
 				this.attachElement(opt_parentElement, opt_siblingElement);
 				this.inDocument = true;
 				this.attachData_ = {
@@ -6195,6 +5263,8 @@ var Component = function (_EventEmitter) {
 		key: 'detach',
 		value: function detach() {
 			if (this.inDocument) {
+				this.emit('willDetach');
+				this.willDetach();
 				if (this.element && this.element.parentNode) {
 					this.element.parentNode.removeChild(this.element);
 				}
@@ -6246,6 +5316,21 @@ var Component = function (_EventEmitter) {
 			this.renderer_ = null;
 
 			_get(Component.prototype.__proto__ || Object.getPrototypeOf(Component.prototype), 'disposeInternal', this).call(this);
+		}
+
+		/**
+   * Forces an update that ignores the `shouldUpdate` lifecycle method for
+   * components whose render depends on external variables.
+   */
+
+	}, {
+		key: 'forceUpdate',
+		value: function forceUpdate(opt_callback) {
+			this.forceUpdateCallback_ = opt_callback;
+
+			this.updateRenderer_({
+				forceUpdate: true
+			});
 		}
 
 		/**
@@ -6369,6 +5454,19 @@ var Component = function (_EventEmitter) {
 		}
 
 		/**
+   * Fires before state batch changes. Provides hook point for modifying
+   *     state.
+   * @param {Event} event
+   * @protected
+   */
+
+	}, {
+		key: 'handleStateWillChange_',
+		value: function handleStateWillChange_(event) {
+			this.willReceiveState(event.changes);
+		}
+
+		/**
    * Checks if this component has sync updates enabled.
    * @return {boolean}
    */
@@ -6390,8 +5488,26 @@ var Component = function (_EventEmitter) {
 		value: function informRendered() {
 			var firstRender = !this.hasRendererRendered_;
 			this.hasRendererRendered_ = true;
+
+			if (this.forceUpdateCallback_) {
+				this.forceUpdateCallback_();
+				this.forceUpdateCallback_ = null;
+			}
+
 			this.rendered(firstRender);
 			this.emit('rendered', firstRender);
+		}
+
+		/**
+   * Informs the component that the renderer is about to update. Calls the
+   * component's `willUpdate` lifecycle method.
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'informWillUpdate',
+		value: function informWillUpdate() {
+			this.willUpdate.apply(this, arguments);
 		}
 
 		/**
@@ -6453,7 +5569,7 @@ var Component = function (_EventEmitter) {
    */
 		value: function renderComponent(opt_parentElement) {
 			if (!this.hasRendererRendered_) {
-				if (window.__METAL_DEV_TOOLS_HOOK__) {
+				if (!this.serverSide_ && window.__METAL_DEV_TOOLS_HOOK__) {
 					window.__METAL_DEV_TOOLS_HOOK__(this);
 				}
 				this.getRenderer().render(this);
@@ -6593,6 +5709,10 @@ var Component = function (_EventEmitter) {
 	}, {
 		key: 'updateRenderer_',
 		value: function updateRenderer_(data) {
+			if (!data.forceUpdate) {
+				this.forceUpdateCallback_ = null;
+			}
+
 			if (!this.skipUpdates_ && this.hasRendererRendered_) {
 				this.getRenderer().update(this, data);
 			}
@@ -6610,6 +5730,42 @@ var Component = function (_EventEmitter) {
 		value: function validatorEventsFn_(val) {
 			return !(0, _metal.isDefAndNotNull)(val) || (0, _metal.isObject)(val);
 		}
+
+		/**
+   * Lifecycle. Fires before the component has been attached to the DOM.
+   */
+
+	}, {
+		key: 'willAttach',
+		value: function willAttach() {}
+
+		/**
+   * Lifecycle. Fires before component is detached from the DOM.
+   */
+
+	}, {
+		key: 'willDetach',
+		value: function willDetach() {}
+
+		/**
+   * Lifecycle. Called when the component is about to receive state changes.
+   * Provides a hook point for modifying state that can be used in the next
+   * rerender.
+   * @param {Object} changes Changes made to this.state
+   */
+
+	}, {
+		key: 'willReceiveState',
+		value: function willReceiveState() {}
+
+		/**
+   * Lifecycle. Called when the component's renderer is about to update.
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'willUpdate',
+		value: function willUpdate() {}
 	}, {
 		key: 'element',
 		get: function get() {
@@ -6685,7 +5841,7 @@ var Component = function (_EventEmitter) {
 							IncrementalDOM.patch = patch;
 						};
 						IncrementalDOM.patch = patchInterceptor;
-						Component.render(Ctor, opt_config);
+						Component.render(Ctor, opt_config).dispose();
 						return interceptedComponentStrings[0];
 					}
 				default:
@@ -6797,7 +5953,7 @@ var proxyBlackList_ = {
 exports.default = Component;
 
 /***/ }),
-/* 140 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6882,7 +6038,7 @@ ComponentRegistry.components_ = {};
 exports.default = ComponentRegistry;
 
 /***/ }),
-/* 141 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6951,7 +6107,7 @@ function syncState(component, opt_changes) {
 }
 
 /***/ }),
-/* 142 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6965,7 +6121,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(82);
+var _domData = __webpack_require__(71);
 
 var _domData2 = _interopRequireDefault(_domData);
 
@@ -7032,7 +6188,7 @@ var DomDelegatedEventHandle = function (_EventHandle) {
 exports.default = DomDelegatedEventHandle;
 
 /***/ }),
-/* 143 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7046,7 +6202,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _dom = __webpack_require__(80);
+var _dom = __webpack_require__(69);
 
 var _metalEvents = __webpack_require__(7);
 
@@ -7145,7 +6301,7 @@ var DomEventEmitterProxy = function (_EventEmitterProxy) {
 exports.default = DomEventEmitterProxy;
 
 /***/ }),
-/* 144 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7161,6 +6317,7 @@ exports.append = append;
 exports.buildFragment = buildFragment;
 exports.contains = contains;
 exports.delegate = delegate;
+exports.isNodeListLike = isNodeListLike;
 exports.enterDocument = enterDocument;
 exports.exitDocument = exitDocument;
 exports.hasClass = hasClass;
@@ -7181,15 +6338,15 @@ exports.triggerEvent = triggerEvent;
 
 var _metal = __webpack_require__(2);
 
-var _domData = __webpack_require__(82);
+var _domData = __webpack_require__(71);
 
 var _domData2 = _interopRequireDefault(_domData);
 
-var _DomDelegatedEventHandle = __webpack_require__(142);
+var _DomDelegatedEventHandle = __webpack_require__(110);
 
 var _DomDelegatedEventHandle2 = _interopRequireDefault(_DomDelegatedEventHandle);
 
-var _DomEventHandle = __webpack_require__(87);
+var _DomEventHandle = __webpack_require__(78);
 
 var _DomEventHandle2 = _interopRequireDefault(_DomEventHandle);
 
@@ -7353,7 +6510,7 @@ function append(parent, child) {
 	if ((0, _metal.isString)(child)) {
 		child = buildFragment(child);
 	}
-	if (child instanceof NodeList) {
+	if (isNodeListLike(child)) {
 		var childArr = Array.prototype.slice.call(child);
 		for (var i = 0; i < childArr.length; i++) {
 			parent.appendChild(childArr[i]);
@@ -7458,6 +6615,15 @@ function isAbleToInteractWith_(node, eventName, opt_eventObj) {
 }
 
 /**
+ * Returns true if the specified value is a NodeList or like one.
+ * @param {?} val Variable to test.
+ * @return {boolean} Whether variable is like a NodeList.
+ */
+function isNodeListLike(val) {
+	return (0, _metal.isDefAndNotNull)(val) && typeof val.length === 'number' && typeof val.item === 'function';
+}
+
+/**
  * Inserts node in document as last element.
  * @param {Element} node Element to remove children from.
  */
@@ -7520,7 +6686,7 @@ function hasClass(element, className) {
  * @private
  */
 function hasClassWithNative_(element, className) {
-	return element.classList.contains(className);
+	return className.indexOf(' ') === -1 && element.classList.contains(className);
 }
 
 /**
@@ -7531,7 +6697,7 @@ function hasClassWithNative_(element, className) {
  * @private
  */
 function hasClassWithoutNative_(element, className) {
-	return (' ' + element.className + ' ').indexOf(' ' + className + ' ') >= 0;
+	return (' ' + element.className + ' ').indexOf(' ' + className + ' ') >= 0 && className.split(' ').length === 1;
 }
 
 /**
@@ -8016,60 +7182,71 @@ function triggerSelectorListeners_(container, element, event, defaultFns) {
 }
 
 /***/ }),
-/* 145 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _dom = __webpack_require__(80);
+var _metal = __webpack_require__(2);
 
-var _features = __webpack_require__(88);
+var _dom = __webpack_require__(69);
+
+var _features = __webpack_require__(79);
 
 var _features2 = _interopRequireDefault(_features);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var mouseEventMap = {
-	mouseenter: 'mouseover',
-	mouseleave: 'mouseout',
-	pointerenter: 'pointerover',
-	pointerleave: 'pointerout'
-};
-Object.keys(mouseEventMap).forEach(function (eventName) {
-	(0, _dom.registerCustomEvent)(eventName, {
-		delegate: true,
-		handler: function handler(callback, event) {
-			var related = event.relatedTarget;
-			var target = event.delegateTarget;
-			if (!related || related !== target && !(0, _dom.contains)(target, related)) {
+/**
+ * Register custom events for event delegation.
+ */
+function registerEvents() {
+	var mouseEventMap = {
+		mouseenter: 'mouseover',
+		mouseleave: 'mouseout',
+		pointerenter: 'pointerover',
+		pointerleave: 'pointerout'
+	};
+	Object.keys(mouseEventMap).forEach(function (eventName) {
+		(0, _dom.registerCustomEvent)(eventName, {
+			delegate: true,
+			handler: function handler(callback, event) {
+				var related = event.relatedTarget;
+				var target = event.delegateTarget;
+				if (!related || related !== target && !(0, _dom.contains)(target, related)) {
+					event.customType = eventName;
+					return callback(event);
+				}
+			},
+			originalEvent: mouseEventMap[eventName]
+		});
+	});
+
+	var animationEventMap = {
+		animation: 'animationend',
+		transition: 'transitionend'
+	};
+	Object.keys(animationEventMap).forEach(function (eventType) {
+		var eventName = animationEventMap[eventType];
+		(0, _dom.registerCustomEvent)(eventName, {
+			event: true,
+			delegate: true,
+			handler: function handler(callback, event) {
 				event.customType = eventName;
 				return callback(event);
-			}
-		},
-		originalEvent: mouseEventMap[eventName]
+			},
+			originalEvent: _features2.default.checkAnimationEventName()[eventType]
+		});
 	});
-});
+}
 
-var animationEventMap = {
-	animation: 'animationend',
-	transition: 'transitionend'
-};
-Object.keys(animationEventMap).forEach(function (eventType) {
-	var eventName = animationEventMap[eventType];
-	(0, _dom.registerCustomEvent)(eventName, {
-		event: true,
-		delegate: true,
-		handler: function handler(callback, event) {
-			event.customType = eventName;
-			return callback(event);
-		},
-		originalEvent: _features2.default.checkAnimationEventName()[eventType]
-	});
-});
+if (!(0, _metal.isServerSide)()) {
+	registerEvents();
+}
 
 /***/ }),
-/* 146 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8083,7 +7260,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _dom = __webpack_require__(80);
+var _dom = __webpack_require__(69);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8227,7 +7404,7 @@ var globalEval = function () {
 exports.default = globalEval;
 
 /***/ }),
-/* 147 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8241,7 +7418,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _dom = __webpack_require__(80);
+var _dom = __webpack_require__(69);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8367,7 +7544,7 @@ var globalEvalStyles = function () {
 exports.default = globalEvalStyles;
 
 /***/ }),
-/* 148 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8381,7 +7558,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(2);
 
-var _EventHandle = __webpack_require__(89);
+var _EventHandle = __webpack_require__(80);
 
 var _EventHandle2 = _interopRequireDefault(_EventHandle);
 
@@ -8903,7 +8080,7 @@ function toArray(val) {
 exports.default = EventEmitter;
 
 /***/ }),
-/* 149 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9143,7 +8320,7 @@ var EventEmitterProxy = function (_Disposable) {
 exports.default = EventEmitterProxy;
 
 /***/ }),
-/* 150 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9234,7 +8411,352 @@ var EventHandler = function (_Disposable) {
 exports.default = EventHandler;
 
 /***/ }),
-/* 151 */
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(85);
+
+var _changes = __webpack_require__(83);
+
+var _data = __webpack_require__(70);
+
+var _children = __webpack_require__(84);
+
+var _patch2 = __webpack_require__(125);
+
+var _render = __webpack_require__(86);
+
+var _metalComponent = __webpack_require__(0);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IncrementalDomRenderer = function (_ComponentRenderer$co) {
+	_inherits(IncrementalDomRenderer, _ComponentRenderer$co);
+
+	function IncrementalDomRenderer() {
+		_classCallCheck(this, IncrementalDomRenderer);
+
+		return _possibleConstructorReturn(this, (IncrementalDomRenderer.__proto__ || Object.getPrototypeOf(IncrementalDomRenderer)).apply(this, arguments));
+	}
+
+	_createClass(IncrementalDomRenderer, [{
+		key: 'buildShouldUpdateArgs',
+
+		/**
+   * Returns an array with the args that should be passed to the component's
+   * `shouldUpdate` method. This can be overridden by sub classes to change
+   * what the method should receive.
+   * @param {Object} changes
+   * @return {!Array}
+   */
+		value: function buildShouldUpdateArgs(changes) {
+			return [changes.props];
+		}
+
+		/**
+   * @inheritDoc
+   */
+
+	}, {
+		key: 'dispose',
+		value: function dispose(component) {
+			var data = (0, _data.getData)(component);
+			var ref = data.config.ref;
+			var owner = data.owner;
+			if (owner && owner.components && owner.components[ref] === component) {
+				delete owner.components[ref];
+			}
+
+			if (data.childComponents) {
+				for (var i = 0; i < data.childComponents.length; i++) {
+					var child = data.childComponents[i];
+					if (!child.isDisposed()) {
+						child.element = null;
+						child.dispose();
+					}
+				}
+			}
+
+			(0, _data.clearData)(component);
+		}
+
+		/**
+   * Generates a key for the element currently being rendered in the given
+   * component. By default, just returns the original key. Sub classes can
+   * override this to change the behavior.
+   * @param {!Component} component
+   * @param {string} key
+   * @return {?string}
+   */
+
+	}, {
+		key: 'generateKey',
+		value: function generateKey(component, key) {
+			return key;
+		}
+
+		/**
+   * Get the component's config data.
+   * @param {!Component} component
+   * @return {!Object}
+   */
+
+	}, {
+		key: 'getConfig',
+		value: function getConfig(component) {
+			return (0, _data.getData)(component).config;
+		}
+
+		/**
+   * Get the component's incremental dom renderer data.
+   * @param {!Component} component
+   * @return {!Object}
+   */
+
+	}, {
+		key: 'getData',
+		value: function getData(component) {
+			return (0, _data.getData)(component);
+		}
+
+		/**
+   * Gets the component that triggered the current patch operation.
+   * @return {Component}
+   */
+
+	}, {
+		key: 'getPatchingComponent',
+		value: function getPatchingComponent() {
+			return (0, _patch2.getPatchingComponent)();
+		}
+
+		/**
+   * Handles a node having just been rendered. Sub classes should override this
+   * for custom behavior.
+   */
+
+	}, {
+		key: 'handleNodeRendered',
+		value: function handleNodeRendered() {}
+
+		/**
+   * Checks if the given object is an incremental dom node.
+   * @param {!Object} node
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'isIncDomNode',
+		value: function isIncDomNode(node) {
+			return !!(0, _children.getOwner)(node);
+		}
+
+		/**
+   * Calls incremental dom's patch function to render the component.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'patch',
+		value: function patch(component) {
+			(0, _patch2.patch)(component);
+		}
+
+		/**
+   * Renders the renderer's component for the first time, patching its element
+   * through incremental dom function calls. If the first arg is a function
+   * instead of a component instance, creates and renders this function, which
+   * can either be a simple incremental dom function or a component constructor.
+   * @param {!Component} component
+   * @param {!Component|function()} component Can be a component instance, a
+   *     simple incremental dom function or a component constructor.
+   * @param {Object|Element=} opt_dataOrElement Optional config data for the
+   *     function, or parent for the rendered content.
+   * @param {Element=} opt_parent Optional parent for the rendered content.
+   * @return {!Component} The rendered component's instance.
+   */
+
+	}, {
+		key: 'render',
+		value: function render(component, opt_dataOrElement, opt_parent) {
+			if (component instanceof _metalComponent.Component) {
+				this.patch(component);
+			} else {
+				return (0, _render.renderFunction)(this, component, opt_dataOrElement, opt_parent);
+			}
+		}
+
+		/**
+   * Renders the given child node via its owner renderer.
+   * @param {!Object} child
+   */
+
+	}, {
+		key: 'renderChild',
+		value: function renderChild(child) {
+			(0, _render.renderChild)(child);
+		}
+
+		/**
+   * Calls functions from `IncrementalDOM` to build the component element's
+   * content. Can be overriden by subclasses (for integration with template
+   * engines for example).
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'renderIncDom',
+		value: function renderIncDom(component) {
+			if (component.render) {
+				component.render();
+			} else {
+				IncrementalDOM.elementVoid('div');
+			}
+		}
+
+		/**
+   * Runs the incremental dom functions for rendering this component, without
+   * calling `patch`. This function needs to be called inside a `patch`.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'renderInsidePatch',
+		value: function renderInsidePatch(component) {
+			var changes = (0, _changes.getChanges)(component);
+
+			var shouldRender = !component.wasRendered || this.shouldUpdate(component, changes) || IncrementalDOM.currentPointer() !== component.element;
+			if (shouldRender) {
+				this.willUpdate_(component, changes);
+
+				(0, _render.render)(component);
+			} else if (component.element) {
+				this.skipRender();
+			}
+		}
+
+		/**
+   * Sets up this component to be used by this renderer.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'setUp',
+		value: function setUp(component) {
+			component.context = {};
+			component.components = {};
+			component.refs = {};
+
+			var data = (0, _data.getData)(component);
+			data.config = component.getInitialConfig();
+			(0, _changes.trackChanges)(component);
+		}
+
+		/**
+   * Checks if the component should be updated with the current state changes.
+   * @param {!Component} component
+   * @param {Object} changes
+   * @return {boolean}
+   */
+
+	}, {
+		key: 'shouldUpdate',
+		value: function shouldUpdate(component, changes) {
+			if (!changes) {
+				return false;
+			}
+			if (component.shouldUpdate) {
+				return component.shouldUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
+			}
+			return true;
+		}
+
+		/**
+   * Skips the next disposal of children components, by clearing the array as
+   * if there were no children rendered the last time. This can be useful for
+   * allowing components to be reused by other parent components in separate
+   * render update cycles.
+   * @param {!Component} component
+   */
+
+	}, {
+		key: 'skipNextChildrenDisposal',
+		value: function skipNextChildrenDisposal(component) {
+			(0, _data.getData)(component).childComponents = null;
+		}
+
+		/**
+   * Skips rendering the current node.
+   */
+
+	}, {
+		key: 'skipRender',
+		value: function skipRender() {
+			IncrementalDOM.skipNode();
+		}
+
+		/**
+   * Updates the renderer's component when state changes, patching its element
+   * through incremental dom function calls.
+   * @param {!Component} component
+   * @param {Object} data
+   */
+
+	}, {
+		key: 'update',
+		value: function update(component, data) {
+			var changes = (0, _changes.getChanges)(component);
+			if (data.forceUpdate || this.shouldUpdate(component, changes)) {
+				this.willUpdate_(component, changes);
+				this.patch(component);
+			}
+		}
+
+		/**
+   * Invokes component's "willUpdate" lifecycle method if applicable.
+   * @param {!Component} component
+   * @param {Object} changes
+   */
+
+	}, {
+		key: 'willUpdate_',
+		value: function willUpdate_(component, changes) {
+			if (!component.wasRendered || !changes) {
+				return;
+			}
+			component.informWillUpdate.apply(component, _toConsumableArray(this.buildShouldUpdateArgs(changes)));
+		}
+	}]);
+
+	return IncrementalDomRenderer;
+}(_metalComponent.ComponentRenderer.constructor);
+
+var renderer = new IncrementalDomRenderer();
+
+// Name of this renderer. Renderers should provide this as a way to identify
+// them via a simple string (when calling enableCompatibilityMode to add
+// support to old features for specific renderers for example).
+renderer.RENDERER_NAME = 'incremental-dom';
+
+exports.default = renderer;
+
+/***/ }),
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9246,7 +8768,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.disposeUnused = disposeUnused;
 exports.schedule = schedule;
 
-var _data = __webpack_require__(81);
+var _data = __webpack_require__(70);
 
 var comps_ = [];
 var disposing_ = false;
@@ -9289,7 +8811,456 @@ function schedule(comps) {
 }
 
 /***/ }),
-/* 152 */
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _HTMLParser = __webpack_require__(122);
+
+var _HTMLParser2 = _interopRequireDefault(_HTMLParser);
+
+var _unescape = __webpack_require__(123);
+
+var _unescape2 = _interopRequireDefault(_unescape);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var parser_;
+
+var HTML2IncDom = function () {
+	function HTML2IncDom() {
+		_classCallCheck(this, HTML2IncDom);
+	}
+
+	_createClass(HTML2IncDom, null, [{
+		key: 'buildFn',
+
+		/**
+   * Should convert the given html string to a function with calls to
+   * incremental dom methods.
+   * @param {string} html
+   * @return {!function()} Function with incremental dom calls for building
+   *     the given html string.
+   */
+		value: function buildFn(html) {
+			return function () {
+				return HTML2IncDom.run(html);
+			};
+		}
+
+		/**
+   * Gets the html parser being currently used.
+   * @return {!function()}
+   */
+
+	}, {
+		key: 'getParser',
+		value: function getParser() {
+			return parser_ || _HTMLParser2.default;
+		}
+
+		/**
+   * Should convert the given html string to calls to incremental dom methods.
+   * @param {string} html
+   */
+
+	}, {
+		key: 'run',
+		value: function run(html) {
+			HTML2IncDom.getParser()(html, {
+				start: function start(tag, attrs, unary) {
+					var fn = unary ? IncrementalDOM.elementVoid : IncrementalDOM.elementOpen;
+					var args = [tag, null, []];
+					for (var i = 0; i < attrs.length; i++) {
+						args.push(attrs[i].name, attrs[i].value);
+					}
+					fn.apply(null, args);
+				},
+
+				end: function end(tag) {
+					IncrementalDOM.elementClose(tag);
+				},
+
+				chars: function chars(text) {
+					IncrementalDOM.text(text, _unescape2.default);
+				}
+			});
+		}
+
+		/**
+   * Changes the function that will be used to parse html strings. By default
+   * this will use the `HTMLParser` function from
+   * https://github.com/blowsie/Pure-JavaScript-HTML5-Parser. This will accept
+   * any function that follows that same api, basically accepting the html
+   * string and an object with `start`, `end` and `chars` functions to be called
+   * during the parsing.
+   * @param {!function(string, !Object} newParser
+   */
+
+	}, {
+		key: 'setParser',
+		value: function setParser(newParser) {
+			parser_ = newParser;
+		}
+	}]);
+
+	return HTML2IncDom;
+}();
+
+exports.default = HTML2IncDom;
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+/* eslint-disable */
+
+/*
+ * HTML5 Parser By Sam Blowes
+ *
+ * Designed for HTML5 documents
+ *
+ * Original code by John Resig (ejohn.org)
+ * http://ejohn.org/blog/pure-javascript-html-parser/
+ * Original code by Erik Arvidsson, Mozilla Public License
+ * http://erik.eae.net/simplehtmlparser/simplehtmlparser.js
+ *
+ * ----------------------------------------------------------------------------
+ * License
+ * ----------------------------------------------------------------------------
+ *
+ * This code is triple licensed using Apache Software License 2.0,
+ * Mozilla Public License or GNU Public License
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ *
+ * The Original Code is Simple HTML Parser.
+ *
+ * The Initial Developer of the Original Code is Erik Arvidsson.
+ * Portions created by Erik Arvidssson are Copyright (C) 2004. All Rights
+ * Reserved.
+ *
+ * ////////////////////////////////////////////////////////////////////////////
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * @license
+ */
+
+/*
+ *
+ * ----------------------------------------------------------------------------
+ * Usage
+ * ----------------------------------------------------------------------------
+ *
+ * // Use like so:
+ * HTMLParser(htmlString, {
+ *     start: function(tag, attrs, unary) {},
+ *     end: function(tag) {},
+ *     chars: function(text) {},
+ *     comment: function(text) {}
+ * });
+ *
+ * // or to get an XML string:
+ * HTMLtoXML(htmlString);
+ *
+ * // or to get an XML DOM Document
+ * HTMLtoDOM(htmlString);
+ *
+ * // or to inject into an existing document/DOM node
+ * HTMLtoDOM(htmlString, document);
+ * HTMLtoDOM(htmlString, document.body);
+ *
+ */
+
+// Regular Expressions for parsing tags and attributes
+var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
+    endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/,
+    attr = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g;
+
+// Empty Elements - HTML 5
+var empty = makeMap("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr");
+
+// Block Elements - HTML 5
+var block = makeMap("a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,ins,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video");
+
+// Inline Elements - HTML 5
+var inline = makeMap("abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var");
+
+// Elements that you can, intentionally, leave open
+// (and which close themselves)
+var closeSelf = makeMap("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr");
+
+// Attributes that have their values filled in disabled="disabled"
+var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected");
+
+// Special Elements (can contain anything)
+var special = makeMap("script,style");
+
+var HTMLParser = function HTMLParser(html, handler) {
+	var index,
+	    chars,
+	    match,
+	    stack = [],
+	    last = html;
+	stack.last = function () {
+		return this[this.length - 1];
+	};
+
+	while (html) {
+		chars = true;
+
+		// Make sure we're not in a script or style element
+		if (!stack.last() || !special[stack.last()]) {
+
+			// Comment
+			if (html.indexOf("<!--") == 0) {
+				index = html.indexOf("-->");
+
+				if (index >= 0) {
+					if (handler.comment) handler.comment(html.substring(4, index));
+					html = html.substring(index + 3);
+					chars = false;
+				}
+
+				// end tag
+			} else if (html.indexOf("</") == 0) {
+				match = html.match(endTag);
+
+				if (match) {
+					html = html.substring(match[0].length);
+					match[0].replace(endTag, parseEndTag);
+					chars = false;
+				}
+
+				// start tag
+			} else if (html.indexOf("<") == 0) {
+				match = html.match(startTag);
+
+				if (match) {
+					html = html.substring(match[0].length);
+					match[0].replace(startTag, parseStartTag);
+					chars = false;
+				}
+			}
+
+			if (chars) {
+				index = html.indexOf("<");
+
+				var text = index < 0 ? html : html.substring(0, index);
+				html = index < 0 ? "" : html.substring(index);
+
+				if (handler.chars) handler.chars(text);
+			}
+		} else {
+			html = html.replace(new RegExp("([\\s\\S]*?)<\/" + stack.last() + "[^>]*>"), function (all, text) {
+				text = text.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, "$1$2");
+				if (handler.chars) handler.chars(text);
+
+				return "";
+			});
+
+			parseEndTag("", stack.last());
+		}
+
+		if (html == last) throw "Parse Error: " + html;
+		last = html;
+	}
+
+	// Clean up any remaining tags
+	parseEndTag();
+
+	function parseStartTag(tag, tagName, rest, unary) {
+		tagName = tagName.toLowerCase();
+
+		if (block[tagName]) {
+			// Close last tag if it's inline, except if it's a "span" (since people
+			// usually add anything they want to spans, and browsers allow it).
+			// Note: this exception for "span" was added manually (i.e. it's not
+			// present in the original code).
+			while (stack.last() && inline[stack.last()] && stack.last() !== 'span') {
+				parseEndTag("", stack.last());
+			}
+		}
+
+		if (closeSelf[tagName] && stack.last() == tagName) {
+			parseEndTag("", tagName);
+		}
+
+		unary = empty[tagName] || !!unary;
+
+		if (!unary) stack.push(tagName);
+
+		if (handler.start) {
+			var attrs = [];
+
+			rest.replace(attr, function (match, name) {
+				var value = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : fillAttrs[name] ? name : "";
+
+				attrs.push({
+					name: name,
+					value: value,
+					escaped: value.replace(/(^|[^\\])"/g, '$1\\\"') //"
+				});
+			});
+
+			if (handler.start) handler.start(tagName, attrs, unary);
+		}
+	}
+
+	function parseEndTag(tag, tagName) {
+		// If no tag name is provided, clean shop
+		if (!tagName) var pos = 0;
+
+		// Find the closest opened tag of the same type
+		else for (var pos = stack.length - 1; pos >= 0; pos--) {
+				if (stack[pos] == tagName) break;
+			}if (pos >= 0) {
+			// Close all the open elements, up the stack
+			for (var i = stack.length - 1; i >= pos; i--) {
+				if (handler.end) handler.end(stack[i]);
+			} // Remove the open elements from the stack
+			stack.length = pos;
+		}
+	}
+};
+
+function makeMap(str) {
+	var obj = {},
+	    items = str.split(",");
+	for (var i = 0; i < items.length; i++) {
+		obj[items[i]] = true;
+	}return obj;
+}
+
+exports.default = HTMLParser;
+
+/* eslint-enable */
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Copyright 2006 The Closure Library Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * Unescapes an HTML string using a DOM to resolve non-XML, non-numeric
+ * entities. This function is XSS-safe and whitespace-preserving.
+ * @private
+ * @param {string} str The string to unescape.
+ * @return {string} The unescaped {@code str} string.
+ */
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function unescape(str) {
+  /** @type {!Object<string, string>} */
+  var seen = { '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"' };
+  var div = document.createElement('div');
+
+  // Match as many valid entity characters as possible. If the actual entity
+  // happens to be shorter, it will still work as innerHTML will return the
+  // trailing characters unchanged. Since the entity characters do not include
+  // open angle bracket, there is no chance of XSS from the innerHTML use.
+  // Since no whitespace is passed to innerHTML, whitespace is preserved.
+  return str.replace(HTML_ENTITY_PATTERN_, function (s, entity) {
+    // Check for cached entity.
+    var value = seen[s];
+    if (value) {
+      return value;
+    }
+    // Check for numeric entity.
+    if (entity.charAt(0) === '#') {
+      // Prefix with 0 so that hex entities (e.g. &#x10) parse as hex numbers.
+      var n = Number('0' + entity.substr(1));
+      if (!isNaN(n)) {
+        value = String.fromCharCode(n);
+      }
+    }
+    // Fall back to innerHTML otherwise.
+    if (!value) {
+      // Append a non-entity character to avoid a bug in Webkit that parses
+      // an invalid entity at the end of innerHTML text as the empty string.
+      div.innerHTML = s + ' ';
+      // Then remove the trailing character from the result.
+      value = div.firstChild.nodeValue.slice(0, -1);
+    }
+    // Cache and return.
+    seen[s] = value;
+    return value;
+  });
+}
+
+exports.default = unescape;
+
+/**
+ * Regular expression that matches an HTML entity.
+ * @type {!RegExp}
+ */
+
+var HTML_ENTITY_PATTERN_ = /&([^;\s<&]+);?/g;
+
+/***/ }),
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9301,13 +9272,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.applyAttribute = applyAttribute;
 exports.convertListenerNamesToFns = convertListenerNamesToFns;
 
+var _metal = __webpack_require__(2);
+
 var _metalDom = __webpack_require__(3);
 
 var _metalComponent = __webpack_require__(0);
 
-var _incrementalDomAop = __webpack_require__(83);
-
-var _metal = __webpack_require__(2);
+var _incrementalDomAop = __webpack_require__(72);
 
 var HANDLE_SUFFIX = '__handle__';
 var LISTENER_REGEX = /^(?:on([A-Z].+))|(?:data-on(.+))$/;
@@ -9346,6 +9317,9 @@ function applyAttribute(component, element, name, value) {
  * @private
  */
 function attachEvent_(component, element, attr, eventName, fn) {
+  if ((0, _metal.isServerSide)()) {
+    return;
+  }
   var handleKey = eventName + HANDLE_SUFFIX;
   if (element[handleKey]) {
     element[handleKey].removeListener();
@@ -9441,6 +9415,9 @@ function getEventFromListenerAttr_(attr) {
  * @private
  */
 function setBooleanAttr_(element, name, value) {
+  if ((0, _metal.isServerSide)()) {
+    return;
+  }
   element[name] = value;
   if (value) {
     element.setAttribute(name, '');
@@ -9463,13 +9440,16 @@ function setBooleanAttr_(element, name, value) {
  * @private
  */
 function setValueAttrAsProperty_(element, name, value) {
+  if ((0, _metal.isServerSide)()) {
+    return;
+  }
   if (name === 'value' && element.value !== value) {
     element[name] = value;
   }
 }
 
 /***/ }),
-/* 153 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9483,9 +9463,11 @@ exports.patch = patch;
 
 var _metalDom = __webpack_require__(3);
 
-var _data = __webpack_require__(81);
+var _data = __webpack_require__(70);
 
-var _render = __webpack_require__(96);
+var _metal = __webpack_require__(2);
+
+var _render = __webpack_require__(86);
 
 var patchingComponents_ = [];
 
@@ -9498,7 +9480,10 @@ var patchingComponents_ = [];
  */
 function buildParentIfNecessary_(element) {
 	if (!element || !element.parentNode) {
-		var parent = document.createElement('div');
+		var parent = {};
+		if (!(0, _metal.isServerSide)()) {
+			parent = document.createElement('div');
+		}
 		if (element) {
 			(0, _metalDom.append)(parent, element);
 		}
@@ -9590,7 +9575,7 @@ function tryPatchWithNoParent_(component) {
 }
 
 /***/ }),
-/* 154 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9598,7 +9583,7 @@ function tryPatchWithNoParent_(component) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-__webpack_require__(90);
+__webpack_require__(81);
 
 (function () {
   this.CLOSURE_NO_DEPS = true;
@@ -14225,10 +14210,10 @@ __webpack_require__(90);
     return IncrementalDOM;
   });
 }).call(typeof exports !== 'undefined' && typeof global !== 'undefined' ? global : window);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74)))
 
 /***/ }),
-/* 155 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14318,7 +14303,7 @@ var SoyAop = {
 exports.default = SoyAop;
 
 /***/ }),
-/* 156 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14330,7 +14315,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _metal = __webpack_require__(2);
 
-var _validators = __webpack_require__(97);
+var _validators = __webpack_require__(87);
 
 var _validators2 = _interopRequireDefault(_validators);
 
@@ -14466,10 +14451,10 @@ var Config = {
   * @return {!Object} `State` configuration object.
   */
 	internal: function internal() {
-		var _internal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+		var internal = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
 		return mergeConfig(this, {
-			internal: _internal
+			internal: internal
 		});
 	},
 
@@ -14480,10 +14465,10 @@ var Config = {
   * @return {!Object} `State` configuration object.
   */
 	required: function required() {
-		var _required = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+		var required = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
 		return mergeConfig(this, {
-			required: _required
+			required: required
 		});
 	},
 
@@ -14532,6 +14517,20 @@ var Config = {
 	valueFn: function valueFn(_valueFn) {
 		return mergeConfig(this, {
 			valueFn: _valueFn
+		});
+	},
+
+
+	/**
+  * Adds the `writeOnce` flag to the `State` configuration.
+  * @param {boolean} writeOnce Flag to set "writeOnce" to. False by default.
+  * @return {!Object} `State` configuration object.
+  */
+	writeOnce: function writeOnce() {
+		var writeOnce = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+		return mergeConfig(this, {
+			writeOnce: writeOnce
 		});
 	}
 };
@@ -14607,7 +14606,7 @@ function setPrimitiveValidators(name) {
 exports.default = Config;
 
 /***/ }),
-/* 157 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14922,8 +14921,6 @@ var State = function (_EventEmitter) {
 
 		/**
    * Adds state keys from super classes static hint `MyClass.STATE = {};`.
-   * @param {Object.<string, !Object>=} opt_config An object that maps all the
-   *     configurations for state keys.
    * @protected
    */
 
@@ -14934,8 +14931,12 @@ var State = function (_EventEmitter) {
 			if (ctor !== State) {
 				var defineContext = void 0;
 				if (this.obj_ === this) {
-					defineContext = ctor.hasConfiguredState_ ? false : ctor.prototype;
-					ctor.hasConfiguredState_ = true;
+					var staticKey = State.STATE_STATIC_HINT_CONFIGURED;
+
+					ctor[staticKey] = ctor[staticKey] || {};
+
+					defineContext = ctor[staticKey][ctor.name] ? false : ctor.prototype;
+					ctor[staticKey][ctor.name] = true;
 				}
 				this.configState(State.getStateStatic(ctor), defineContext);
 			}
@@ -14964,6 +14965,8 @@ var State = function (_EventEmitter) {
 		key: 'emitBatchEvent_',
 		value: function emitBatchEvent_() {
 			if (!this.isDisposed()) {
+				this.context_.emit('stateWillChange', this.scheduledBatchData_);
+
 				var data = this.scheduledBatchData_;
 				this.scheduledBatchData_ = null;
 				this.context_.emit('stateChanged', data);
@@ -15093,7 +15096,7 @@ var State = function (_EventEmitter) {
 	}, {
 		key: 'hasInitialValue_',
 		value: function hasInitialValue_(name) {
-			return this.initialValues_.hasOwnProperty(name);
+			return this.initialValues_.hasOwnProperty(name) && (0, _metal.isDef)(this.initialValues_[name]);
 		}
 
 		/**
@@ -15362,7 +15365,8 @@ var State = function (_EventEmitter) {
 	}, {
 		key: 'validateInitialValue_',
 		value: function validateInitialValue_(name) {
-			if (this.hasInitialValue_(name) && !this.callValidator_(name, this.initialValues_[name])) {
+			if (this.initialValues_.hasOwnProperty(name) && !this.callValidator_(name, this.initialValues_[name])) {
+
 				delete this.initialValues_[name];
 			}
 		}
@@ -15414,7 +15418,21 @@ var State = function (_EventEmitter) {
 	return State;
 }(_metalEvents.EventEmitter);
 
+/**
+ * Constant used as key on State instance for storing property definition.
+ * @type {!string}
+ */
+
+
 State.STATE_REF_KEY = '__METAL_STATE_REF_KEY__';
+
+/**
+ * Constant used as key on class constructors that extend from State, stores
+ * which constructors have had their static STATE configured so that
+ * configuration of STATE is not repeated.
+ * @type {!string}
+ */
+State.STATE_STATIC_HINT_CONFIGURED = '__METAL_STATE_STATIC_HINT_CONFIGURED__';
 
 /**
  * Constants that represent the states that a state key can be in.
@@ -15429,7 +15447,7 @@ State.KeyStates = {
 exports.default = State;
 
 /***/ }),
-/* 158 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15732,7 +15750,7 @@ Toggler.STATE = {
 exports.default = Toggler;
 
 /***/ }),
-/* 159 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15744,7 +15762,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _core = __webpack_require__(98);
+var _core = __webpack_require__(88);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15875,7 +15893,7 @@ var array = function () {
 exports.default = array;
 
 /***/ }),
-/* 160 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16117,14 +16135,14 @@ async.nextTick.wrapCallback_ = function (opt_returnValue) {
 };
 
 exports.default = async;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(155).setImmediate))
 
 /***/ }),
-/* 161 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 /**
  * A collection of core utility functions.
@@ -16158,6 +16176,7 @@ exports.isWindow = isWindow;
 exports.isObject = isObject;
 exports.isPromise = isPromise;
 exports.isString = isString;
+exports.isServerSide = isServerSide;
 exports.nullFunction = nullFunction;
 var compatibilityModeData_ = void 0;
 
@@ -16437,13 +16456,24 @@ function isString(val) {
 }
 
 /**
+ * Sets to true if running inside Node.js environment with extra check for
+ * `process.browser` to skip Karma runner environment. Karma environment has
+ * `process` defined even though it runs on the browser.
+ * @return {boolean}
+ */
+function isServerSide() {
+  return typeof process !== 'undefined' && typeof process.env !== 'undefined' && process.env.NODE_ENV !== 'test' && !process.browser;
+}
+
+/**
  * Null function used for default values of callbacks, etc.
  * @return {void} Nothing.
  */
 function nullFunction() {}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(73)))
 
 /***/ }),
-/* 162 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16519,7 +16549,7 @@ var Disposable = function () {
 exports.default = Disposable;
 
 /***/ }),
-/* 163 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16630,7 +16660,7 @@ var object = function () {
 exports.default = object;
 
 /***/ }),
-/* 164 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16753,6 +16783,409 @@ var string = function () {
 }();
 
 exports.default = string;
+
+/***/ }),
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sidebar", function() { return Sidebar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "templates", function() { return templates; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_metal_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_metal_component__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_metal_soy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_metal_soy__);
+/* jshint ignore:start */
+
+
+var templates;
+goog.loadModule(function(exports) {
+
+// This file was automatically generated from Sidebar.soy.
+// Please don't edit this file by hand.
+
+/**
+ * @fileoverview Templates in namespace Sidebar.
+ * @hassoydeltemplate {ElectricNavigation.anchor.idom}
+ * @public
+ */
+
+goog.module('Sidebar.incrementaldom');
+
+/** @suppress {extraRequire} */
+var soy = goog.require('soy');
+/** @suppress {extraRequire} */
+var soydata = goog.require('soydata');
+/** @suppress {extraRequire} */
+goog.require('goog.i18n.bidi');
+/** @suppress {extraRequire} */
+goog.require('goog.asserts');
+/** @suppress {extraRequire} */
+goog.require('goog.string');
+var IncrementalDom = goog.require('incrementaldom');
+var ie_open = IncrementalDom.elementOpen;
+var ie_close = IncrementalDom.elementClose;
+var ie_void = IncrementalDom.elementVoid;
+var ie_open_start = IncrementalDom.elementOpenStart;
+var ie_open_end = IncrementalDom.elementOpenEnd;
+var itext = IncrementalDom.text;
+var iattr = IncrementalDom.attr;
+
+var $templateAlias2 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricNavigation.incrementaldom', 'render');
+
+var $templateAlias1 = __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.getTemplate('ElectricSearchAutocomplete.incrementaldom', 'render');
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function $render(opt_data, opt_ignored, opt_ijData) {
+  ie_open('nav', null, null,
+      'class', 'sidebar');
+    ie_open('a', null, null,
+        'class', 'sidebar-header toggler-header-collapsed');
+      ie_void('span', null, null,
+          'class', 'sidebar-icon icon-16-menu');
+      ie_open('span');
+        itext('Docs Menu');
+      ie_close('span');
+      ie_open('span', null, null,
+          'class', 'sidebar-icon-right');
+        ie_void('span', null, null,
+            'class', 'icon-12-arrow-down-short');
+        ie_void('span', null, null,
+            'class', 'icon-12-arrow-up-short');
+      ie_close('span');
+    ie_close('a');
+    ie_open('div', null, null,
+        'class', 'sidebar-toggler-content toggler-collapsed');
+      ie_open('div', null, null,
+          'class', 'sidebar-search');
+        $templateAlias1({excludePath: opt_data.searchExcludePath, maxResults: 3, path: opt_data.searchPath ? opt_data.searchPath : '/docs/', placeholder: 'Search Docs'}, null, opt_ijData);
+      ie_close('div');
+      $templateAlias2({elementClasses: 'sidebar-list sidebar-list-1', listItemClasses: 'sidebar-item', anchorVariant: 'sidebar', section: opt_data.section}, null, opt_ijData);
+    ie_close('div');
+  ie_close('nav');
+}
+exports.render = $render;
+if (goog.DEBUG) {
+  $render.soyTemplateName = 'Sidebar.render';
+}
+
+
+/**
+ * @param {Object<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @param {Object<string, *>=} opt_ijData
+ * @return {void}
+ * @suppress {checkTypes}
+ */
+function __deltemplate_s144_d34389eb(opt_data, opt_ignored, opt_ijData) {
+  ie_open('a', null, null,
+      'class', 'sidebar-link ' + (opt_data.page.active ? 'sidebar-link-selected' : ''),
+      'href', opt_data.page.url);
+    if (opt_data.page.icon) {
+      ie_void('span', null, null,
+          'class', 'sidebar-icon icon-16-' + opt_data.page.icon);
+    }
+    ie_open('span');
+      var dyn13 = opt_data.page.title;
+      if (typeof dyn13 == 'function') dyn13(); else if (dyn13 != null) itext(dyn13);
+    ie_close('span');
+  ie_close('a');
+}
+exports.__deltemplate_s144_d34389eb = __deltemplate_s144_d34389eb;
+if (goog.DEBUG) {
+  __deltemplate_s144_d34389eb.soyTemplateName = 'Sidebar.__deltemplate_s144_d34389eb';
+}
+soy.$$registerDelegateFn(soy.$$getDelTemplateId('ElectricNavigation.anchor.idom'), 'sidebar', 0, __deltemplate_s144_d34389eb);
+
+exports.render.params = ["section","searchExcludePath","searchPath"];
+exports.render.types = {"section":"any","searchExcludePath":"any","searchPath":"any"};
+templates = exports;
+return exports;
+
+});
+
+class Sidebar extends __WEBPACK_IMPORTED_MODULE_0_metal_component___default.a {}
+__WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(Sidebar, templates);
+
+/* harmony default export */ __webpack_exports__["default"] = (templates);
+/* jshint ignore:end */
+
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74), __webpack_require__(73)))
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(154);
+exports.setImmediate = setImmediate;
+exports.clearImmediate = clearImmediate;
+
 
 /***/ })
 /******/ ]);
